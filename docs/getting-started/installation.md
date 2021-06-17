@@ -13,7 +13,7 @@ Running your own Tellery with Kubernetes
 
 ## Installing the Chart
 
-Add repo
+First of all, add the repo
 
 ```shell
 helm repo add tellery https://xxxxxx
