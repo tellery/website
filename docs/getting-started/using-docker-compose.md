@@ -29,24 +29,23 @@ POSTGRES_USERNAME=mosaic docker-compose up
 
 ## Environments
 
-| Parameter              | Description                                                | Default                 |
-| ---------------------- | ---------------------------------------------------------- | ----------------------- |
-| MOSAIC_API_IMAGE       | API server image name                                      | mosaic/api:latest       |
-| MOSAIC_WEB_IMAGE       | Web server image name                                      | mosaic/web:latest       |
-| MOSAIC_CONNECTOR_IMAGE | Connector server image name                                | mosaic/connector:latest |
-| POSTGRES_USERNAME      | Postgresql username                                        | mosaic                  |
-| POSTGRES_PASSWORD      | Postgresql password                                        | ZMnyXaVYm8ItOv+vhoh07Q  |
-| POSTGRES_DB            | Postgresql database name                                   | mosaic                  |
-| SERVER_PROTO           | Web server protocol                                        | http                    |
-| SERVER_HOST            | Web server host                                            | localhost               |
-| SECRET_KEY             | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A  |
-| EMAIL_USE_TLS          | Enable TLS                                                 | false                   |
-| EMAIL_USERNAME         | Mail server username                                       | ""                      |
-| EMAIL_PASSWORD         | Mail server password                                       | ""                      |
-| EMAIL_PORT             | Mail server port                                           | 587                     |
-| EMAIL_HOST             | Mail server host                                           | ""                      |
-| EMAIL_FROM             | System mail sender's email address                         | ""                      |
-| OSS_BUCKET             | Oss bucket                                                 | mosaic-uploads          |
-| OSS_REGION             | Oss region                                                 | ""                      |
-| OSS_ACCESS_KEY_ID      | Oss access key                                             | ""                      |
-| OSS_ACCESS_KEY_SECRET  | Oss secret key                                             | ""                      |
+| Parameter                    | Description                                                | Default                 |
+| ---------------------------- | ---------------------------------------------------------- | ----------------------- |
+| MOSAIC_API_IMAGE             | API server image name                                      | mosaic/api:latest       |
+| MOSAIC_WEB_IMAGE             | Web server image name                                      | mosaic/web:latest       |
+| MOSAIC_CONNECTOR_IMAGE       | Connector server image name                                | mosaic/connector:latest |
+| POSTGRES_USERNAME            | Postgresql username                                        | mosaic                  |
+| POSTGRES_PASSWORD            | Postgresql password                                        | ZMnyXaVYm8ItOv+vhoh07Q  |
+| POSTGRES_DB                  | Postgresql database name                                   | mosaic                  |
+| SERVER_PROTO                 | Web server protocol                                        | http                    |
+| SERVER_HOST                  | Web server host                                            | localhost               |
+| SECRET_KEY                   | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A  |
+| EMAIL_USE_TLS                | Enable TLS                                                 | false                   |
+| EMAIL_USERNAME               | Mail server username                                       | ""                      |
+| EMAIL_PASSWORD               | Mail server password                                       | ""                      |
+| EMAIL_PORT                   | Mail server port                                           | 587                     |
+| EMAIL_HOST                   | Mail server host                                           | ""                      |
+| EMAIL_FROM                   | System mail sender's email address                         | ""                      |
+| OBJECT_STORAGE_BUCKET        | Object storage bucket                                      | tellery-uploads         |
+| OBJECT_STORAGE_ACCESS_KEY_ID | Object storage access key                                  | minio_local             |
+| OBJECT_STORAGE_ACCESS_SECRET | Object storage secret key                                  | Z9nYZsZpO5d7PZ1k0223aA  |

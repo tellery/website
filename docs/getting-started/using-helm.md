@@ -65,40 +65,42 @@ helm uninstall release-name
 
 The following table lists the configurable parameters of the Tellery chart and their default values.
 
-| Parameter                   | Description                                                | Default                |
-| --------------------------- | ---------------------------------------------------------- | ---------------------- |
-| ingress.enabled             | Enable ingress controller resource                         | false                  |
-| ingress.annotations         | Ingress annotations configuration                          | null                   |
-| ingress.hostname            | Ingress resource hostname                                  | null                   |
-| ingress.tls                 | Ingress TLS configuration                                  | null                   |
-| postgresql.enabled          | Enable postgresql deployed by helm                         | false                  |
-| externalPostgresql.host     | External postgresql host                                   | postgresql             |
-| externalPostgresql.port     | External postgresql port                                   | 5432                   |
-| externalPostgresql.database | External postgresql Database name                          | tellery                |
-| externalPostgresql.username | External postgresql username                               | postgres               |
-| externalPostgresql.password | External postgresql password                               | ''                     |
-| redis.enabled               | Enable redis deployed by helm                              | false                  |
-| externalRedis.enabled       | Enable external redis                                      | false                  |
-| externalRedis.host          | External redis host                                        | redis                  |
-| externalRedis.port          | External redis port                                        | 6379                   |
-| externalRedis.password      | External redis password                                    | null                   |
-| system.secretKey            | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A |
-| system.search.language      | Language for full-text search                              | en                     |
-| system.search.plugin        | Pixel plug-in for full-text search                         | null                   |
-| system.web.port             | Web server port                                            | 80                     |
-| system.web.protocol         | Web server protocol                                        | https                  |
-| system.web.host             | Web server host                                            | null                   |
-| system.server.port          | Backend server port                                        | 8000                   |
-| email.host                  | Mail server host                                           | ''                     |
-| email.port                  | Mail server port                                           | 587                    |
-| email.username              | Mail server username                                       | ''                     |
-| email.password              | Mail server password                                       | ''                     |
-| email.tls                   | Enable TLS                                                 | false                  |
-| email.from                  | System mail sender's email address                         | ''                     |
-| oss.bucket                  | Oss bucket                                                 | tellery-uploads        |
-| oss.region                  | Oss region                                                 | ''                     |
-| oss.accessKey               | Oss access key                                             | ''                     |
-| oss.secretKey               | Oss secret key                                             | ''                     |
+| Parameter                   | Description                                                | Default                            |
+| --------------------------- | ---------------------------------------------------------- | ---------------------------------- |
+| ingress.enabled             | Enable ingress controller resource                         | false                              |
+| ingress.annotations         | Ingress annotations configuration                          | null                               |
+| ingress.hostname            | Ingress resource hostname                                  | null                               |
+| ingress.tls                 | Ingress TLS configuration                                  | null                               |
+| postgresql.enabled          | Enable postgresql deployed by helm                         | false                              |
+| externalPostgresql.host     | External postgresql host                                   | postgresql                         |
+| externalPostgresql.port     | External postgresql port                                   | 5432                               |
+| externalPostgresql.database | External postgresql Database name                          | tellery                            |
+| externalPostgresql.username | External postgresql username                               | postgres                           |
+| externalPostgresql.password | External postgresql password                               | ''                                 |
+| redis.enabled               | Enable redis deployed by helm                              | false                              |
+| externalRedis.enabled       | Enable external redis                                      | false                              |
+| externalRedis.host          | External redis host                                        | redis                              |
+| externalRedis.port          | External redis port                                        | 6379                               |
+| externalRedis.password      | External redis password                                    | null                               |
+| system.secretKey            | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A             |
+| system.search.language      | Language for full-text search                              | en                                 |
+| system.search.plugin        | Pixel plug-in for full-text search                         | null                               |
+| system.web.port             | Web server port                                            | 80                                 |
+| system.web.protocol         | Web server protocol                                        | https                              |
+| system.web.host             | Web server host                                            | null                               |
+| system.server.port          | Backend server port                                        | 8000                               |
+| email.host                  | Mail server host                                           | ''                                 |
+| email.port                  | Mail server port                                           | 587                                |
+| email.username              | Mail server username                                       | ''                                 |
+| email.password              | Mail server password                                       | ''                                 |
+| email.tls                   | Enable TLS                                                 | false                              |
+| email.from                  | System mail sender's email address                         | ''                                 |
+| objectStorage.type          | Object storage type                                        | s3                                 |
+| objectStorage.endpoint      | Object storage endpoint                                    | https://s3.us-west-1.amazonaws.com |
+| objectStorage.bucket        | Object storage bucket                                      | tellery-uploads                    |
+| objectStorage.region        | Object storage region                                      | us-west-1                          |
+| objectStorage.accessKey     | Object storage access key                                  | ''                                 |
+| objectStorage.secretKey     | Object storage secret key                                  | ''                                 |
 
 The following configuration is configured for each service, the following uses `$NAME` instead of `(web | api | connector)`
 
