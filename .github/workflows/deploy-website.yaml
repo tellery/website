@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-    - master
+      - master
 
   workflow_dispatch:
 

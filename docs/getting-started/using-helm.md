@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Installation
+# Production Setup
 
 Running your own Tellery with Kubernetes
 
@@ -95,7 +95,7 @@ The following table lists the configurable parameters of the Tellery chart and t
 | email.password              | Mail server password                                       | ''                     |
 | email.tls                   | Enable TLS                                                 | false                  |
 | email.from                  | System mail sender's email address                         | ''                     |
-| oss.bucket                  | Oss bucket                                                 | tellery-uploads         |
+| oss.bucket                  | Oss bucket                                                 | tellery-uploads        |
 | oss.region                  | Oss region                                                 | ''                     |
 | oss.accessKey               | Oss access key                                             | ''                     |
 | oss.secretKey               | Oss secret key                                             | ''                     |
@@ -104,7 +104,7 @@ The following configuration is configured for each service, the following uses `
 
 | Parameter                                        | Description                                     | Default       |
 | ------------------------------------------------ | ----------------------------------------------- | ------------- |
-| images.$NAME.repository                          | Container image repository                      | tellery/web    |
+| images.$NAME.repository                          | Container image repository                      | tellery/web   |
 | images.$NAME.tag                                 | Container image tag                             | 0.1.0         |
 | images.$NAME.pullPolicy                          | Container image pullPolicy                      | IfNotPresent  |
 | images.$NAME.imagePullSecrets                    | Container image image pull secrets              | []            |
