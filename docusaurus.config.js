@@ -68,7 +68,7 @@ const config = {
           items: [
             {
               label: 'Contact Us',
-              href: customFields.contactEmail,
+              href: `mailto:${customFields.contactEmail}`,
             },
           ],
         },
