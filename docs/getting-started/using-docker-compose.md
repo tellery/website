@@ -21,7 +21,7 @@ git clone https://github.com/tellery/tellery.git
 cd tellery/hack/compose
 ```
 
-Then you can modify the configuration by modifying the variables in the [.env](./.env) or specifying the environment variable at startup.
+Then you can modify the configuration by modifying the variables in the [.env](https://github.com/tellery/tellery/blob/master/hack/compose/.env) or specifying the environment variable at startup.
 
 ```shell
 POSTGRES_USERNAME=mosaic docker-compose up
