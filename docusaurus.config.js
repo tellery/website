@@ -6,8 +6,7 @@ const customFields = {
 }
 
 const config = {
-  title: 'Stop copy-pasting screenshoot of charts',
-  tagline: 'Tellery is an open source way for building collaborative analyses all in one place.',
+  title: 'Tellery',
   url: customFields.domainUrl,
   baseUrl: '/',
   onBrokenLinks: 'throw',
