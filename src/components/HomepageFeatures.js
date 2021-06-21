@@ -31,7 +31,7 @@ const FeatureList = [
       <>
         Tellery allows you customize your deliverables from dozens of building
         blocks. Want a KPI dashboard? A weekly report? A deep user segment research?
-        Tell the story in your own way. 
+        Tell story your own way. 
       </>
     ),
   },

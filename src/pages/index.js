@@ -12,7 +12,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">Stop copy-pasting screenshoot of charts</h1>
-        <p className="hero__subtitle">Tellery is an open source way for building collaborative analyses all in one place.</p>
+        <p className="hero__subtitle">Tellery is an open source way for building collaborative analysis all in one place.</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
