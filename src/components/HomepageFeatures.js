@@ -19,8 +19,7 @@ const FeatureList = [
     description: (
       <>
         Tellery allows you abstract essential business logic, and reference it 
-        anywhere. Stop writing duplicated SQLs to calculate similar 
-        metrics over and over gain. 
+        anywhere. Stop writing duplicated SQLs to calculate metrics over and over again. 
       </>
     ),
   },
