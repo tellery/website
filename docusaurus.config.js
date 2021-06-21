@@ -1,8 +1,14 @@
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
-  title: 'Tellery',
-  tagline: 'Cool~',
-  url: 'https://tellery.io',
+const customFields = {
+  githubUrl: 'https://github.com/tellery/tellery',
+  twitterUrl: 'https://twitter.com/TelleryHQ',
+  contactEmail: 'contact@tellery.io',
+  domainUrl: 'https://tellery.io',
+}
+
+const config = {
+  title: 'Stop copy-pasting screenshoot of charts',
+  tagline: 'Tellery is an open source way for building collaborative analyses all in one place.',
+  url: customFields.domainUrl,
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -18,27 +24,29 @@ module.exports = {
       },
       items: [
         {
+          href: customFields.githubUrl,
+          label: 'GitHub',
+          position: 'left',
+        },
+        {
           type: 'doc',
           docId: 'introduction',
           position: 'left',
-          label: 'Documentation',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/tellery/tellery',
-          label: 'GitHub',
-          position: 'right',
-        },
+//        {to: '/blog', label: 'Blog', position: 'left'},
+
       ],
     },
     footer: {
       style: 'dark',
       links: [
+
         {
-          title: 'Docs',
+          title: 'For Developer',
           items: [
             {
-              label: 'Doc',
+              label: 'Documentation',
               to: '/docs/introduction',
             },
           ],
@@ -47,32 +55,25 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/tellery',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'GitHub',
+              href: customFields.githubUrl,
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: customFields.twitterUrl,
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Support',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/tellery/tellery',
+              label: 'Contact Us',
+              href: customFields.contactEmail,
             },
           ],
         },
+
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc. Built with Docusaurus.`,
     },
@@ -100,3 +101,8 @@ module.exports = {
     ],
   ],
 };
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
+module.exports = {
+  ...config,
+  customFields: this.customFields
+}

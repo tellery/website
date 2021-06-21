@@ -1,35 +1,37 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
-
+ 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Streamlined Analysis',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Tellery allows you edit your analytics code and visualization options 
+        without leaving your current context.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Modular SQL',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Tellery allows you abstract essential business logic, and reference it 
+        anywhere. Stop writing duplicated SQLs to calculate similar 
+        metrics over and over gain. 
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'All-in-one workspace',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Tellery allows you customize your deliverables from dozens of building
+        blocks. Want a KPI dashboard? A weekly report? A deep user segment research?
+        Tell the story in your own way. 
       </>
     ),
   },
