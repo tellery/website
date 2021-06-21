@@ -100,7 +100,6 @@ const config = {
     ],
   ],
 };
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   ...config,
   customFields: this.customFields
