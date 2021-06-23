@@ -3,10 +3,16 @@ const customFields = {
   twitterUrl: 'https://twitter.com/TelleryHQ',
   contactEmail: 'contact@tellery.io',
   domainUrl: 'https://tellery.io',
+  copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc.`,
+  hero: {
+    title: 'Stop copy-pasting screenshot of charts',
+    subtitle: 'Tellery is an open source way for building collaborative analysis all in one place.',
+  }
 }
 
 const config = {
   title: 'Tellery',
+  tagline: 'Analyze, refererence, and report data all in one place',
   url: customFields.domainUrl,
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -14,6 +20,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'tellery', // Usually your GitHub org/user name.
   projectName: 'website', // Usually your repo name.
+  customFields: customFields,
   themeConfig: {
     navbar: {
       title: 'Tellery',
@@ -38,6 +45,7 @@ const config = {
       ],
     },
     footer: {
+      copyright: customFields.copyright,
       style: 'dark',
       links: [
 
@@ -74,7 +82,6 @@ const config = {
         },
 
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -101,6 +108,5 @@ const config = {
   ],
 };
 module.exports = {
-  ...config,
-  customFields: this.customFields
+  ...config
 }

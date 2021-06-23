@@ -11,8 +11,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">Stop copy-pasting screenshoot of charts</h1>
-        <p className="hero__subtitle">Tellery is an open source way for building collaborative analysis all in one place.</p>
+        <h1 className="hero__title">{`${siteConfig.customFields.hero.title}`}</h1>
+        <p className="hero__subtitle">{siteConfig.customFields.hero.subtitle}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -29,7 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Analyze, refererence, and report data all in one place`}>
+      title={`${siteConfig.tagline}`} 
+      description={`${siteConfig.tagline}`}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
