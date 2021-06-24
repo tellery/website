@@ -36,7 +36,7 @@ const config = {
         },
         {
           type: 'doc',
-          docId: 'introduction',
+          docId: 'introduction/what-is-tellery',
           position: 'left',
           label: 'Docs',
         },
