@@ -11,6 +11,14 @@ Running your own Tellery with Kubernetes
 - [Helm](https://docs.helm.sh/docs/intro/install/) 3.0+
 - Kubernetes 1.10+
 
+## Infrastructure
+
+- **(Required)** Postgresql 10.0+
+- **(Required)** Object Storage Service ( `AWS S3`, `Aliyun OSS` or others which compatible `S3` protocol)
+- (Optional) Redis 5.0+
+- For notifications, you would need
+  - Email: An email address and an email server
+
 ## Installing the Chart
 
 First of all, add the repo
@@ -82,13 +90,6 @@ The following table lists the configurable parameters of the Tellery chart and t
 | externalRedis.host          | External redis host                                        | redis                              |
 | externalRedis.port          | External redis port                                        | 6379                               |
 | externalRedis.password      | External redis password                                    | null                               |
-| system.secretKey            | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A             |
-| system.search.language      | Language for full-text search                              | en                                 |
-| system.search.plugin        | Pixel plug-in for full-text search                         | null                               |
-| system.web.port             | Web server port                                            | 80                                 |
-| system.web.protocol         | Web server protocol                                        | https                              |
-| system.web.host             | Web server host                                            | null                               |
-| system.server.port          | Backend server port                                        | 8000                               |
 | email.host                  | Mail server host                                           | ''                                 |
 | email.port                  | Mail server port                                           | 587                                |
 | email.username              | Mail server username                                       | ''                                 |
@@ -101,6 +102,13 @@ The following table lists the configurable parameters of the Tellery chart and t
 | objectStorage.region        | Object storage region                                      | us-west-1                          |
 | objectStorage.accessKey     | Object storage access key                                  | ''                                 |
 | objectStorage.secretKey     | Object storage secret key                                  | ''                                 |
+| system.secretKey            | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A             |
+| system.search.language      | Language for full-text search                              | en                                 |
+| system.search.plugin        | Pixel plug-in for full-text search                         | null                               |
+| system.web.port             | Web server port                                            | 80                                 |
+| system.web.protocol         | Web server protocol                                        | https                              |
+| system.web.host             | Web server host                                            | null                               |
+| system.server.port          | Backend server port                                        | 8000                               |
 
 The following configuration is configured for each service, the following uses `$NAME` instead of `(web | api | connector)`
 
@@ -131,7 +139,7 @@ The following configuration is configured for each service, the following uses `
 Using the `--set key\value[,key=value]` argument to specify each parameter
 
 ```shell
-helm install release-name . --set system.secretKey=xxx --set web.replicas=2
+helm install release-name tellery --set system.secretKey=xxx --set web.replicas=2
 ```
 
 Or using the yaml to specify each parameter
