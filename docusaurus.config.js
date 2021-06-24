@@ -5,7 +5,7 @@ const customFields = {
   domainUrl: 'https://tellery.io',
   copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc.`,
   hero: {
-    title: 'Stop copy-pasting screenshot of charts',
+    title: 'Eliminating work about analytics',
     subtitle: 'Tellery is an open source way for building collaborative analysis all in one place.',
   }
 }
@@ -36,7 +36,7 @@ const config = {
         },
         {
           type: 'doc',
-          docId: 'introduction/what-is-tellery',
+          docId: 'introduction',
           position: 'left',
           label: 'Docs',
         },

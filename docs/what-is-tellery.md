@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+id: introduction
+slug: /introduction
+
 ---
 
 # What is Tellery?
