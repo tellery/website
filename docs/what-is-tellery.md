@@ -1,20 +1,36 @@
 ---
 sidebar_position: 1
 id: introduction
-slug: /introduction
+slug: /
 
 ---
 
 # What is Tellery?
 
+Tellery helps you organize your ad-hoc analyses and then narrate them in one place.
 
-The modern data stack makes it easy to answer questions, but really hard to answer it consistently. Knowledge about data is siloed. We too often copy-paste screenshot of charts from one tool to another. Metrics are buried in dashboard and can not be referenced elsewhere. We conduct duplicated analyses that a colleague had already done.
+Tellery brings all of your words and data into one flexible surface:
 
-Most analytics tools don't compound. Most analyses, in report, decks, dashboard, notebooks are ephemeral. This is the start problem. If any individual isn't getting compound interest from his analytics how can a collective.
+ * Anomalies investigation
+ * Feature-specific analysis
+ * Campaign-oriented dashboard
+ * Or customize your deliverable for your own needs
 
-We start by building a tool that can help analysts organize analytics code in one place. We bring together analytic workflow and a presentation layer. Want a KPI dashboard? A weekly report? A deep user research? Tellery allows you build your deliverables from a handful of building blocks.
 
-Tellery allows you abstract essential business logic, and reference it anywhere. Define a model grasping the nuances of datasets to make explorative analysis organizable. Tellery uses SQL to model data, which means you can easily consolidates it in [dbt](https://www.getdbt.com/). The further change is easy, not only to the place that defines it, but also to that references it.
+Tellery allows you abstract essential business logic, and reference it anywhere. You can define a model grasping the nuances of datasets to make explorative analysis organizable. Tellery uses SQL to model data, so you can easily consolidates it in [dbt](https://www.getdbt.com/). 
 
-Since numbers are defined consistently and always up to date. Business users can see the context around numbers, making it possible to see how analysts arrived at the conclusions they did. It’s easy to discover and trust data across the organization.
 
+See the reason [why we built Tellery](/docs/about).
+
+
+---
+
+## Getting started with Tellery
+
+[Try the demo Tellery project](/docs/getting-started/quick-setup) with minimal setup.
+
+
+---
+## Reporting bugs and feature requests
+
+Want to report a bug or request a feature? Feel free to [open an issue in GitHub](https://github.com/tellery/tellery/issues/new)
