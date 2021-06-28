@@ -4,6 +4,7 @@ const customFields = {
   contactEmail: 'contact@tellery.io',
   domainUrl: 'https://tellery.io',
   copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc.`,
+  slackInviteUrl: 'https://join.slack.com/t/telleryio/shared_invite/zt-s37tgvo7-QBdpggK_uG6QqJVWhSXlFg',
   hero: {
     subtitle: 'Tellery is an open source way for building collaborative data analysis all in one place.',
   }
@@ -61,8 +62,12 @@ const config = {
           title: 'Community',
           items: [
             {
-              label: 'GitHub',
-              href: customFields.githubUrl,
+              label: 'Support',
+              href: `mailto:${customFields.contactEmail}`,
+            },
+            {
+              label: 'Slack',
+              href: customFields.slackInviteUrl,
             },
             {
               label: 'Twitter',
@@ -70,16 +75,6 @@ const config = {
             },
           ],
         },
-        {
-          title: 'Support',
-          items: [
-            {
-              label: 'Contact Us',
-              href: `mailto:${customFields.contactEmail}`,
-            },
-          ],
-        },
-
       ],
     },
   },
