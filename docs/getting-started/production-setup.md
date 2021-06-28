@@ -14,7 +14,7 @@ Running your own Tellery with Kubernetes
 ## Infrastructure
 
 - **(Required)** Postgresql 10.0+
-- **(Required)** Object Storage Service ( `AWS S3`, `Aliyun OSS` or others which compatible `S3` protocol)
+- **(Required)** Object Storage Service ( `AWS S3`, `Aliyun OSS` or others compatible with `S3` protocol)
 - (Optional) Redis 5.0+
 - For notifications, you would need
   - Email: An email address and an email server
@@ -31,23 +31,12 @@ To install the helm chart with release name `release-name`:
 
 ```shell
 helm install release-name tellery \
---set redis.enabled=true \
 --set postgresql.enabled=true
 ```
 
 If you want to provide advanced parameters with your installation you can check the full [Configuration](#configuration).
 
-### Installing with Postgresql and Redis
-
-```shell
-helm install release-name tellery \
---set redis.enabled=true \
---set postgresql.enabled=true
-```
-
-See [Redis Helm Chart](https://artifacthub.io/packages/helm/bitnami/redis/14.3.3#parameters) and [Postgresql Helm Chart](https://artifacthub.io/packages/helm/bitnami/postgresql/10.4.8#parameters) for more configurations
-
-### Installing with external Postgresql and Redis
+### Installing with external Postgresql
 
 ```shell
 helm install release-name tellery \
@@ -55,13 +44,8 @@ helm install release-name tellery \
 --set externalPostgresql.port=5432 \
 --set externalPostgresql.username=postgres \
 --set externalPostgresql.password=password \
---set externalPostgresql.database=tellery \
---set externalRedis.enabled=true \
---set externalRedis.host=redisAddress \
---set externalRedis.port=6379
+--set externalPostgresql.database=tellery
 ```
-
-> Redis is optional, it will be allowed not to set `redis.enabled=true` and `externalRedis.enabled=true`
 
 ## Uninstall the Chart
 
@@ -73,42 +57,83 @@ helm uninstall release-name
 
 The following table lists the configurable parameters of the Tellery chart and their default values.
 
-| Parameter                   | Description                                                | Default                            |
-| --------------------------- | ---------------------------------------------------------- | ---------------------------------- |
-| ingress.enabled             | Enable ingress controller resource                         | false                              |
-| ingress.annotations         | Ingress annotations configuration                          | null                               |
-| ingress.hostname            | Ingress resource hostname                                  | null                               |
-| ingress.tls                 | Ingress TLS configuration                                  | null                               |
-| postgresql.enabled          | Enable postgresql deployed by helm                         | false                              |
-| externalPostgresql.host     | External postgresql host                                   | postgresql                         |
-| externalPostgresql.port     | External postgresql port                                   | 5432                               |
-| externalPostgresql.database | External postgresql Database name                          | tellery                            |
-| externalPostgresql.username | External postgresql username                               | postgres                           |
-| externalPostgresql.password | External postgresql password                               | ''                                 |
-| redis.enabled               | Enable redis deployed by helm                              | false                              |
-| externalRedis.enabled       | Enable external redis                                      | false                              |
-| externalRedis.host          | External redis host                                        | redis                              |
-| externalRedis.port          | External redis port                                        | 6379                               |
-| externalRedis.password      | External redis password                                    | null                               |
-| email.host                  | Mail server host                                           | ''                                 |
-| email.port                  | Mail server port                                           | 587                                |
-| email.username              | Mail server username                                       | ''                                 |
-| email.password              | Mail server password                                       | ''                                 |
-| email.tls                   | Enable TLS                                                 | false                              |
-| email.from                  | System mail sender's email address                         | ''                                 |
-| objectStorage.type          | Object storage type                                        | s3                                 |
-| objectStorage.endpoint      | Object storage endpoint                                    | https://s3.us-west-1.amazonaws.com |
-| objectStorage.bucket        | Object storage bucket                                      | tellery-uploads                    |
-| objectStorage.region        | Object storage region                                      | us-west-1                          |
-| objectStorage.accessKey     | Object storage access key                                  | ''                                 |
-| objectStorage.secretKey     | Object storage secret key                                  | ''                                 |
-| system.secretKey            | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A             |
-| system.search.language      | Language for full-text search                              | en                                 |
-| system.search.plugin        | Pixel plug-in for full-text search                         | null                               |
-| system.web.port             | Web server port                                            | 80                                 |
-| system.web.protocol         | Web server protocol                                        | https                              |
-| system.web.host             | Web server host                                            | null                               |
-| system.server.port          | Backend server port                                        | 8000                               |
+### Postgresql Configuration
+
+You can choose `PostgreSQL deployed by Helm` by `--set postgresql.enabled=true` or `External PostgreSQL` by `--set externalPostgresql.host=xxx`, if both are configured, `PostgreSQL deployed by Helm` will be used.
+
+`PostgreSQL deployed by Helm` is base on [Postgresql Helm Chart](https://artifacthub.io/packages/helm/bitnami/postgresql/10.4.8#parameters), you can see it for more configurations
+
+| Parameter                   | Description                        | Default    |
+| --------------------------- | ---------------------------------- | ---------- |
+| postgresql.enabled          | Enable postgresql deployed by helm | false      |
+| externalPostgresql.host     | External postgresql host           | postgresql |
+| externalPostgresql.port     | External postgresql port           | 5432       |
+| externalPostgresql.database | External postgresql Database name  | tellery    |
+| externalPostgresql.username | External postgresql username       | postgres   |
+| externalPostgresql.password | External postgresql password       | ''         |
+
+### Object Storage Configuration
+
+`objectStorage.endpoint` is optional when you are using `AWS S3`
+
+| Parameter               | Description               | Default                            |
+| ----------------------- | ------------------------- | ---------------------------------- |
+| objectStorage.type      | Object storage type       | s3                                 |
+| objectStorage.endpoint  | Object storage endpoint   | https://s3.us-west-1.amazonaws.com |
+| objectStorage.bucket    | Object storage bucket     | tellery-uploads                    |
+| objectStorage.region    | Object storage region     | us-west-1                          |
+| objectStorage.accessKey | Object storage access key | ''                                 |
+| objectStorage.secretKey | Object storage secret key | ''                                 |
+
+### Redis Configuration
+
+You can choose `Redis deployed by Helm` by `--set redis.enabled=true` or `External Redis` by `--set externalRedis.enabled=true`, if both are configured, `Redis deployed by Helm` will be used.
+
+`Redis deployed by Helm` is base on [Redis Helm Chart](https://artifacthub.io/packages/helm/bitnami/redis/14.3.3#parameters), you can see it for more configurations
+
+| Parameter              | Description                   | Default |
+| ---------------------- | ----------------------------- | ------- |
+| redis.enabled          | Enable redis deployed by helm | false   |
+| externalRedis.enabled  | Enable external redis         | false   |
+| externalRedis.host     | External redis host           | redis   |
+| externalRedis.port     | External redis port           | 6379    |
+| externalRedis.password | External redis password       | null    |
+
+### Email Server Configuration
+
+| Parameter      | Description                        | Default |
+| -------------- | ---------------------------------- | ------- |
+| email.host     | Mail server host                   | ''      |
+| email.port     | Mail server port                   | 587     |
+| email.username | Mail server username               | ''      |
+| email.password | Mail server password               | ''      |
+| email.tls      | Enable TLS                         | false   |
+| email.from     | System mail sender's email address | ''      |
+
+### System Configuration
+
+`system.web.host` is required, setting it, to specify the access domain of tellery service
+
+If your written language is not English, you can modify your search plugin through [this document](https://github.com/tellery/tellery) to get a better search experience.
+
+| Parameter              | Description                                                | Default                |
+| ---------------------- | ---------------------------------------------------------- | ---------------------- |
+| system.secretKey       | Secret key for encrypt sensitive information into database | pjfJ2Cbe3sv0Gtz32Krr4A |
+| system.search.language | Language for full-text search                              | en                     |
+| system.search.plugin   | Pixel plug-in for full-text search                         | null                   |
+| system.web.port        | Web server port                                            | 80                     |
+| system.web.protocol    | Web server protocol                                        | https                  |
+| system.web.host        | Web server host                                            | null                   |
+| system.server.port     | Backend server port                                        | 8000                   |
+
+### Basic Configuration
+
+| Parameter           | Description                        | Default |
+| ------------------- | ---------------------------------- | ------- |
+| ingress.enabled     | Enable ingress controller resource | false   |
+| ingress.annotations | Ingress annotations configuration  | null    |
+| ingress.hostname    | Ingress resource hostname          | null    |
+| ingress.tls         | Ingress TLS configuration          | null    |
 
 The following configuration is configured for each service, the following uses `$NAME` instead of `(web | api | connector)`
 
