@@ -5,14 +5,14 @@ const customFields = {
   domainUrl: 'https://tellery.io',
   copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc.`,
   hero: {
-    title: 'Eliminating work about analytics',
-    subtitle: 'Tellery is an open source way for building collaborative analysis all in one place.',
+    title: 'Organize your analysis for the long term',
+    subtitle: 'Tellery is an open source way for building collaborative data analysis all in one place.',
   }
 }
 
 const config = {
   title: 'Tellery',
-  tagline: 'Analyze, refererence, and report data all in one place',
+  tagline: 'Organize and narrate your analysis all in one place',
   url: customFields.domainUrl,
   baseUrl: '/',
   onBrokenLinks: 'throw',
