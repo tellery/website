@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # How to use markdown
@@ -9,18 +9,18 @@ Markdown is a lightweight markup language with plain text for formatting syntax.
 
 ## Styling
 
-Type [] to create to-do checkbox.
+### List
 
-Use single asterisk * followed by a space to create bullet point.
+Type `[]` to create to-do checkbox.
 
-Type 1. followed by a space to start the numbered list.
+Use single asterisk `*` followed by a space to create bullet point.
 
-Use two angle brackets >> followed by a space to start a toggle list.
+Type `1.` followed by a space to start the numbered list.
 
-Use single bracket > to capture a blockquote.
+In your list, press `Tab` to indent and add sub-bullets.
 
-Capture a code snippet with three leading ```.
 
+### Headings
 
 Headings can be created as follows:
 
@@ -30,5 +30,13 @@ Headings can be created as follows:
 ### Heading 3
 ```
 
+### Others
+
+
+Use two angle brackets `>>` followed by a space to start a toggle list.
+
+Use single bracket `>` to capture a blockquote.
+
+Capture a code snippet with three leading `````.
 
 Soon, we will provide inline markdown support, such as **bold**, *italicize*, and ~~strikethrough~~
