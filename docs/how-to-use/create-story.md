@@ -51,7 +51,7 @@ Or, click the "Visualization options📊" on the bottom right of the question bl
 ## Add some naratives 
 
 
-Tellery provide [markdown](/docs/markdown) syntax you're familiar with to add your narratives. The typing experience is simple.
+Tellery provide [markdown](/docs/how-to-use/markdown) syntax you're familiar with to add your narratives. The typing experience is simple.
 
 
 You can put your relevant explanations to visualization, making it possible for stakeholders to understand your story.
