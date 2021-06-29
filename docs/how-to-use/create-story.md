@@ -15,16 +15,26 @@ Then the story is created in your workspace and a new empty story will pop up in
 ## Ask a new question
 
 
+:::info
+
+For asking a question in tellery, you need to configure a database first.
+
+:::
+
+
+
 Type `/` to bring up your menu of content options. Go ahead and choose "Question`Q`", then a question block willl appear in the story.
 
 
 ### Edit SQL
 
 
-Tellery will automatically open an question editor when a new question is created. You can edit the SQL and submit to Tellery to ask a question.
+Tellery will automatically open an question editor when a new question is created. You can edit the SQL and 
+click 'Execute▶️' button to submit it to Tellery. Tellery will query data warehouse, fetch result back, and visualize it.
 
 
-Click the "Edit SQL`<>`" on the bottom right of the question block to bring up its SQL in the question editor.
+Click the "Edit SQL`<>`" on the bottom right of any existing question block to bring up its SQL in the question editor.
+
 
 
 
