@@ -49,7 +49,7 @@ Each question reference will be rendered as a follow link. To open the reference
 
 
 1. Click the question title above it
-2. Press 'Alt/Option' and click the link
+2. Press "Alt/Option" and click the link
 3. Hover on the link, then click the question title in the popup that appears
 
 
@@ -65,7 +65,7 @@ Unlike persistent table in the data warehouse, referenced questions are interpol
 ### Some Advice
 
 
-If you have complex transformations. We recommend you govern them in a batch processing tool like dbt.
+If you have complex transformations. We recommend you govern them using a batch processing tool like dbt.
 Because you can assure data quality and improve performance.
 
 
