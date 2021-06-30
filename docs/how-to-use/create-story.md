@@ -17,7 +17,7 @@ Then the story is created in your workspace and a new empty story will pop up in
 
 :::info
 
-For asking a question in tellery, you need to configure a database first.
+For asking a question in tellery, you need to [configure a database](/docs/how-to-use/configure-database) first.
 
 :::
 
@@ -48,7 +48,7 @@ Or, click the "Visualization options📊" on the bottom right of the question bl
 
 
 
-## Add some naratives 
+## Add some narratives 
 
 
 Tellery provide [markdown](/docs/how-to-use/markdown) syntax you're familiar with to add your narratives. The typing experience is simple.
@@ -68,10 +68,13 @@ Move your mouse to the block and the `⋮⋮` icon will appear to the left of it
 
 
 
-### Adjust the layout
+### Arrange the layout
 
 
-When you have two content blocks side by side. You can drag the resizer between them to resize their width.
+Drag and drop either the right or bottom edges of block Resize the block
+
+
+When you have two content blocks side by side. Hove over the space between them and you will see a separator. Drag and drop the separator between them to resize their width.
 
 
 Change the width of story from the upper right `•••` menu on your story. Making a story full-width will allow you put more content horizontally.

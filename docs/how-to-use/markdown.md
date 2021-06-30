@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # How to use markdown
@@ -17,6 +17,8 @@ Use single asterisk `*` followed by a space to create bullet point.
 
 Type `1.` followed by a space to start the numbered list.
 
+Use two angle brackets `>>` followed by a space to start a toggle list.
+
 In your list, press `Tab` to indent and add sub-bullets.
 
 
@@ -32,8 +34,6 @@ Headings can be created as follows:
 
 ### Others
 
-
-Use two angle brackets `>>` followed by a space to start a toggle list.
 
 Use single bracket `>` to capture a blockquote.
 
