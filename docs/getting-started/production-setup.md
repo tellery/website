@@ -135,31 +135,31 @@ If your written language is not English, you can modify your search plugin throu
 | ingress.hostname    | Ingress resource hostname          | null    |
 | ingress.tls         | Ingress TLS configuration          | null    |
 
-The following configuration is configured for each service, the following uses `$NAME` instead of `(web | api | connector)`
+The following configuration is configured for each service, the following uses `$NAME` instead of `(server | connector)`
 
-| Parameter                                        | Description                                     | Default       |
-| ------------------------------------------------ | ----------------------------------------------- | ------------- |
-| images.$NAME.repository                          | Container image repository                      | tellery/web   |
-| images.$NAME.tag                                 | Container image tag                             | 0.1.0         |
-| images.$NAME.pullPolicy                          | Container image pullPolicy                      | IfNotPresent  |
-| images.$NAME.imagePullSecrets                    | Container image image pull secrets              | []            |
-| $NAME.replicas                                   | desired number of pods                          | 1             |
-| $NAME.probeInitialDelaySeconds                   | Delay before liveness probe is initiated        | 10            |
-| $NAME.resources                                  | Server resource requests and limits             | {}            |
-| $NAME.affinity                                   | Affinity settings for pod assignment            | {}            |
-| $NAME.nodeSelector                               | Node labels for pod assignment                  | {}            |
-| $NAME.tolerations                                | Toleration labels for pod assignment            | {}            |
-| $NAME.podLabels                                  | Ingress labels configuration                    | {}            |
-| $NAME.autoscaling.enabled                        | Enable auto scaling                             | false         |
-| $NAME.autoscaling.minReplicas                    | Minimum number of pods                          | 1             |
-| $NAME.autoscaling.maxReplicas                    | Maximum number of pods                          | 2             |
-| $NAME.autoscaling.targetCPUUtilizationPercentage | Define the CPU trigger value of the expansion   | 50            |
-| $NAME.service.name                               | Server's port name defined in Service           | http          |
-| $NAME.service.type                               | Service Type                                    | ClusterIP     |
-| $NAME.service.externalPort                       | Service port                                    | 80,8000,50051 |
-| $NAME.service.annotations                        | Annotations for service assignment              | {}            |
-| $NAME.service.externalIPs                        | ExternalIPs for service assignment              | null          |
-| $NAME.service.loadBalancerSourceRanges           | LoadBalancerSourceRanges for service assignment | null          |
+| Parameter                                        | Description                                     | Default        |
+| ------------------------------------------------ | ----------------------------------------------- | -------------- |
+| images.$NAME.repository                          | Container image repository                      | tellery/server |
+| images.$NAME.tag                                 | Container image tag                             | 0.1.0          |
+| images.$NAME.pullPolicy                          | Container image pullPolicy                      | IfNotPresent   |
+| images.$NAME.imagePullSecrets                    | Container image image pull secrets              | []             |
+| $NAME.replicas                                   | desired number of pods                          | 1              |
+| $NAME.probeInitialDelaySeconds                   | Delay before liveness probe is initiated        | 10             |
+| $NAME.resources                                  | Server resource requests and limits             | {}             |
+| $NAME.affinity                                   | Affinity settings for pod assignment            | {}             |
+| $NAME.nodeSelector                               | Node labels for pod assignment                  | {}             |
+| $NAME.tolerations                                | Toleration labels for pod assignment            | {}             |
+| $NAME.podLabels                                  | Ingress labels configuration                    | {}             |
+| $NAME.autoscaling.enabled                        | Enable auto scaling                             | false          |
+| $NAME.autoscaling.minReplicas                    | Minimum number of pods                          | 1              |
+| $NAME.autoscaling.maxReplicas                    | Maximum number of pods                          | 2              |
+| $NAME.autoscaling.targetCPUUtilizationPercentage | Define the CPU trigger value of the expansion   | 50             |
+| $NAME.service.name                               | Server's port name defined in Service           | http           |
+| $NAME.service.type                               | Service Type                                    | ClusterIP      |
+| $NAME.service.externalPort                       | Service port                                    | 80,8000,50051  |
+| $NAME.service.annotations                        | Annotations for service assignment              | {}             |
+| $NAME.service.externalIPs                        | ExternalIPs for service assignment              | null           |
+| $NAME.service.loadBalancerSourceRanges           | LoadBalancerSourceRanges for service assignment | null           |
 
 Using the `--set key\value[,key=value]` argument to specify each parameter
 
