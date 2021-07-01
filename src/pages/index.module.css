@@ -4,7 +4,11 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+ 
 
+html {
+  background: #ffffff;
+}
 a {
   color: inherit;
 }
@@ -140,6 +144,7 @@ a {
   font-size: 36px;
   line-height: 43px;
   display: flex;
+  color: #333333;
   align-items: center;
 }
 
