@@ -145,7 +145,7 @@ const Features = () => {
         left={
           <>
             <ImageWrapper
-              src={useBaseUrl("/static/img/home/screenshot-2.png")}
+              src={useBaseUrl("/img/home/screenshot-2.png")}
               width={600}
               height={482}
             />
@@ -186,7 +186,7 @@ const Features = () => {
         right={
           <>
             <ImageWrapper
-              src={useBaseUrl("/static/img/home/screenshot-1.png")}
+              src={useBaseUrl("/img/home/screenshot-1.png")}
               width={695}
               height={494}
             />
@@ -226,7 +226,7 @@ const HeroSnapshot = () => {
   return (
     <div className={styles.heroSnapshot}>
       <ImageWrapper
-        src={useBaseUrl("/static/img/home/screenshot-1.png")}
+        src={useBaseUrl("/img/home/screenshot-1.png")}
         width={695}
         height={494}
       />
