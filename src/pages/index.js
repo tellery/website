@@ -15,7 +15,7 @@ const ImageWrapper = ({ height, width, className, src }) => {
     >
       <img
         src={src}
-        style={{ opacity: imageLoaded ? 1 : 0 }}
+        style={{ opacity: imageLoaded ? 1 : 0.1 }}
         onLoad={(e) => setImageLoaded(true)}
       />
     </div>
