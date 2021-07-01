@@ -1,44 +1,45 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
- 
+import React from "react";
+import clsx from "clsx";
+import styles from "./HomepageFeatures.module.css";
+
 const FeatureList = [
   {
-    title: 'Streamlined Analysis',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Streamlined Analysis",
+    Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        Tellery allows you edit your analytics code and visualization options 
+        Tellery allows you edit your analytics code and visualization options
         without leaving your current context.
       </>
     ),
   },
   {
-    title: 'Modular SQL',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: "Modular SQL",
+    Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Tellery allows you abstract essential business logic, and reference it 
-        anywhere. Stop writing duplicated SQLs to calculate metrics over and over again. 
+        Tellery allows you abstract essential business logic, and reference it
+        anywhere. Stop writing duplicated SQLs to calculate metrics over and
+        over again.
       </>
     ),
   },
   {
-    title: 'All-in-one workspace',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: "All-in-one workspace",
+    Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
         Tellery allows you customize your deliverables from dozens of building
-        blocks. Want a KPI dashboard? A weekly report? A deep user segment research?
-        Tell story your own way. 
+        blocks. Want a KPI dashboard? A weekly report? A deep user segment
+        research? Tell story your own way.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
