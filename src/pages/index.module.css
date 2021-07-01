@@ -5,9 +5,9 @@
  * and scoped locally.
  */
 
- a {
-   color: inherit;
- }
+a {
+  color: inherit;
+}
 
 .heroBanner {
   padding: 4rem 0;
@@ -307,7 +307,6 @@
   display: block;
 }
 
-
 @media screen and (max-width: 966px) {
   .hero h2 {
     font-size: 38px;
@@ -385,7 +384,6 @@
   }
 
   .dropdown {
-  display: inline-block;
+    display: inline-block;
   }
-
 }

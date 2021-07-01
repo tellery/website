@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
@@ -8,6 +8,14 @@ import clsx from "clsx";
 
 const ImageWrapper = ({ height, width, className, src }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (ref.current?.complete) {
+      setImageLoaded(true);
+    }
+  }, []);
+
   return (
     <div
       className={clsx(styles.imageWrapper, className)}
@@ -17,6 +25,7 @@ const ImageWrapper = ({ height, width, className, src }) => {
         src={src}
         style={{ opacity: imageLoaded ? 1 : 0.1 }}
         onLoad={(e) => setImageLoaded(true)}
+        ref={ref}
       />
     </div>
   );
@@ -86,9 +95,9 @@ const Menu = () => {
         <MenuItems />
       </ul>
       <ul className={styles.dropdown}>
-      <span>Menu</span>
+        <span>Menu</span>
         <div className={styles.dropdownContent}>
-        <MenuItems />
+          <MenuItems />
         </div>
       </ul>
     </>
