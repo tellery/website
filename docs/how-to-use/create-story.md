@@ -23,7 +23,7 @@ For asking a question in tellery, you need to [configure a database](/docs/how-t
 
 
 
-Type `/` to bring up your menu of content options. Go ahead and choose "Question`Q`", then a question block willl appear in the story.
+Type `/` to bring up your menu of content options. Go ahead and choose "Question`Q`", then a question block will appear in the story.
 
 
 ### Edit SQL

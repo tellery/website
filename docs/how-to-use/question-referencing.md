@@ -16,10 +16,7 @@ Enter powerful questions references.
 Question reference is a lightweight modeling mechanism to grasp the nuances of your data. They have no different with any ordinary questions in Tellery, unless you can `select from` them directly in another question. 
 
 
-To link questions together, every question in Tellery has an address. We can reference a question by using `{{double curly braces}}` and placing the question's address in between. You can easily recognize a question reference in an question by these braces.
-
-
-One of the most useful case of question reference is to calculate a metric and reuse it in multiple places.
+To link things together, every block in Tellery has an address. We can reference a question by its address. One of the most useful case of question reference is to calculate a metric and reuse it in multiple places.
 
 
 ## How to reference questions?
@@ -29,8 +26,10 @@ One of the most useful case of question reference is to calculate a metric and r
 
 
 
-The easiest way to reference a block is by having it in front of you. Click the bottom right `•••` menu on the question block you want to reference, and click "Copy question ref" to copy its address (including double curly braces) to your clipboard.
+The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy block ref" button in dropdown menu to copy its address to your clipboard.
 
+
+If you paste the address in question editor, it will be automatically recognized by Tellery.
 
 
 ### Search for them
