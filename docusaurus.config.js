@@ -10,10 +10,10 @@ const customFields = {
     hero: {
       title: "Stop copy-pasting, start referencing", 
       subtitle:
-        "Tellery is an open source way for building collaborative data analysis all in one place.",
+        "Tellery helps analysts organize analyses and narrate them in one place. As easy as to use a notebook. As powerful as a data modeling tool.",
     },
     philosophy:
-      "We believe analytic code is an asset. But most analysis, narrated in reports, decks, dashboards, notebooks are ephemeral. If we can build a tool helping people organize analysis effectively, we can free up them to focus on bigger ideas.",
+      "We believe that analytic code is an asset. But most analysis, narrated in reports, decks, dashboards, notebooks are ephemeral. If we can build a tool helping people organize analysis effectively, we can free up them to focus on bigger ideas.",
   },
 };
 
