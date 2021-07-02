@@ -119,7 +119,6 @@
   color: inherit;
 }
 
-
 .more * + * {
   margin-left: 100px;
 }

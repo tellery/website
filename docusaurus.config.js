@@ -6,9 +6,14 @@ const customFields = {
   copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc.`,
   slackInviteUrl:
     "https://join.slack.com/t/telleryio/shared_invite/zt-s37tgvo7-QBdpggK_uG6QqJVWhSXlFg",
-  hero: {
-    subtitle:
-      "Tellery is an open source way for building collaborative data analysis all in one place.",
+  copy: {
+    hero: {
+      title: "Stop copy-pasting, start referencing", 
+      subtitle:
+        "Tellery is an open source way for building collaborative data analysis all in one place.",
+    },
+    philosophy:
+      "We believe analytic code is an asset. But most analysis, narrated in reports, decks, dashboards, notebooks are ephemeral. If we can build a tool helping people organize analysis effectively, we can free up them to focus on bigger ideas.",
   },
 };
 
@@ -32,16 +37,17 @@ const config = {
       },
       items: [
         {
-          href: customFields.githubUrl,
           label: "GitHub",
-          position: "left",
+          href: customFields.githubUrl,
         },
         {
-          type: "doc",
-          docId: "introduction",
-          position: "left",
           label: "Docs",
+          href: "/docs",
         },
+        {
+          label: "Features",
+          href: "#"
+        }    
         //        {to: '/blog', label: 'Blog', position: 'left'},
       ],
     },
@@ -54,7 +60,7 @@ const config = {
           items: [
             {
               label: "Documentation",
-              to: "/docs",
+              href: "/docs",
             },
           ],
         },

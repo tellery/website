@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import styles from "./CircularLoading.module.css";
 
 export const CircularLoading = ({ size, color, scale = 0.5 }) => {
   return (
     <div
-      style={{ '--size': `${size}px`, '--color': color, '--scale': scale }}
+      style={{ "--size": `${size}px`, "--color": color, "--scale": scale }}
       className={styles.container}
     >
       <div></div>
@@ -12,7 +12,7 @@ export const CircularLoading = ({ size, color, scale = 0.5 }) => {
       <div></div>
       <div></div>
     </div>
-  )
-}
+  );
+};
 
-export default CircularLoading
+export default CircularLoading;

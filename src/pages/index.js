@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 import Head from "@docusaurus/Head";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import clsx from "clsx";
-import { CircularLoading } from '../components/CircularLoading'
+import { CircularLoading } from "../components/CircularLoading";
 import { useClickAway } from "react-use";
 
 const ImageWrapper = ({ height, width, className, src }) => {
@@ -75,6 +75,7 @@ const Meta = () => {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <>
       <Meta></Meta>
@@ -110,13 +111,12 @@ const Logo = (props) => {
 
 const MenuItems = () => {
   const { siteConfig } = useDocusaurusContext();
-
+  const { items = [] } = siteConfig.themeConfig.navbar;
   return (
     <>
-      <MenuItem title="Github" href="https://github.com/tellery/tellery" />
-      <MenuItem title="Features" href="#" />
-      <MenuItem title="Docs" href="/docs/" />
-      <MenuItem title="Pricing" href="#" />
+      {items.map((item) => (
+        <MenuItem title={item.label} href={item.href} />
+      ))}
     </>
   );
 };
@@ -177,7 +177,7 @@ const Subscribe = () => {
             })
               .then((res) => {
                 setLoading(false);
-                setSubscribed(true)
+                setSubscribed(true);
               })
               .finally((res) => {
                 setLoading(false);
@@ -187,11 +187,13 @@ const Subscribe = () => {
         >
           <input ref={ref} placeholder="Get tellery" type="email"></input>
           <button>
-            {loading
-              ? <CircularLoading size={12} color={"#ffffff"} scale={1}/>
-              : subscribed
-              ? "Subscribe success!"
-              : " Subscribe to newsletter"}
+            {loading ? (
+              <CircularLoading size={12} color={"#ffffff"} scale={1} />
+            ) : subscribed ? (
+              "Subscribe success!"
+            ) : (
+              " Subscribe to newsletter"
+            )}
           </button>
         </form>
       </div>
@@ -297,14 +299,13 @@ const Feature = ({ left, right }) => {
 };
 
 const Hero = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const hero = siteConfig.customFields.copy.hero;
   return (
     <section className={styles.hero}>
-      <h2>Stop copy-pasting</h2>
+      <h2>{hero.title}</h2>
 
-      <h3>
-        Tellery is an open source way for building collaborative analysis all in
-        one place.
-      </h3>
+      <h3>{hero.subtitle}</h3>
 
       <a href="/docs/">Get Started</a>
       <HeroSnapshot />
@@ -339,6 +340,8 @@ const Divider = () => {
 };
 
 const Philosophy = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const philosophy = siteConfig.customFields.copy.philosophy;
   return (
     <div className={styles.philosophy}>
       <div>
@@ -370,34 +373,24 @@ const Philosophy = () => {
           </g>
         </svg>
       </div>
-      <p>
-        We believe analytic code is an asset. But most reports, presentations,
-        dashboards are ephemeral. If we can build a tool helping people organize
-        analysis more effectively, we can help them maximize the value of data.
-      </p>
+      <p>{philosophy}</p>
     </div>
   );
 };
 
 const More = () => {
   const { siteConfig } = useDocusaurusContext();
+  const { links = [] } = siteConfig.themeConfig.footer;
 
   return (
     <div className={styles.more}>
-      <MoreColumn title="learn">
-        <MoreItem title="Documentation" href="/docs" />
-      </MoreColumn>
-      <MoreColumn title="Community">
-        <MoreItem title="Twitter" href={siteConfig.customFields.twitterUrl} />
-        <MoreItem title="Github" href={siteConfig.customFields.githubUrl} />
-      </MoreColumn>
-      <MoreColumn title="More" href="#">
-        <MoreItem title="Privacy Policy" href="#" />
-        <MoreItem
-          title="Contact Us"
-          href={`mailto:${siteConfig.customFields.contactEmail}`}
-        />
-      </MoreColumn>
+      {links.map((linkItem, i) => (
+        <MoreColumn title={linkItem.title}>
+          {linkItem.items?.map((item) => (
+            <MoreItem title={item.label} href={item.href} />
+          ))}
+        </MoreColumn>
+      ))}
     </div>
   );
 };
