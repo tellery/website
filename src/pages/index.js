@@ -33,6 +33,7 @@ const ImageWrapper = ({ height, width, className, src }) => {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <>
       <Head>
@@ -102,12 +103,13 @@ const Logo = (props) => {
 };
 
 const MenuItems = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const { items = [] } = siteConfig.themeConfig.navbar;
   return (
     <>
-      <MenuItem title="Github" href="https://github.com/tellery/tellery" />
-      <MenuItem title="Features" href="#" />
-      <MenuItem title="Docs" href="/docs/" />
-      <MenuItem title="Pricing" href="#" />
+      {items.map((item) => (
+        <MenuItem title={item.label} href={item.href} />  
+      ))}
     </>
   );
 };
@@ -240,14 +242,13 @@ const Feature = ({ left, right }) => {
 };
 
 const Hero = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const hero = siteConfig.customFields.copy.hero;
   return (
     <section className={styles.hero}>
-      <h2>Stop copy-pasting</h2>
+      <h2>{hero.title}</h2>
 
-      <h3>
-        Tellery is an open source way for building collaborative analysis all in
-        one place.
-      </h3>
+      <h3>{hero.subtitle}</h3>
 
       <a href="/docs/">Get Started</a>
       <HeroSnapshot />
@@ -282,6 +283,8 @@ const Divider = () => {
 };
 
 const Philosophy = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const philosophy = siteConfig.customFields.copy.philosophy;
   return (
     <div className={styles.philosophy}>
       <div>
@@ -314,28 +317,25 @@ const Philosophy = () => {
         </svg>
       </div>
       <p>
-        We believe analytic code is an asset. But most reports, presentations,
-        dashboards are ephemeral. If we can build a tool helping people organize
-        analysis more effectively, we can help them maximize the value of data.
+        {philosophy}
       </p>
     </div>
   );
 };
 
 const More = () => {
+  const { siteConfig } = useDocusaurusContext();
+  const { links = [] } = siteConfig.themeConfig.footer;
+
   return (
-    <div className={styles.more}>
-      <MoreColumn title="learn">
-        <MoreItem title="Documentation" />
+    <div className={styles.more}> 
+    {links.map((linkItem, i) => (
+      <MoreColumn title={linkItem.title}>  
+          {linkItem.items?.map((item) => (
+            <MoreItem title={item.label} href={item.href} />
+          ))}
       </MoreColumn>
-      <MoreColumn title="Community">
-        <MoreItem title="Twitter" />
-        <MoreItem title="Github" />
-      </MoreColumn>
-      <MoreColumn title="More">
-        <MoreItem title="Privacy Policy" />
-        <MoreItem title="Contact Us" />
-      </MoreColumn>
+    ))}
     </div>
   );
 };
@@ -349,6 +349,6 @@ const MoreColumn = ({ children, title }) => {
   );
 };
 
-const MoreItem = ({ title }) => {
-  return <li>{title}</li>;
+const MoreItem = ({ title, href }) => {
+  return <li><a href={href}>{title}</a></li>;
 };
