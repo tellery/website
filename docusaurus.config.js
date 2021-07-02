@@ -28,7 +28,7 @@ const config = {
       title: "Tellery",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/icon.svg",
       },
       items: [
         {

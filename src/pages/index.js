@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import Head from "@docusaurus/Head";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import clsx from "clsx";
+import { CircularLoading } from '../components/CircularLoading'
+import { useClickAway } from "react-use";
 
 const ImageWrapper = ({ height, width, className, src }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -31,46 +32,52 @@ const ImageWrapper = ({ height, width, className, src }) => {
   );
 };
 
+const Meta = () => {
+  return (
+    <Head>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <title>Tellery</title>
+      <link rel="icon" href="/icon.svg" />
+      <link rel="mask-icon" href="/mask-icon.svg" color="#002FA7" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta
+        name="viewport"
+        key="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      />
+    </Head>
+  );
+};
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <>
-      <Head>
-        <Link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <title>Tellery</title>
-        <link rel="icon" href="/icon.svg" />
-        <link rel="mask-icon" href="/mask-icon.svg" color="#002FA7" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta
-          name="viewport"
-          key="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
-        />
-      </Head>
+      <Meta></Meta>
       <Header />
       <Body />
       <Subscribe />
@@ -102,6 +109,8 @@ const Logo = (props) => {
 };
 
 const MenuItems = () => {
+  const { siteConfig } = useDocusaurusContext();
+
   return (
     <>
       <MenuItem title="Github" href="https://github.com/tellery/tellery" />
@@ -113,14 +122,33 @@ const MenuItems = () => {
 };
 
 const Menu = () => {
+  const [showMenuDropdown, setShowMenuDropdown] = useState(false);
+  const ref = useRef(null);
+  useClickAway(ref, () => {
+    setShowMenuDropdown(false);
+  });
+
   return (
     <>
       <ul className={styles.menu}>
         <MenuItems />
       </ul>
       <ul className={styles.dropdown}>
-        <span>Menu</span>
-        <div className={styles.dropdownContent}>
+        <span
+          onClick={(e) => {
+            setShowMenuDropdown(!showMenuDropdown);
+          }}
+        >
+          Menu
+        </span>
+        <div
+          ref={ref}
+          className={styles.dropdownContent}
+          style={{
+            opacity: showMenuDropdown ? 1 : 0,
+            pointerEvents: showMenuDropdown ? "auto" : "none",
+          }}
+        >
           <MenuItems />
         </div>
       </ul>
@@ -129,13 +157,42 @@ const Menu = () => {
 };
 
 const Subscribe = () => {
+  const ref = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
+
   return (
     <section className={styles.subscribe}>
       <div>
         <h2>Get the latest news and product updates</h2>
-        <form onSubmit={(e) => e.preventDefault()}>
-          <input placeholder="Get tellery" type="email"></input>
-          <button>Subscribe to newsletter</button>
+        <form
+          onSubmit={(e) => {
+            setLoading(true);
+            fetch("https://tellery.codefuture.top/subscribe", {
+              body: JSON.stringify({ email: ref.current.value }),
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+            })
+              .then((res) => {
+                setLoading(false);
+                setSubscribed(true)
+              })
+              .finally((res) => {
+                setLoading(false);
+              });
+            e.preventDefault();
+          }}
+        >
+          <input ref={ref} placeholder="Get tellery" type="email"></input>
+          <button>
+            {loading
+              ? <CircularLoading size={12} color={"#ffffff"} scale={1}/>
+              : subscribed
+              ? "Subscribe success!"
+              : " Subscribe to newsletter"}
+          </button>
         </form>
       </div>
     </section>
@@ -152,7 +209,7 @@ const MenuItem = ({ title, href }) => {
 
 const Body = () => {
   return (
-    <main>
+    <main className={styles.body}>
       <Hero />
       <Features />
     </main>
@@ -323,18 +380,23 @@ const Philosophy = () => {
 };
 
 const More = () => {
+  const { siteConfig } = useDocusaurusContext();
+
   return (
     <div className={styles.more}>
       <MoreColumn title="learn">
-        <MoreItem title="Documentation" />
+        <MoreItem title="Documentation" href="/docs" />
       </MoreColumn>
       <MoreColumn title="Community">
-        <MoreItem title="Twitter" />
-        <MoreItem title="Github" />
+        <MoreItem title="Twitter" href={siteConfig.customFields.twitterUrl} />
+        <MoreItem title="Github" href={siteConfig.customFields.githubUrl} />
       </MoreColumn>
-      <MoreColumn title="More">
-        <MoreItem title="Privacy Policy" />
-        <MoreItem title="Contact Us" />
+      <MoreColumn title="More" href="#">
+        <MoreItem title="Privacy Policy" href="#" />
+        <MoreItem
+          title="Contact Us"
+          href={`mailto:${siteConfig.customFields.contactEmail}`}
+        />
       </MoreColumn>
     </div>
   );
@@ -349,6 +411,10 @@ const MoreColumn = ({ children, title }) => {
   );
 };
 
-const MoreItem = ({ title }) => {
-  return <li>{title}</li>;
+const MoreItem = ({ title, href }) => {
+  return (
+    <li>
+      <a href={href}>{title}</a>
+    </li>
+  );
 };

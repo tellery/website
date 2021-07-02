@@ -4,13 +4,9 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
- 
 
-html {
+.body {
   background: #ffffff;
-}
-a {
-  color: inherit;
 }
 
 .heroBanner {
@@ -60,7 +56,10 @@ a {
   display: flex;
   align-items: center;
   padding: 0 15px;
-  cursor: pointer;
+}
+
+.menuItem a {
+  color: inherit;
 }
 
 .footer {
@@ -115,6 +114,11 @@ a {
   color: #ffffff;
   margin: 15px 0px;
 }
+
+.more a {
+  color: inherit;
+}
+
 
 .more * + * {
   margin-left: 100px;
@@ -172,6 +176,11 @@ a {
   border: none;
   margin-left: 20px;
   cursor: pointer;
+  min-width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 250ms;
 }
 
 .hero {
@@ -288,10 +297,12 @@ a {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  user-select: none;
+  cursor: pointer;
 }
 
 .dropdownContent {
-  display: none;
+  display: block;
   position: fixed;
   right: 0;
   top: 64px;
@@ -300,8 +311,9 @@ a {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 16px 16px;
   z-index: 1;
-  border-radius: 10px;
   color: #333333;
+  cursor: default;
+  transition: opacity 250ms;
 }
 
 .dropdownContent * + * {
