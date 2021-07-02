@@ -41,24 +41,24 @@ const Meta = () => {
         rel="stylesheet"
       />
       <title>Tellery</title>
-      <link rel="icon" href="/icon.svg" />
-      <link rel="mask-icon" href="/mask-icon.svg" color="#002FA7" />
+      <link rel="icon" href="/img/icon.svg" />
+      <link rel="mask-icon" href="img/mask-icon.svg" color="#002FA7" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/apple-touch-icon.png"
+        href="/img/apple-touch-icon.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon-32x32.png"
+        href="/img/favicon-32x32.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/favicon-16x16.png"
+        href="/img/favicon-16x16.png"
       />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
