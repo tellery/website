@@ -23,19 +23,22 @@ For asking a question in tellery, you need to [configure a database](/docs/how-t
 
 
 
-Type `/` to bring up your menu of content options. Go ahead and choose "Question`Q`", then a question block will appear in the story.
+Type `/` to bring up your menu of content options. Go ahead and choose "Question", then a question block will appear in the story.
 
 
 ### Edit SQL
 
 
-Tellery will automatically open an question editor when a new question is created. You can edit the SQL and 
-click 'Execute▶️' button to submit it to Tellery. Tellery will query data warehouse, fetch result back, and visualize it.
+When a new question is created, Tellery will automatically open an question editor. Start writing your SQL there.
 
 
 Click the "Edit SQL`<>`" on the bottom right of any existing question block to bring up its SQL in the question editor.
 
 
+### Execute SQL
+
+
+You can click "Execute▶️" button to submit the SQL of question to Tellery. Tellery will query data warehouse, fetch result back, and visualize it.
 
 
 ###  Change the visualization
