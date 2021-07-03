@@ -5,32 +5,10 @@ import Head from "@docusaurus/Head";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import clsx from "clsx";
 import { CircularLoading } from "../components/CircularLoading";
+import { HomepageFeatures } from "../components/HomepageFeatures";
+import { ImageWrapper } from "../components/ImageWrapper";
 import { useClickAway } from "react-use";
 
-const ImageWrapper = ({ height, width, className, src }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (ref.current?.complete) {
-      setImageLoaded(true);
-    }
-  }, []);
-
-  return (
-    <div
-      className={clsx(styles.imageWrapper, className)}
-      style={{ paddingTop: `${(100 * height) / width}%` }}
-    >
-      <img
-        src={src}
-        style={{ opacity: imageLoaded ? 1 : 0.1 }}
-        onLoad={(e) => setImageLoaded(true)}
-        ref={ref}
-      />
-    </div>
-  );
-};
 
 const Meta = () => {
   return (
@@ -213,90 +191,12 @@ const Body = () => {
   return (
     <main className={styles.body}>
       <Hero />
-      <Features />
+      <HomepageFeatures />
     </main>
   );
 };
 
-const Features = () => {
-  return (
-    <section className={styles.features}>
-      <Feature
-        left={
-          <>
-            <h3>Streamlined Analysis</h3>
-            <p>
-              Tellery allows you edit your analytics code and visualization
-              options without leaving your current context.
-            </p>
-          </>
-        }
-        right={null}
-      />
-      <Feature
-        left={
-          <>
-            <ImageWrapper
-              src={useBaseUrl("/img/home/screenshot-2.png")}
-              width={600}
-              height={482}
-            />
-          </>
-        }
-        right={
-          <>
-            <h3>Write once, reference anywhere</h3>
-            <p>
-              Tellery allows you abstract essential business logic, and
-              reference it anywhere. Stop writing duplicated metrics calculation
-              over and over gain.
-            </p>
-            <p>
-              Tellery uses SQL to model data, which means you can easily export
-              the transformation code to dbt (to assure quality or improve
-              performance).
-            </p>
-          </>
-        }
-      />
 
-      <Feature
-        left={
-          <>
-            <h3>All in one analytic workflow</h3>
-            <p>
-              Want a KPI dashboard? A weekly report? A deep user research?
-              Tellery allows you build your deliverables from dozens of building
-              blocks. Stop copy-pasting screenshot of charts between tabs.
-            </p>
-            <p>
-              Numbers are defined consistently and always up to date. It’s easy
-              to discover and trust data across the organization.
-            </p>
-          </>
-        }
-        right={
-          <>
-            <ImageWrapper
-              src={useBaseUrl("/img/home/screenshot-1.png")}
-              width={695}
-              height={494}
-            />
-          </>
-        }
-      />
-    </section>
-  );
-};
-
-const Feature = ({ left, right }) => {
-  return (
-    <div className={styles.feature}>
-      <div>{left}</div>
-      <div>{right}</div>
-    </div>
-  );
-};
 
 const Hero = () => {
   const { siteConfig } = useDocusaurusContext();

@@ -1,66 +1,96 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./HomepageFeatures.module.css";
+import { ImageWrapper } from "../components/ImageWrapper";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const FeatureList = [
   {
-    title: "Streamlined Analysis",
-    Svg: require("../../static/img/undraw_docusaurus_mountain.svg").default,
-    description: (
+    "title": "Build analytical narratives from scratch, faster.",
+    "description": (
       <>
-        Tellery allows you edit your analytics code and visualization options
-        without leaving your current context.
+        Tellery comes with a bucket of building blocks and rich text styling features.
+        Want a feature-specific analysis? An anomalies investigation? 
+        A Campaign-oriented dashboard? Tell story your own way. 
+        Stop copy-pasting screenshot of charts between tabs.
       </>
     ),
+    "image": {
+      "url": "/img/home/screenshot-1.png",
+      "width": 695,
+      "height": 494
+    },
   },
   {
-    title: "Modular SQL",
-    Svg: require("../../static/img/undraw_docusaurus_tree.svg").default,
-    description: (
+    "title": "Design for collaborative analytics",
+    "description": (
       <>
-        Tellery allows you abstract essential business logic, and reference it
-        anywhere. Stop writing duplicated SQLs to calculate metrics over and
-        over again.
+        Tellery allows you abstract essential business logic, and
+        reference it in future contexts. 
+        Stop writing duplicated metrics calculation over and over gain.
       </>
     ),
+    "image": {
+      "url": "/img/home/screenshot-2.png",
+      "width": 600,
+      "height": 482
+    },
   },
   {
-    title: "All-in-one workspace",
-    Svg: require("../../static/img/undraw_docusaurus_react.svg").default,
-    description: (
+    "title": "Streamlined Analysis",
+    "description": (
       <>
-        Tellery allows you customize your deliverables from dozens of building
-        blocks. Want a KPI dashboard? A weekly report? A deep user segment
-        research? Tell story your own way.
+        Edit analytic code and configure visualization options without leaving your current context. 
+        Answer questions in seconds. Put your explanations.
       </>
     ),
+    "image": {
+      "url": "/img/home/screenshot-1.png",
+      "width": 600,
+      "height": 482
+    }
   },
-];
+]
 
-function Feature({ Svg, title, description }) {
-  return (
-    <div className={clsx("col col--4")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
-export default function HomepageFeatures() {
+export const HomepageFeatures = () => {
+  
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
+   
+     {FeatureList.map((item, idx) => (
+        <FeatureWrapper item={item} contentOnLeft={idx % 2 == 1} />
+      ))}
+
     </section>
   );
+};
+
+const FeatureWrapper = ({item, contentOnLeft}) => {
+  const content = (
+    <>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+    </>
+  );
+  const image = (
+    <>
+      <ImageWrapper src={useBaseUrl(item.image.url)} 
+        width={item.image.width} 
+        height={item.image.height} />
+    </> 
+  );
+  
+  return contentOnLeft ? <Feature left={content} right={image} />
+   : <Feature left={image} right={content} />
 }
+
+const Feature = ({ left, right }) => {
+  return (
+    <div className={styles.feature}>
+      <div>{left}</div>
+      <div>{right}</div>
+    </div>
+  );
+};
+
+export default HomepageFeatures;
