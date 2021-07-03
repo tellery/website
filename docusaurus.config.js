@@ -8,7 +8,7 @@ const customFields = {
     "https://join.slack.com/t/telleryio/shared_invite/zt-s37tgvo7-QBdpggK_uG6QqJVWhSXlFg",
   copy: {
     hero: {
-      title: "Stop copy-pasting, start referencing", 
+      title: "Ad hoc analytics made easy, and consistent", 
       subtitle:
         "Tellery helps analysts organize analyses and narrate them in one place. As easy as to use a notebook. As powerful as a data modeling tool.",
     },
@@ -24,7 +24,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/mask-icon.svg",
   organizationName: "tellery", // Usually your GitHub org/user name.
   projectName: "website", // Usually your repo name.
   customFields: customFields,
