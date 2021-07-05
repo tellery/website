@@ -52,7 +52,7 @@ const config = {
       ],
     },
     footer: {
-      copyright: customFields.copyright,
+      // copyright: customFields.copyright,
       style: "dark",
       links: [
         {
@@ -82,6 +82,10 @@ const config = {
           ],
         },
       ],
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/nightOwl'),
+      additionalLanguages: ['bash'],
     },
   },
   presets: [
