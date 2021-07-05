@@ -29,7 +29,7 @@
 }
 
 .nav {
-  background: linear-gradient(127.82deg, #ea3df9 -102.76%, #002fa7 166.48%);
+  background: #002fa7;
   padding: 17px 30px;
   display: flex;
   justify-content: space-between;
@@ -180,6 +180,7 @@
   justify-content: center;
   align-items: center;
   transition: width 250ms;
+  font-size: 16px;
 }
 
 .hero {

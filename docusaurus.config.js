@@ -46,7 +46,7 @@ const config = {
         },
         {
           label: "Features",
-          href: "#"
+          href: "#features"
         }    
         //        {to: '/blog', label: 'Blog', position: 'left'},
       ],

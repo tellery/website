@@ -6,7 +6,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const FeatureList = [
   {
-    "title": "Build analytical narratives from scratch, faster.",
+    "title": "Build analytical narratives from scratch, faster",
     "description": (
       <>
         Tellery comes with a bucket of building blocks and rich text styling features.
@@ -55,7 +55,7 @@ const FeatureList = [
 export const HomepageFeatures = () => {
   
   return (
-    <section className={styles.features}>
+    <section id='features' className={styles.features}>
    
      {FeatureList.map((item, idx) => (
         <FeatureWrapper item={item} contentOnLeft={idx % 2 == 1} />
