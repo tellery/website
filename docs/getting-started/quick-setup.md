@@ -21,7 +21,7 @@ Open your terminal, and run:
 git clone https://github.com/tellery/tellery.git
 
 # Change directories into the demo directory
-cd tellery/hack/compose
+cd tellery/deploy/compose
 
 # Run docker compose
 docker-compose up
@@ -29,7 +29,7 @@ docker-compose up
 
 You can now access it on [http://localhost:80](http://localhost:80).
 
-Check out the [general configuration guide](https://github.com/tellery/tellery/tree/master/hack/compose#environments) for more detailed info.
+Check out the [general configuration guide](https://github.com/tellery/tellery/tree/master/deploy/compose#environments) for more detailed info.
 
 
 ## Next step

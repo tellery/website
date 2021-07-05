@@ -169,7 +169,7 @@ helm install release-name tellery --set system.secretKey=xxx --set web.replicas=
 
 Or using the yaml to specify each parameter
 
-Copy these [default configuration](https://github.com/tellery/tellery/blob/master/hack/helm/values.yaml) into a new file named tellery-config.yaml, then modify as your need.
+Copy these [default configuration](https://github.com/tellery/tellery/blob/master/deploy/helm/values.yaml) into a new file named tellery-config.yaml, then modify as your need.
 
 ```shell
 helm install release-name tellery -f tellery-config.yaml
