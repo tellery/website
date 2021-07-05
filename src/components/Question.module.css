@@ -1,0 +1,28 @@
+.wrapper pre {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.title {
+  background-color: #f9fbfc;
+  color: rgb(1, 22, 39);
+
+  border: 1px solid #dddddd;
+  border-bottom: 0px;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  padding: 7px;
+  font-size: 12px;
+}
+
+.titleInner {
+  margin: 4px 8px;
+}
+
+.icon {
+  vertical-align: middle;
+  margin-right: 5px;
+  fill: #8a949d;
+}
