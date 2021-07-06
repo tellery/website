@@ -136,6 +136,14 @@
   padding: 100px 0;
 }
 
+.subscribe input {
+  font-size: 16px;
+}
+
+.subscribe input::placeholder {
+  color: #CCCCCC;
+}
+
 .subscribe div {
   display: flex;
   flex-direction: column;
@@ -181,6 +189,7 @@
   align-items: center;
   transition: width 250ms;
   font-size: 16px;
+  font-weight: 600;
 }
 
 .hero {

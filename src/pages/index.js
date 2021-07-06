@@ -3,7 +3,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import Head from "@docusaurus/Head";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import clsx from "clsx";
 import { CircularLoading } from "../components/CircularLoading";
 import { HomepageFeatures } from "../components/HomepageFeatures";
 import { ImageWrapper } from "../components/ImageWrapper";
@@ -163,8 +162,7 @@ const Subscribe = () => {
             e.preventDefault();
           }}
         >
-          <input ref={ref} placeholder="Enter your email" type="email" 
-            style={{fontSize: 16, color: '#CCCCCC'}}></input>
+          <input ref={ref} placeholder="Enter your email" type="email" ></input>
           <button>
             {loading ? (
               <CircularLoading size={12} color={"#ffffff"} scale={1} />

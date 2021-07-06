@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
-import clsx from "clsx";
-import styles from "./ImageWrapper.module.css";
+import clsx from "clsx"
+import React, { useEffect, useRef, useState } from "react"
+import styles from "./ImageWrapper.module.css"
 
 export const ImageWrapper = ({ height, width, className, src }) => {
   const [imageLoaded, setImageLoaded] = useState(false);

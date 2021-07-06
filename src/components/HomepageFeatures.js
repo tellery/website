@@ -1,8 +1,7 @@
-import React from "react";
-import clsx from "clsx";
-import styles from "./HomepageFeatures.module.css";
-import { ImageWrapper } from "../components/ImageWrapper";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl from "@docusaurus/useBaseUrl"
+import React from "react"
+import { ImageWrapper } from "../components/ImageWrapper"
+import styles from "./HomepageFeatures.module.css"
 
 const FeatureList = [
   {
@@ -45,9 +44,9 @@ const FeatureList = [
       </>
     ),
     "image": {
-      "url": "/img/home/screenshot-1.png",
+      "url": "/img/home/screenshot-3.png",
       "width": 600,
-      "height": 482
+      "height": 683
     }
   },
 ]
