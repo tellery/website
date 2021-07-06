@@ -164,7 +164,7 @@ const Subscribe = () => {
           }}
         >
           <input ref={ref} placeholder="Enter your email" type="email" 
-            style={{fontSize: 16, color: '#CCCCCC'}}></input>
+            style={{fontSize: 16, color: '#AAA'}}></input>
           <button>
             {loading ? (
               <CircularLoading size={12} color={"#ffffff"} scale={1} />
