@@ -71,7 +71,7 @@ Here’s a list of basic blocks in Tellery:
 
 
 
-Tellery provide [markdown](/docs/how-to-use/markdown) syntax you're familiar with to add your narratives. The typing experience is simple. You can put your relevant explanations to visualization, making it possible for stakeholders to understand your story.
+Tellery provide [markdown](/docs/how-to-use/shortcut#markdown-styling) syntax you're familiar with to add your narratives. The typing experience is simple. You can put your relevant explanations to visualization, making it possible for stakeholders to understand your story.
 
 
 

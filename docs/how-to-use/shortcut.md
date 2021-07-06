@@ -2,12 +2,25 @@
 sidebar_position: 4
 ---
 
-# How to use markdown
+# Learn the shortcut
+
+:::note
+`Cmd/Ctrl`  indicates "Command" on Mac and "Control" on Windows and Linux. 
+:::
+
+## Question editor
+
+
+* Press `Cmd/Ctrl + s` to save changes to current question
+* Press `Cmd/Ctrl + Enter` to execute the SQL of current question
+* Press `Alt/Option + v` to toggle "Visualization options" 
+* Press `Alt/Option + s` to toggle "Edit SQL" 
+
+
+## Markdown styling
 
 Markdown is a lightweight markup language with plain text for formatting syntax. Tellery **is** a Markdown editor. That means you can do things like the following…
 
-
-## Styling
 
 ### List
 
