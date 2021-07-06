@@ -5,7 +5,7 @@ import Head from "@docusaurus/Head";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { CircularLoading } from "../components/CircularLoading";
 import { HomepageFeatures } from "../components/HomepageFeatures";
-import { ImageWrapper } from "../components/ImageWrapper";
+import { VideoWrapper } from "../components/VideoWrapper";
 import { useClickAway } from "react-use";
 
 
@@ -92,7 +92,7 @@ const MenuItems = () => {
   return (
     <>
       {items.map((item) => (
-        <MenuItem title={item.label} href={item.href} />
+        <MenuItem key={item.label} title={item.label} href={item.href} />
       ))}
     </>
   );
@@ -216,10 +216,9 @@ const Hero = () => {
 const HeroSnapshot = () => {
   return (
     <div className={styles.heroSnapshot}>
-      <ImageWrapper
-        src={useBaseUrl("/img/home/screenshot-1.png")}
-        width={695}
-        height={494}
+      <VideoWrapper src={useBaseUrl("/img/home/hero-video.mov")}
+        width={2790}
+        height={1418}
       />
     </div>
   );
