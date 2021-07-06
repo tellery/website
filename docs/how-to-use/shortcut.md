@@ -8,6 +8,12 @@ sidebar_position: 4
 `Cmd/Ctrl`  indicates "Command" on Mac and "Control" on Windows and Linux. 
 :::
 
+
+## Global keybinding
+
+* Press `Cmd/Ctrl + k` to toggle search bar
+
+
 ## Question editor
 
 
@@ -17,7 +23,19 @@ sidebar_position: 4
 * Press `Alt/Option + s` to toggle "Edit SQL" 
 
 
+## Story 
+
+* Type `[[` and the name of another story to create a link to it
+* Press `Alt/Option` and click a story link to open it in sidebar
+
+
+### Slash command
+
+TBD
+
+
 ## Markdown styling
+
 
 Markdown is a lightweight markup language with plain text for formatting syntax. Tellery **is** a Markdown editor. That means you can do things like the following…
 
