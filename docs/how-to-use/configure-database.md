@@ -10,25 +10,21 @@ A profile consists of:
 
 - connector type *(what kind of database you are connecting)*
 
-- connection string *(basically the remote address of your database, along with some configuration)*
-
 - authentication *(username, password)*
 
-- optionals *(some miscellaneous configurations, differs from each kind of connector. For more details, see sections below)*
-
-:::note
-Since our connectors are based on JDBC, you can always put extra configuration on the connection string.
-
-Nonetheless, the connection string will be returned to the frontend as plain text. Hence, for the security of your own data, **do not put the authentication into connection string**.
-:::
+- configurations & optionals *(host, port, etc. differs from each kind of connector. For more details, see sections below)*
 
 ## Snowflake
 
 To connect with Snowflake, you need to provide:
 
-- username
-- password
-- a [JDBC connection string](https://docs.snowflake.com/en/user-guide/jdbc-configure.html#jdbc-driver-connection-string)
+|    Field    |                             Description                           |    Example    | Required |
+|:-----------:|:-----------------------------------------------------------------:|:-------------:|:--------:|
+| accountName |                    your Snowflake account name                    |    xy12345    |   yes    |
+|   regionId  |                     your Snowflake region Id                      | us-ease-2.aws |   yes    |
+|     role    |  the default access control role to use in the Snowflake session  |    SYSADMIN   |    no    |
+|  warehouse  |                the virtual warehouse to run queries               |   COMPUTE_WH  |    no    |
+
 
 Snowflake connector supports importing data from csv without any other configuration.
 
@@ -36,9 +32,11 @@ Snowflake connector supports importing data from csv without any other configura
 
 To connect with Redshift, you need to provide:
 
-- username
-- password
-- a [JDBC connection string](https://docs.aws.amazon.com/redshift/latest/mgmt/jdbc20-obtain-url.html) (database required)
+|    Field    |                           Description                          |                             Example                            | Required |
+|:-----------:|:--------------------------------------------------------------:|:--------------------------------------------------------------:|:--------:|
+|  endpoint  |               The hostname of your Redshift cluster             |  examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com  |   yes    |
+|    port    | The port number that you specified when launched , usually 5439 |                               5439                             |   yes    |
+|  database  |    The logical database to connect to and run queries against   |                               my_db                            |   yes*   |
 
 :::note
 Since the Redshift is based on PostgreSQL, the configuration of Redshift will be similar to that of PostgreSQL. If you are interested in this topic, please read the note in [PostgreSQL](#postgreSQL)
@@ -50,9 +48,11 @@ To support importing csv to Redshift, you need to provide aws credentials for up
 
 ## PostgreSQL
 
-- username
-- password
-- a [JDBC connection string](https://jdbc.postgresql.org/documentation/head/connect.html) (database required)
+|    Field    |                           Description                          |   Example   | Required |
+|:-----------:|:--------------------------------------------------------------:|:-----------:|:--------:|
+|  endpoint  |          The hostname of your PostgreSQL database               |  localhost  |   yes    |
+|    port    | The port number that you specified when launched , usually 5432 |    5432     |   yes    |
+|  database  |    The logical database to connect to and run queries against   |    my_db    |   yes*   |
 
 :::note
 The database argument is mandatory for postgreSQL, by default it would be the same as your username.
