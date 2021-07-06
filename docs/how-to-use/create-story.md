@@ -23,7 +23,7 @@ For asking a question in tellery, you need to [configure a database](/docs/how-t
 
 
 
-Type `/` to bring up your menu of content options. Go ahead and choose "Question", then a question block will appear in the story.
+Type `/` to bring up your menu of content options. Go ahead and choose "Question", then a question block will appear in the story. You can edit the name of the question.
 
 
 ### Edit SQL
@@ -38,13 +38,13 @@ Click the "Edit SQL`<>`" on the bottom right of any existing question block to b
 ### Execute SQL
 
 
-You can click "Execute▶️" button to submit the SQL of question to Tellery. Tellery will query data warehouse, fetch result back, and visualize it.
+You can click "Execute▶️" button in question editor to submit a SQL to Tellery. Tellery will query data warehouse, fetch result back, and visualize it.
 
 
 ###  Change the visualization
 
 
-To change the visualization, just click the "Visualization options📊" button on the upper right of your question editor.
+The default visualization type is `table`. To change the visualization, just click the "Visualization options📊" button on the upper right of your question editor.
 
 
 Or, click the "Visualization options📊" on the bottom right of the question block.
@@ -54,10 +54,24 @@ Or, click the "Visualization options📊" on the bottom right of the question bl
 ## Add some narratives 
 
 
-Tellery provide [markdown](/docs/how-to-use/markdown) syntax you're familiar with to add your narratives. The typing experience is simple.
+Besides the question block, you can also insert a narrative block by simply typing the `/` command.
 
 
-You can put your relevant explanations to visualization, making it possible for stakeholders to understand your story.
+Here’s a list of basic blocks in Tellery:
+
+
+* Text
+* Header
+* Image
+* Bulleted list
+* Toggle list
+* Checked list
+* Separator
+* Quote
+
+
+
+Tellery provide [markdown](/docs/how-to-use/markdown) syntax you're familiar with to add your narratives. The typing experience is simple. You can put your relevant explanations to visualization, making it possible for stakeholders to understand your story.
 
 
 
@@ -70,14 +84,13 @@ Move your mouse to the block and the `⋮⋮` icon will appear to the left of it
 
 
 
-
 ### Arrange the layout
 
 
-Drag and drop either the right or bottom edges of block Resize the block
+To resize a question block, you can drag the right or bottom edges of it.
 
 
-When you have two content blocks side by side. Hove over the space between them and you will see a separator. Drag and drop the separator between them to resize their width.
+Drag-and-dropping a block to the right side of another creates columns. Hove over the space between columns and you will see a separator. Drag and drop the separator to resize their width.
 
 
-Change the width of story from the upper right `•••` menu on your story. Making a story full-width will allow you put more content horizontally.
+Change the width of story from the upper right `•••` menu on your story. Making a story "Full-width" will allow you put more content horizontally.
