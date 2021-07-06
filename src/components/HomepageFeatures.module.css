@@ -38,3 +38,19 @@
 .feature > * + * {
   margin-left: 50px;
 }
+
+
+@media screen and (max-width: 966px) {
+  .features {
+    padding: 40px 20px;
+  }
+  .feature {
+    flex-direction: column;
+  }
+  .feature > * {
+    width: 100%;
+  }
+  .feature > * + * {
+    margin-left: 0;
+  }
+}

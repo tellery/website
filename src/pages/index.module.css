@@ -9,18 +9,6 @@
   background: #ffffff;
 }
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
 
 .buttons {
   display: flex;
@@ -287,17 +275,9 @@
   .hero h2 {
     font-size: 38px;
   }
-  .features {
-    padding: 40px 20px;
-  }
-  .feature {
-    flex-direction: column;
-  }
-  .feature > * {
-    width: 100%;
-  }
-  .feature > * + * {
-    margin-left: 0;
+
+  .hero h3 {
+    padding: 0 20px;
   }
 
   .subscribe {
