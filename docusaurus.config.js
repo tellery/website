@@ -8,7 +8,7 @@ const customFields = {
     "https://join.slack.com/t/telleryio/shared_invite/zt-s37tgvo7-QBdpggK_uG6QqJVWhSXlFg",
   copy: {
     hero: {
-      title: "Ad hoc analytics made easy, and consistent", 
+      title: "Analyze, report and organize all in one place", 
       subtitle:
         "Tellery helps analysts organize analyses and narrate them in one place. As easy as to use a notebook. As powerful as a data modeling tool.",
     },
