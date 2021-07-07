@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Quick Setup
 
-Setup Tellery quickly using docker compose.
+Setup Tellery quickly to play with on your local machine.
 
 ## Prerequisites
 
