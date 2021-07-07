@@ -15,9 +15,9 @@ const FeatureList = [
       </>
     ),
     image: {
-      url: "/img/home/screenshot-1.png",
-      width: 695,
-      height: 494,
+      url: "/img/home/feature-1.png",
+      width: 1800,
+      height: 2049,
     },
   },
   {
@@ -30,9 +30,9 @@ const FeatureList = [
       </>
     ),
     image: {
-      url: "/img/home/screenshot-2.png",
-      width: 600,
-      height: 482,
+      url: "/img/home/feature-2.png",
+      width: 1800,
+      height: 1446,
     },
   },
   {
@@ -45,9 +45,9 @@ const FeatureList = [
       </>
     ),
     image: {
-      url: "/img/home/screenshot-3.png",
-      width: 600,
-      height: 683,
+      url: "/img/home/feature-3.png",
+      width: 2205,
+      height: 1602,
     },
   },
 ];
