@@ -28,7 +28,11 @@ const config = {
   organizationName: "tellery", // Usually your GitHub org/user name.
   projectName: "website", // Usually your repo name.
   customFields: customFields,
+  plugins: ['@docusaurus/plugin-google-gtag'],
   themeConfig: {
+    gtag: {
+      trackingID: 'G-MEQXXGM2HZ',
+    },
     navbar: {
       title: "Tellery",
       logo: {

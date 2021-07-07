@@ -1,4 +1,3 @@
-
 .features {
   padding: 100px 100px 80px 100px;
   background: #fbfbfb;
@@ -38,7 +37,6 @@
 .feature > * + * {
   margin-left: 50px;
 }
-
 
 @media screen and (max-width: 966px) {
   .features {

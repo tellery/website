@@ -9,7 +9,6 @@
   background: #ffffff;
 }
 
-
 .buttons {
   display: flex;
   align-items: center;
@@ -129,7 +128,7 @@
 }
 
 .subscribe input::placeholder {
-  color: #CCCCCC;
+  color: #cccccc;
 }
 
 .subscribe div {
@@ -272,12 +271,11 @@
 }
 
 @media screen and (max-width: 966px) {
+  .hero {
+    padding: 0 20px;
+  }
   .hero h2 {
     font-size: 38px;
-  }
-
-  .hero h3 {
-    padding: 0 20px;
   }
 
   .subscribe {

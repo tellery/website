@@ -8,7 +8,6 @@ import { HomepageFeatures } from "../components/HomepageFeatures";
 import { VideoWrapper } from "../components/VideoWrapper";
 import { useClickAway } from "react-use";
 
-
 const Meta = () => {
   return (
     <Head>
@@ -162,8 +161,12 @@ const Subscribe = () => {
             e.preventDefault();
           }}
         >
-          <input ref={ref} placeholder="Enter your email" type="email" 
-            style={{fontSize: 16, color: '#AAA'}}></input>
+          <input
+            ref={ref}
+            placeholder="Enter your email"
+            type="email"
+            style={{ fontSize: 16, color: "#AAA" }}
+          ></input>
           <button>
             {loading ? (
               <CircularLoading size={12} color={"#ffffff"} scale={1} />
@@ -196,8 +199,6 @@ const Body = () => {
   );
 };
 
-
-
 const Hero = () => {
   const { siteConfig } = useDocusaurusContext();
   const hero = siteConfig.customFields.copy.hero;
@@ -216,7 +217,8 @@ const Hero = () => {
 const HeroSnapshot = () => {
   return (
     <div className={styles.heroSnapshot}>
-      <VideoWrapper src={useBaseUrl("/img/home/hero-video.mov")}
+      <VideoWrapper
+        src={useBaseUrl("/img/home/hero-video.mov")}
         width={2790}
         height={1418}
       />
@@ -264,8 +266,8 @@ const Philosophy = () => {
           </mask>
           <g mask="url(#mask0)">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M53.565 1H6.44V15.5H13.69V8.25H46.315V51.75H30.6064L26.9814 59H53.565V1ZM6.44 48.125V22.75H13.69V30H23.3567V37.25H13.69V48.125C13.69 50.127 15.313 51.75 17.315 51.75H23.3564L19.7314 59H17.315C11.3089 59 6.44 54.1311 6.44 48.125Z"
               fill="white"
             />
@@ -284,9 +286,9 @@ const More = () => {
   return (
     <div className={styles.more}>
       {links.map((linkItem, i) => (
-        <MoreColumn title={linkItem.title}>
+        <MoreColumn title={linkItem.title} key={linkItem.title}>
           {linkItem.items?.map((item) => (
-            <MoreItem title={item.label} href={item.href} />
+            <MoreItem key={item.label} title={item.label} href={item.href} />
           ))}
         </MoreColumn>
       ))}

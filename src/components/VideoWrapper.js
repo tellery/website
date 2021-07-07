@@ -1,6 +1,6 @@
-import clsx from "clsx"
-import React, { useEffect, useRef, useState } from "react"
-import styles from "./VideoWrapper.module.css"
+import clsx from "clsx";
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./VideoWrapper.module.css";
 
 export const VideoWrapper = ({ height, width, className, src }) => {
   const ref = useRef(null);
@@ -16,6 +16,7 @@ export const VideoWrapper = ({ height, width, className, src }) => {
         autoPlay
         loop
         muted
+        playsInline
       />
     </div>
   );
