@@ -165,7 +165,6 @@ const Subscribe = () => {
             ref={ref}
             placeholder="Enter your email"
             type="email"
-            style={{ fontSize: 16, color: "#AAA" }}
           ></input>
           <button>
             {loading ? (

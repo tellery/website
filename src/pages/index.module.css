@@ -64,8 +64,8 @@
 .philosophy p {
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 17px;
   color: #ffffff;
   margin: 0;
   margin-left: 30px;
@@ -79,8 +79,8 @@
 
 .more h5 {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 17px;
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -94,8 +94,8 @@
 
 .more li {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 17px;
   display: flex;
   align-items: center;
   color: #ffffff;
