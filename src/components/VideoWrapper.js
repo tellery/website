@@ -17,6 +17,7 @@ export const VideoWrapper = ({ height, width, className, src }) => {
         loop
         muted
         playsInline
+        x5-video-player-type="h5-page"
       />
     </div>
   );
