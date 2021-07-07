@@ -1,7 +1,11 @@
+
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import React from 'react'
 import { ImageWrapper } from '../components/ImageWrapper'
+import { VideoWrapper } from '../components/VideoWrapper'
+
 import styles from './HomepageFeatures.module.css'
+
 
 const FeatureList = [
   {
@@ -41,13 +45,14 @@ const FeatureList = [
         seconds. Put your explanations.
       </>
     ),
-    image: {
-      url: '/img/home/feature-3.png',
-      width: 2205,
-      height: 1602
-    }
-  }
-]
+    video: {
+      url: '/img/home/hero-video.mov',
+      width: 2790,
+      height: 1418,
+    },
+  },
+];
+
 
 export const HomepageFeatures = () => {
   return (
@@ -65,15 +70,31 @@ const FeatureWrapper = ({ item, contentOnLeft }) => {
       <h3>{item.title}</h3>
       <p>{item.description}</p>
     </>
-  )
-  const image = (
+  );
+  const imageOrVideo = ('image' in item) ? (
     <>
-      <ImageWrapper src={useBaseUrl(item.image.url)} width={item.image.width} height={item.image.height} />
-    </>
-  )
+      <ImageWrapper
+        src={useBaseUrl(item.image.url)}
+        width={item.image.width}
+        height={item.image.height}
+      />
+    </>  
+  ) : (
+    <>
+      <VideoWrapper
+        src={useBaseUrl(item.video.url)}
+        width={item.video.width}
+        height={item.video.height}
+      />
+    </> 
+  );
 
-  return contentOnLeft ? <Feature left={content} right={image} /> : <Feature left={image} right={content} />
-}
+  return contentOnLeft ? (
+    <Feature left={content} right={imageOrVideo} />
+  ) : (
+    <Feature left={imageOrVideo} right={content} />
+  );
+};
 
 const Feature = ({ left, right }) => {
   return (
