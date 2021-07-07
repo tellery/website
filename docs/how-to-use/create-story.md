@@ -2,9 +2,6 @@
 sidebar_position: 1
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl'
-import VideoWrapper from "@site/src/components/VideoWrapper.js"
-
 
 # Create a new story
 
@@ -16,7 +13,7 @@ Click the "Create new story`+`" button at the bottom of your sidebar.
 Then the story is created in your workspace, and a new empty story will pop up in front of you. You can give it a meaningful name.
 
 
-<VideoWrapper src={useBaseUrl('/img/tutorial/create-story.mp4')} width={1920} height={1080} />
+<video src='/img/tutorial/create-story.mp4' />
 
 
 ## Ask a new question
@@ -57,7 +54,7 @@ The default visualization type is `table`. To change the visualization, just cli
 Or, click the "Visualization options📊" on the bottom right of the question block.
 
 
-<VideoWrapper src={useBaseUrl('/img/tutorial/create-story.mp4')} width={1920} height={1080} />
+<video src='/img/tutorial/create-story.mp4' />
 
 
 ## Add some narratives
@@ -87,7 +84,7 @@ Tellery provides [markdown](/docs/how-to-use/shortcut#markdown-styling) syntax y
 ### Drag and drop
 
 
-<VideoWrapper src={useBaseUrl('/img/tutorial/create-story.mp4')} width={1920} height={1080} />
+<video src='/img/tutorial/create-story.mp4' />
 
 
 
