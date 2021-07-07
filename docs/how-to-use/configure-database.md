@@ -31,11 +31,11 @@ Snowflake connector supports importing data from csv without any other configura
 
 To connect with Redshift, you need to provide:
 
-|    Field    |                           Description                          |                             Example                            | Required |
-|:-----------:|:--------------------------------------------------------------:|:--------------------------------------------------------------:|:--------:|
-|  Endpoint  |               The hostname of your Redshift cluster             |  examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com  |   yes    |
-|    Port    | The port number that you specified when launched , usually 5439 |                               5439                             |   yes    |
-|  Database  |    The logical database to connect to and run queries against   |                               my_db                            |   yes*   |
+|   Field    |                          Description                           |                             Example                            | Required |
+|:----------:|:--------------------------------------------------------------:|:--------------------------------------------------------------:|:--------:|
+|  Endpoint  |              The hostname of your Redshift cluster             |  examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com  |   yes    |
+|    Port    | The port number that you specified when launched, usually 5439 |                               5439                             |   yes    |
+|  Database  |   The logical database to connect to and run queries against   |                               my_db                            |   yes*   |
 
 :::note
 Since the Redshift is based on PostgreSQL, the configuration of Redshift will be similar to that of PostgreSQL. If you are interested in this topic, please read the note in [PostgreSQL](#postgreSQL)
@@ -47,18 +47,18 @@ To support importing csv to Redshift, you need to provide aws credentials for up
 
 ## PostgreSQL
 
-|    Field    |                           Description                          |   Example   | Required |
-|:-----------:|:--------------------------------------------------------------:|:-----------:|:--------:|
-|  Endpoint  |          The hostname of your PostgreSQL database               |  localhost  |   yes    |
-|    Port    | The port number that you specified when launched , usually 5432 |    5432     |   yes    |
-|  Database  |    The logical database to connect to and run queries against   |    my_db    |   yes*   |
+|    Field   |                           Description                          |   Example   | Required |
+|:----------:|:--------------------------------------------------------------:|:-----------:|:--------:|
+|  Endpoint  |         The hostname of your PostgreSQL database               |  localhost  |   yes    |
+|    Port    | The port number that you specified when launched, usually 5432 |    5432     |   yes    |
+|  Database  |   The logical database to connect to and run queries against   |    my_db    |   yes*   |
 
 :::note
 The database argument is mandatory for postgreSQL, by default it would be the same as your username.
 
-In the setting of postgreSQL, databases stand for the topmost hierarchical level of organizing database objects, so you cannot do cross-database query without other plugins.
+In the setting of postgreSQL, databases stand for the topmost hierarchical level of organizing database objects, so you cannot do cross-database queries without other plugins.
 
-Therefore, our connector will restrict your accessibility into the database you configured, all of other databases are invisible even if you got the permission.
+Therefore, our connector will restrict your accessibility into the database you configured, all of the other databases are invisible even if you got the permission.
 
-This settings will be also applied to Redshift.
+This setting will be also applied to Redshift.
 :::

@@ -8,7 +8,7 @@ import Question from "@site/src/components/Question.js"
 # Question referencing
 
 
-Copy-pasting code between one-off analyses will leave you a mountain of technical debt. Question referencing allows you abstract essential business logic, and reference it in future analysis. They are the LEGO blocks for your analysis. 
+Copy-pasting code between one-off analyses will leave you a mountain of technical debt. Question referencing allows you abstract essential business logic, and reference it in future analysis. They are the LEGO blocks for your analysis.
 
 
 Enter powerful question references.
@@ -17,10 +17,10 @@ Enter powerful question references.
 ## What is a question reference?
 
 
-Question reference is a lightweight modeling mechanism to grasp the nuances of your data. Rather than select from existing tables and views in your data warehouse, you can select from another question. Tellery will pull the code from question reference into dependent questions as common table expression.
+Question reference is a lightweight modeling mechanism to grasp the nuances of your data. Rather than select from existing tables and views in your data warehouse, you can select from another question. Tellery will pull the code from question reference into dependent questions as a common table expression.
 
 
-For example, consider a question which defines "active customers": 
+For example, consider a question which defines "active customers":
 
 
 <Question name="active customers">
@@ -38,7 +38,7 @@ where event in ('add_to_cart', 'checkout')
 </Question>
 
 
-This question captures the nuances of datasets but still allows future analytics code make meaningful choices on appropriate granularity.
+This question captures the nuances of datasets but still allows future analytics code to make meaningful choices on appropriate granularity.
 
 
 The following question references it, applies specific filtering and grouping, and asks "what's the number of daily active customers in 2021, by region":
@@ -57,7 +57,7 @@ group by 1,2
 </Question>
 
 
-Question references show the title of question by default. You can recognize a question reference by the highlight:
+Question references show the title of the question by default. You can recognize a question reference by the highlight:
 
 
 
@@ -67,10 +67,10 @@ Question references show the title of question by default. You can recognize a q
 ### Copy their addresses
 
 
-To link things together, every block in Tellery has an address. We can reference a question by its block address. 
+To link things together, every block in Tellery has an address. We can reference a question by its block address.
 
 
-The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy block ref" button in dropdown menu to copy its address to your clipboard.
+The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy block ref" button in the dropdown menu to copy its address to your clipboard.
 
 
 If you paste the address in the question editor, it will be automatically recognized by Tellery.
@@ -91,7 +91,7 @@ Then start typing the name of the question you want to reference. Hit "Enter" to
 Each question reference in question is clickable. You can click it to open the question in another editor tab.
 
 
-On the right side of each question, Tellery also list all the questions referencing that question
+On the right side of each question, Tellery also lists all the questions referencing that question
 in the **Downstream** section. You can navigate to them to see how they use that question.
 
 
@@ -101,4 +101,4 @@ in the **Downstream** section. You can navigate to them to see how they use that
 Although transforming and re-shaping data can be very easy in Tellery, we recommend you govern transformations using a batch-based tool like [dbt](https://www.getdbt.com/). Because you can assure data quality and improve performance there.
 
 
-You can start with question referencing to reduce clutter when answering questions on new datasets. But after the logic is mature, it's better to consolidate them in dbt to create a solid foundation that everyone can share.
+You can start with the question referencing to reduce clutter when answering questions on new datasets. But after the logic being mature, it's better to consolidate them in dbt to create a solid foundation that everyone can share.

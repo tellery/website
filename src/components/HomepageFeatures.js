@@ -39,7 +39,7 @@ const FeatureList = [
     title: 'Streamlined Analysis',
     description: (
       <>
-        Edit analytic code and configure visualization options without leaving your current context. Answer questions
+        Edit analytic code and configure visualization options without leaving the current context. Answer questions
         and put explanations in seconds.
       </>
     ),
