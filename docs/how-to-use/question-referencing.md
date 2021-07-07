@@ -78,7 +78,7 @@ The easiest way to reference a question is by having it in front of you. Move yo
 
 If you paste the address in the question editor, it will be automatically recognized by Tellery.
 
-<video src='/img/tutorial/copy-address.mp4' />
+<video src='/img/tutorial/copy-address.mp4' controls />
 
 
 ### Search for them
@@ -89,7 +89,7 @@ When editing SQL in the question editor, type double curly braces `{{` to invoke
 
 Then start typing the name of the question you want to reference. Hit "Enter" to pull its address in your editor when you’ve found the question in the dropdown that appears.
 
-<video src='/img/tutorial/search-question-ref.mp4 '/>
+<video src='/img/tutorial/search-question-ref.mp4' controls/>
 
 
 ## Navigate between questions
