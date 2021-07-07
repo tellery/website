@@ -23,11 +23,14 @@ git clone https://github.com/tellery/tellery.git
 # Change directories into the demo directory
 cd tellery/deploy/compose
 
+# View or edit config file (optional)
+vim .env
+
 # Run docker compose
 docker-compose up
 ```
 
-You can now access it on [http://localhost:80](http://localhost:80).
+You can now access it on [http://localhost:8000](http://localhost:8000).
 
 Check out the [general configuration guide](https://github.com/tellery/tellery/tree/master/deploy/compose#environments) for more detailed info.
 
