@@ -56,7 +56,11 @@ export const HomepageFeatures = () => {
   return (
     <section id="features" className={styles.features}>
       {FeatureList.map((item, idx) => (
-        <FeatureWrapper key={item.title} item={item} contentOnLeft={idx % 2 == 1} />
+        <FeatureWrapper
+          key={item.title}
+          item={item}
+          contentOnLeft={idx % 2 == 1}
+        />
       ))}
     </section>
   );
