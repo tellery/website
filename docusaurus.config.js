@@ -8,7 +8,7 @@ const customFields = {
     "https://join.slack.com/t/telleryio/shared_invite/zt-s37tgvo7-QBdpggK_uG6QqJVWhSXlFg",
   copy: {
     hero: {
-      title: "Analyze, report and organize all in one place", 
+      title: "Analyze, report and organize\nall in one place",
       subtitle:
         "Tellery helps analysts organize analyses and narrate them in one place. As easy as to use a notebook. As powerful as a data modeling tool.",
     },
@@ -30,7 +30,7 @@ const config = {
   customFields: customFields,
   themeConfig: {
     gtag: {
-      trackingID: 'G-MEQXXGM2HZ',
+      trackingID: "G-MEQXXGM2HZ",
     },
     navbar: {
       title: "Tellery",
@@ -49,8 +49,8 @@ const config = {
         },
         {
           label: "Features",
-          href: "#features"
-        }    
+          href: "#features",
+        },
         //        {to: '/blog', label: 'Blog', position: 'left'},
       ],
     },
@@ -64,6 +64,10 @@ const config = {
             {
               label: "Documentation",
               href: "/docs",
+            },
+            {
+              label: "GitHub",
+              href: customFields.githubUrl,
             },
           ],
         },
@@ -87,8 +91,8 @@ const config = {
       ],
     },
     prism: {
-      theme: require('prism-react-renderer/themes/nightOwl'),
-      additionalLanguages: ['bash'],
+      theme: require("prism-react-renderer/themes/nightOwl"),
+      additionalLanguages: ["bash"],
     },
   },
   presets: [
