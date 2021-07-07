@@ -10,7 +10,7 @@ A database profile, which is the necessary configurations we have to made to con
 
 - Connector type *(what kind of database you are connecting)*
 
-- Authentication *(username, password)*
+- Authentication *(username, password for database)*
 
 - Configurations & Optionals *(host, port, etc. differs from each kind of connector. For more details, see sections below)*
 
