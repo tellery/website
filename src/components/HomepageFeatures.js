@@ -1,70 +1,63 @@
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import React from "react";
-import { ImageWrapper } from "../components/ImageWrapper";
-import styles from "./HomepageFeatures.module.css";
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import React from 'react'
+import { ImageWrapper } from '../components/ImageWrapper'
+import styles from './HomepageFeatures.module.css'
 
 const FeatureList = [
   {
-    title: "Build analytical narratives from scratch, faster",
+    title: 'Build analytical narratives from scratch, faster',
     description: (
       <>
-        Tellery comes with a bucket of building blocks and rich text styling
-        features. Want a feature-specific analysis? An anomalies investigation?
-        A Campaign-oriented dashboard? Tell story your own way. Stop
-        copy-pasting screenshot of charts between tabs.
+        Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific analysis?
+        An anomalies investigation? A Campaign-oriented dashboard? Tell story your own way. Stop copy-pasting screenshot
+        of charts between tabs.
       </>
     ),
     image: {
-      url: "/img/home/feature-1.png",
+      url: '/img/home/feature-1.png',
       width: 1800,
-      height: 2049,
-    },
+      height: 2049
+    }
   },
   {
-    title: "Design for collaborative analytics",
+    title: 'Design for collaborative analytics',
     description: (
       <>
-        Tellery allows you abstract essential business logic, and reference it
-        in future contexts. Stop writing duplicated metrics calculation over and
-        over gain.
+        Tellery allows you abstract essential business logic, and reference it in future contexts. Stop writing
+        duplicated metrics calculation over and over gain.
       </>
     ),
     image: {
-      url: "/img/home/feature-2.png",
+      url: '/img/home/feature-2.png',
       width: 1800,
-      height: 1446,
-    },
+      height: 1446
+    }
   },
   {
-    title: "Streamlined Analysis",
+    title: 'Streamlined Analysis',
     description: (
       <>
-        Edit analytic code and configure visualization options without leaving
-        your current context. Answer questions in seconds. Put your
-        explanations.
+        Edit analytic code and configure visualization options without leaving your current context. Answer questions in
+        seconds. Put your explanations.
       </>
     ),
     image: {
-      url: "/img/home/feature-3.png",
+      url: '/img/home/feature-3.png',
       width: 2205,
-      height: 1602,
-    },
-  },
-];
+      height: 1602
+    }
+  }
+]
 
 export const HomepageFeatures = () => {
   return (
     <section id="features" className={styles.features}>
       {FeatureList.map((item, idx) => (
-        <FeatureWrapper
-          key={item.title}
-          item={item}
-          contentOnLeft={idx % 2 == 1}
-        />
+        <FeatureWrapper key={item.title} item={item} contentOnLeft={idx % 2 == 1} />
       ))}
     </section>
-  );
-};
+  )
+}
 
 const FeatureWrapper = ({ item, contentOnLeft }) => {
   const content = (
@@ -72,23 +65,15 @@ const FeatureWrapper = ({ item, contentOnLeft }) => {
       <h3>{item.title}</h3>
       <p>{item.description}</p>
     </>
-  );
+  )
   const image = (
     <>
-      <ImageWrapper
-        src={useBaseUrl(item.image.url)}
-        width={item.image.width}
-        height={item.image.height}
-      />
+      <ImageWrapper src={useBaseUrl(item.image.url)} width={item.image.width} height={item.image.height} />
     </>
-  );
+  )
 
-  return contentOnLeft ? (
-    <Feature left={content} right={image} />
-  ) : (
-    <Feature left={image} right={content} />
-  );
-};
+  return contentOnLeft ? <Feature left={content} right={image} /> : <Feature left={image} right={content} />
+}
 
 const Feature = ({ left, right }) => {
   return (
@@ -96,7 +81,7 @@ const Feature = ({ left, right }) => {
       <div>{left}</div>
       <div>{right}</div>
     </div>
-  );
-};
+  )
+}
 
-export default HomepageFeatures;
+export default HomepageFeatures

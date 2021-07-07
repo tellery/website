@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./index.module.css";
-import Head from "@docusaurus/Head";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { CircularLoading } from "../components/CircularLoading";
-import { HomepageFeatures } from "../components/HomepageFeatures";
-import { VideoWrapper } from "../components/VideoWrapper";
-import { useClickAway } from "react-use";
+import React, { useEffect, useState, useRef } from 'react'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import styles from './index.module.css'
+import Head from '@docusaurus/Head'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import { CircularLoading } from '../components/CircularLoading'
+import { HomepageFeatures } from '../components/HomepageFeatures'
+import { VideoWrapper } from '../components/VideoWrapper'
+import { useClickAway } from 'react-use'
 
 const Meta = () => {
   return (
@@ -19,23 +19,9 @@ const Meta = () => {
       <title>Tellery</title>
       <link rel="icon" href="/img/icon.svg" />
       <link rel="mask-icon" href="/img/mask-icon.svg" color="#002FA7" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/img/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/img/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/img/favicon-16x16.png"
-      />
+      <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#da532c" />
@@ -46,11 +32,11 @@ const Meta = () => {
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
       />
     </Head>
-  );
-};
+  )
+}
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext()
 
   return (
     <>
@@ -60,7 +46,7 @@ export default function Home() {
       <Subscribe />
       <Footer />
     </>
-  );
+  )
 }
 
 const Header = () => {
@@ -69,8 +55,8 @@ const Header = () => {
       <Logo />
       <Menu />
     </nav>
-  );
-};
+  )
+}
 
 const Logo = (props) => {
   return (
@@ -82,27 +68,27 @@ const Logo = (props) => {
         fill="#fff"
       />
     </svg>
-  );
-};
+  )
+}
 
 const MenuItems = () => {
-  const { siteConfig } = useDocusaurusContext();
-  const { items = [] } = siteConfig.themeConfig.navbar;
+  const { siteConfig } = useDocusaurusContext()
+  const { items = [] } = siteConfig.themeConfig.navbar
   return (
     <>
       {items.map((item) => (
         <MenuItem key={item.label} title={item.label} href={item.href} />
       ))}
     </>
-  );
-};
+  )
+}
 
 const Menu = () => {
-  const [showMenuDropdown, setShowMenuDropdown] = useState(false);
-  const ref = useRef(null);
+  const [showMenuDropdown, setShowMenuDropdown] = useState(false)
+  const ref = useRef(null)
   useClickAway(ref, () => {
-    setShowMenuDropdown(false);
-  });
+    setShowMenuDropdown(false)
+  })
 
   return (
     <>
@@ -112,7 +98,7 @@ const Menu = () => {
       <ul className={styles.dropdown}>
         <span
           onClick={(e) => {
-            setShowMenuDropdown(!showMenuDropdown);
+            setShowMenuDropdown(!showMenuDropdown)
           }}
         >
           Menu
@@ -122,20 +108,20 @@ const Menu = () => {
           className={styles.dropdownContent}
           style={{
             opacity: showMenuDropdown ? 1 : 0,
-            pointerEvents: showMenuDropdown ? "auto" : "none",
+            pointerEvents: showMenuDropdown ? 'auto' : 'none'
           }}
         >
           <MenuItems />
         </div>
       </ul>
     </>
-  );
-};
+  )
+}
 
 const Subscribe = () => {
-  const ref = useRef(null);
-  const [loading, setLoading] = useState(false);
-  const [subscribed, setSubscribed] = useState(false);
+  const ref = useRef(null)
+  const [loading, setLoading] = useState(false)
+  const [subscribed, setSubscribed] = useState(false)
 
   return (
     <section className={styles.subscribe}>
@@ -143,47 +129,47 @@ const Subscribe = () => {
         <h2>Get the latest news and product updates</h2>
         <form
           onSubmit={(e) => {
-            setLoading(true);
-            fetch("https://tellery.codefuture.top/subscribe", {
+            setLoading(true)
+            fetch('https://tellery.codefuture.top/subscribe', {
               body: JSON.stringify({ email: ref.current.value }),
-              method: "POST",
+              method: 'POST',
               headers: {
-                "content-type": "application/json",
-              },
+                'content-type': 'application/json'
+              }
             })
               .then((res) => {
-                setLoading(false);
-                setSubscribed(true);
+                setLoading(false)
+                setSubscribed(true)
               })
               .finally((res) => {
-                setLoading(false);
-              });
-            e.preventDefault();
+                setLoading(false)
+              })
+            e.preventDefault()
           }}
         >
           <input ref={ref} placeholder="Enter your email" type="email"></input>
           <button>
             {loading ? (
-              <CircularLoading size={12} color={"#ffffff"} scale={1} />
+              <CircularLoading size={12} color={'#ffffff'} scale={1} />
             ) : subscribed ? (
-              "Subscribe success!"
+              'Subscribe success!'
             ) : (
-              " Subscribe to newsletter"
+              ' Subscribe to newsletter'
             )}
           </button>
         </form>
       </div>
     </section>
-  );
-};
+  )
+}
 
 const MenuItem = ({ title, href }) => {
   return (
     <li className={styles.menuItem}>
       <a href={href}>{title}</a>
     </li>
-  );
-};
+  )
+}
 
 const Body = () => {
   return (
@@ -191,12 +177,12 @@ const Body = () => {
       <Hero />
       <HomepageFeatures />
     </main>
-  );
-};
+  )
+}
 
 const Hero = () => {
-  const { siteConfig } = useDocusaurusContext();
-  const hero = siteConfig.customFields.copy.hero;
+  const { siteConfig } = useDocusaurusContext()
+  const hero = siteConfig.customFields.copy.hero
   return (
     <section className={styles.hero}>
       <h2>{hero.title}</h2>
@@ -206,20 +192,16 @@ const Hero = () => {
       <a href="/docs/">Get Started</a>
       <HeroSnapshot />
     </section>
-  );
-};
+  )
+}
 
 const HeroSnapshot = () => {
   return (
     <div className={styles.heroSnapshot}>
-      <VideoWrapper
-        src={useBaseUrl("/img/home/hero-video.mov")}
-        width={2790}
-        height={1418}
-      />
+      <VideoWrapper src={useBaseUrl('/img/home/hero-video.mov')} width={2790} height={1418} />
     </div>
-  );
-};
+  )
+}
 
 const Footer = () => {
   return (
@@ -228,35 +210,21 @@ const Footer = () => {
       <Divider />
       <More />
     </footer>
-  );
-};
+  )
+}
 
 const Divider = () => {
-  return <div className={styles.divider}></div>;
-};
+  return <div className={styles.divider}></div>
+}
 
 const Philosophy = () => {
-  const { siteConfig } = useDocusaurusContext();
-  const philosophy = siteConfig.customFields.copy.philosophy;
+  const { siteConfig } = useDocusaurusContext()
+  const philosophy = siteConfig.customFields.copy.philosophy
   return (
     <div className={styles.philosophy}>
       <div>
-        <svg
-          width="60"
-          height="60"
-          viewBox="0 0 60 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <mask
-            id="mask0"
-            mask-type="alpha"
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="60"
-            height="60"
-          >
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
             <rect width="60" height="60" fill="#C4C4C4" />
           </mask>
           <g mask="url(#mask0)">
@@ -271,12 +239,12 @@ const Philosophy = () => {
       </div>
       <p>{philosophy}</p>
     </div>
-  );
-};
+  )
+}
 
 const More = () => {
-  const { siteConfig } = useDocusaurusContext();
-  const { links = [] } = siteConfig.themeConfig.footer;
+  const { siteConfig } = useDocusaurusContext()
+  const { links = [] } = siteConfig.themeConfig.footer
 
   return (
     <div className={styles.more}>
@@ -288,8 +256,8 @@ const More = () => {
         </MoreColumn>
       ))}
     </div>
-  );
-};
+  )
+}
 
 const MoreColumn = ({ children, title }) => {
   return (
@@ -297,13 +265,13 @@ const MoreColumn = ({ children, title }) => {
       <h5>{title}</h5>
       {children}
     </ul>
-  );
-};
+  )
+}
 
 const MoreItem = ({ title, href }) => {
   return (
     <li>
       <a href={href}>{title}</a>
     </li>
-  );
-};
+  )
+}
