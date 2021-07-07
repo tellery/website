@@ -32,6 +32,8 @@ docker-compose up
 
 You can now access it on [http://localhost:8000](http://localhost:8000).
 
+The default account is `admin@tellery.local` and password is `gnThIrfzRDhSQcg8lQrdg`.
+
 Check out the [general configuration guide](https://github.com/tellery/tellery/tree/master/deploy/compose#environments) for more detailed info.
 
 
