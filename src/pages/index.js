@@ -72,13 +72,13 @@ const Logo = (props) => {
   )
 }
 
-const MenuItems = () => {
+const MenuItems = ({ small }) => {
   const { siteConfig } = useDocusaurusContext()
   const { items = [] } = siteConfig.themeConfig.navbar
   return (
     <>
       {items.map((item) => (
-        <MenuItem key={item.label} title={item.label} href={item.href} />
+        <MenuItem key={item.label} title={item.label} href={item.href} small={small} />
       ))}
     </>
   )
@@ -112,7 +112,7 @@ const Menu = () => {
             pointerEvents: showMenuDropdown ? 'auto' : 'none'
           }}
         >
-          <MenuItems />
+          <MenuItems small />
         </div>
       </ul>
     </>
@@ -131,7 +131,7 @@ const Subscribe = () => {
         <form
           onSubmit={(e) => {
             setLoading(true)
-            fetch('https://tellery.codefuture.top/subscribe', {
+            fetch('https://subscribe.tellery.io/subscribe', {
               body: JSON.stringify({ email: ref.current.value }),
               method: 'POST',
               headers: {
@@ -164,11 +164,13 @@ const Subscribe = () => {
   )
 }
 
-const MenuItem = ({ title, href }) => {
+const MenuItem = ({ title, href, small }) => {
   return (
     <li className={styles.menuItem}>
-      {title === 'GitHub' && <GithubIcon fill={'#ffffff'} size={20} />}
-      <a href={href}>{title}</a>
+      <a href={href}>
+        {title === 'GitHub' && <GithubIcon fill={small ? '#1B1F23' : '#ffffff'} size={20} />}
+        {title}
+      </a>
     </li>
   )
 }
@@ -211,7 +213,7 @@ const Hero = () => {
 const HeroSnapshot = () => {
   return (
     <div className={styles.heroSnapshot}>
-      <VideoWrapper src={useBaseUrl('/img/home/hero.mp4')} width={1920} height={1080} />
+      <VideoWrapper src={useBaseUrl('/img/home/hero.mp4')} width={1913} height={1040} />
     </div>
   )
 }

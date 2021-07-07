@@ -46,7 +46,7 @@ const FeatureList = [
     video: {
       url: '/img/home/feature-3.mp4',
       width: 1920,
-      height: 1080
+      height: 972
     }
   }
 ]
