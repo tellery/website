@@ -17,7 +17,7 @@ Tellery brings all of your words and data into one flexible surface:
  * Or customize your deliverable for your own needs
 
 
-Tellery allows you abstract essential business logic, and [reference it in future analysis](/docs/how-to-use/question-referencing). You can define a model grasping the nuances of datasets to make your exploratory analysis organizable. Tellery uses SQL to model data, so you can easily consolidates it in [dbt](https://www.getdbt.com/). 
+Tellery allows you abstract essential business logic, and [reference it in future analysis](/docs/how-to-use/question-referencing). You can define a model grasping the nuances of datasets to make your exploratory analysis organizable. Tellery uses SQL to model data, so you can easily consolidate it in [dbt](https://www.getdbt.com/).
 
 
 See the reason [why we built Tellery](/docs/about).

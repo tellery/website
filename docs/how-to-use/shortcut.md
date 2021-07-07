@@ -5,7 +5,7 @@ sidebar_position: 4
 # Learn the shortcut
 
 :::note
-`Cmd/Ctrl`  indicates "Command" (or "Control") on Mac and "Control" on Windows and Linux. 
+`Cmd/Ctrl`  indicates "Command" (or "Control") on Mac and "Control" on Windows and Linux.
 :::
 
 
@@ -19,15 +19,15 @@ sidebar_position: 4
 
 * Press `Cmd/Ctrl + s` to save changes to current question
 * Press `Cmd/Ctrl + Enter` to execute the SQL of current question
-* Press `Alt/Option + v` to toggle "Visualization options" 
-* Press `Alt/Option + s` to toggle "Edit SQL" 
+* Press `Alt/Option + v` to toggle "Visualization options"
+* Press `Alt/Option + s` to toggle "Edit SQL"
 
 
-## Story 
+## Story
 
 
 * Type `[[` and the name of another story to create a link to it
-* Press `Alt/Option` and click a story link to open it in sidebar
+* Press `Alt/Option` and click a story link to open it in the sidebar
 
 
 ### Inline styling
@@ -39,8 +39,8 @@ With text selected, you can use following shortcut keys apply inline styling:
 * Press `Cmd/Ctrl + i` to *italicize* it
 * Press `Cmd/Ctrl + u` to <u>underline</u> it
 * Press `Cmd/Ctrl + y` to ~~strike-through~~ it
-* Press `Cmd/Ctrl + e` to create as `inline code` with it 
-* Press `Cmd/Ctrl + h` to highlight it 
+* Press `Cmd/Ctrl + e` to create as `inline code` with it
+* Press `Cmd/Ctrl + h` to highlight it
 
 
 
@@ -53,7 +53,7 @@ Markdown is a lightweight markup language with plain text for formatting syntax.
 #### List
 
 * Type `[]` to create to-do checklist.
-* Use single asterisk `*` followed by a space to create bullet point.
+* Use single asterisk `*` followed by a space to create a bullet point.
 * Type `1.` followed by a space to start the numbered list.
 * Use two angle brackets `>>` followed by a space to start a toggle list.
 * In your list, press `Tab` to indent and add sub-bullets.

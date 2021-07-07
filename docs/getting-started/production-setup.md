@@ -112,7 +112,7 @@ You can choose `Redis deployed by Helm` by `--set redis.enabled=true` or `Extern
 
 ### System Configuration
 
-`system.web.host` is required, setting it, to specify the access domain of tellery service
+`system.web.host` is required, setting it, to specify the access domain of Tellery service
 
 If your written language is not English, you can modify your search plugin through [this document](https://github.com/tellery/tellery) to get a better search experience.
 
