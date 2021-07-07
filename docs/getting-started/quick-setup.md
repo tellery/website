@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Quick Setup
 
-Setup Tellery quickly to play with on your local machine.
+Setup Tellery quickly on your local machine. We prepare some sample data for you to play with.
 
 ## Prerequisites
 
