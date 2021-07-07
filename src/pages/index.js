@@ -217,7 +217,7 @@ const HeroSnapshot = () => {
   return (
     <div className={styles.heroSnapshot}>
       <VideoWrapper
-        src={useBaseUrl("/img/home/hero-video.mov")}
+        src={useBaseUrl("/img/home/hero-video.mp4")}
         width={2790}
         height={1418}
       />
