@@ -4,15 +4,15 @@ sidebar_position: 2
 
 # Configure a database
 
-To bring your own data into Tellery, You can add a profile to your connector server (by default it will be bootstrapped together with your deployment).
+To bring your own data into Tellery, You can set up your database profile on Settings > Databases.
 
-A profile consists of:
+A database profile, which is the necessary configurations we have to made to connect to your data warehouse, consists of:
 
-- connector type *(what kind of database you are connecting)*
+- Connector type *(what kind of database you are connecting)*
 
-- authentication *(username, password)*
+- Authentication *(username, password)*
 
-- configurations & optionals *(host, port, etc. differs from each kind of connector. For more details, see sections below)*
+- Configurations & Optionals *(host, port, etc. differs from each kind of connector. For more details, see sections below)*
 
 ## Snowflake
 
