@@ -36,9 +36,9 @@ sidebar_position: 4
 With text selected, you can use following shortcut keys apply inline styling:
 
 * Press `Cmd/Ctrl + b` to **bold** it
-* Press `Cmd/Ctrl + i` to  *italicize* it
-* Press `Cmd/Ctrl + u` to __underline__ it
-* Press `Cmd/Ctrl + y` to __strike-through__ it
+* Press `Cmd/Ctrl + i` to *italicize* it
+* Press `Cmd/Ctrl + u` to <u>underline</u> it
+* Press `Cmd/Ctrl + y` to ~~strike-through~~ it
 * Press `Cmd/Ctrl + e` to create as `inline code` with it 
 * Press `Cmd/Ctrl + h` to highlight it 
 
