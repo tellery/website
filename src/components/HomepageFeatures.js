@@ -15,7 +15,7 @@ const FeatureList = [
       </>
     ),
     "image": {
-      "url": "/img/home/screenshot-1.png",
+      "url": "/img/home/feature-1.png",
       "width": 695,
       "height": 494
     },
@@ -30,7 +30,7 @@ const FeatureList = [
       </>
     ),
     "image": {
-      "url": "/img/home/screenshot-2.png",
+      "url": "/img/home/feature-2.png",
       "width": 600,
       "height": 482
     },
@@ -44,7 +44,7 @@ const FeatureList = [
       </>
     ),
     "image": {
-      "url": "/img/home/screenshot-3.png",
+      "url": "/img/home/feature-3.png",
       "width": 600,
       "height": 683
     }
