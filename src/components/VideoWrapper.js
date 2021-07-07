@@ -7,7 +7,7 @@ export const VideoWrapper = ({ height, width, className, src }) => {
 
   return (
     <div className={clsx(styles.videoWrapper, className)} style={{ paddingTop: `${(100 * height) / width}%` }}>
-      <video src={src} ref={ref} autoPlay loop muted playsInline preload x5-video-player-type="h5-page" />
+      <video src={src} ref={ref} autoPlay loop muted playsInline preload={"preload"} x5-video-player-type="h5-page" />
     </div>
   )
 }

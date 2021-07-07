@@ -185,7 +185,11 @@ const Hero = () => {
   const hero = siteConfig.customFields.copy.hero
   return (
     <section className={styles.hero}>
-      <h2>{hero.title}</h2>
+      <h2>
+        {hero.title.split(/(\n)/).map((item) => (
+          <React.Fragment key={item}>{item === '\n' ? <br /> : item}</React.Fragment>
+        ))}
+      </h2>
 
       <h3>{hero.subtitle}</h3>
 

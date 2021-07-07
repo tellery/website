@@ -8,9 +8,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  transition: opacity 250ms;
   height: 100%;
   width: 100%;
+  border: none;
   border-radius: 10px;
-  overflow: hidden;
 }
