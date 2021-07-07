@@ -2,7 +2,9 @@
 sidebar_position: 1
 ---
 
+
 # Create a new story
+
 
 
 Click the "Create new story`+`" button at the bottom of your sidebar.
@@ -10,6 +12,8 @@ Click the "Create new story`+`" button at the bottom of your sidebar.
 
 Then the story is created in your workspace, and a new empty story will pop up in front of you. You can give it a meaningful name.
 
+
+<video src='/img/tutorial/create-story.mp4' />
 
 
 ## Ask a new question
@@ -22,11 +26,11 @@ For asking a question in Tellery, you need to [configure a database](/docs/how-t
 :::
 
 
-
 Type `/` to bring up your menu of content options. Go ahead and choose "Question", then a question block will appear in the story. You can edit the name of the question.
 
 
 ### Edit SQL
+
 
 
 When a new question is created, Tellery will automatically open a question editor. Start writing your SQL there.
@@ -49,6 +53,8 @@ The default visualization type is `table`. To change the visualization, just cli
 
 Or, click the "Visualization options📊" on the bottom right of the question block.
 
+
+<video src='/img/tutorial/create-story.mp4' />
 
 
 ## Add some narratives
@@ -76,6 +82,11 @@ Tellery provides [markdown](/docs/how-to-use/shortcut#markdown-styling) syntax y
 
 
 ### Drag and drop
+
+
+<video src='/img/tutorial/create-story.mp4' />
+
+
 
 Any text or chart in a story can be dragged wherever you want it.
 

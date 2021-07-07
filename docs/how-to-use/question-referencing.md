@@ -19,6 +19,12 @@ Enter powerful question references.
 
 Question reference is a lightweight modeling mechanism to grasp the nuances of your data. Rather than select from existing tables and views in your data warehouse, you can select from another question. Tellery will pull the code from question reference into dependent questions as a common table expression.
 
+Question references show the title of the question by default. You can recognize a question reference by the highlight:
+
+
+<img src='/img/tutorial/question-reference.png'/>
+
+
 
 For example, consider a question which defines "active customers":
 
@@ -57,9 +63,6 @@ group by 1,2
 </Question>
 
 
-Question references show the title of the question by default. You can recognize a question reference by the highlight:
-
-
 
 ## How to reference questions?
 
@@ -75,6 +78,8 @@ The easiest way to reference a question is by having it in front of you. Move yo
 
 If you paste the address in the question editor, it will be automatically recognized by Tellery.
 
+<video src='/img/tutorial/copy-address.mp4' />
+
 
 ### Search for them
 
@@ -83,6 +88,8 @@ When editing SQL in the question editor, type double curly braces `{{` to invoke
 
 
 Then start typing the name of the question you want to reference. Hit "Enter" to pull its address in your editor when you’ve found the question in the dropdown that appears.
+
+<video src='/img/tutorial/search-question-ref.mp4 '/>
 
 
 ## Navigate between questions

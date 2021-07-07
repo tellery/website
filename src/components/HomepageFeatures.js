@@ -52,10 +52,10 @@ const FeatureList = [
     Right: () => (
       <p>
         Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific analysis?
-        An anomalies investigation? A campaign-oriented dashboard? Tell story your own way. No more copy-pasting
-        screenshot of charts.
+        An anomalies investigation? A campaign-oriented dashboard? Tell the story your own way. No more copy-pasting
+        screenshots of charts.
       </p>
-    )
+    ),
   },
   {
     title: 'Design for collaborative analytics',
@@ -72,7 +72,7 @@ const FeatureList = [
     Left: () => <VideoWrapper src={useBaseUrl('/img/home/feature-3.mp4')} width={1920} height={972} />,
     Right: () => (
       <p>
-        Edit analytic code and configure visualization options without leaving the current context. Answer questions and
+       Edit analytic code and configure visualization options without leaving the current context. Answer questions and
         put explanations in seconds.
       </p>
     )
