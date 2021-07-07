@@ -12,9 +12,9 @@ const FeatureList = [
     title: 'Build analytical narratives from scratch, faster',
     description: (
       <>
-        Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific analysis?
-        An anomalies investigation? A Campaign-oriented dashboard? Tell story your own way. Stop copy-pasting screenshot
-        of charts between tabs.
+        Tellery comes with a bucket of building blocks and rich text styling features.
+        Want a feature-specific analysis? An anomalies investigation? A campaign-oriented
+        dashboard? Tell story your own way. No more copy-pasting screenshot of charts.
       </>
     ),
     image: {
@@ -27,8 +27,8 @@ const FeatureList = [
     title: 'Design for collaborative analytics',
     description: (
       <>
-        Tellery allows you abstract essential business logic, and reference it in future contexts. Stop writing
-        duplicated metrics calculation over and over gain.
+        Enough of calculating duplicated metrics in isolation. Tellery allows
+        you abstract essential business logic, and reference it in future contexts.
       </>
     ),
     image: {
@@ -41,8 +41,8 @@ const FeatureList = [
     title: 'Streamlined Analysis',
     description: (
       <>
-        Edit analytic code and configure visualization options without leaving your current context. Answer questions in
-        seconds. Put your explanations.
+        Edit analytic code and configure visualization options without leaving your current context.
+        Answer questions and put explanations in seconds.
       </>
     ),
     video: {
