@@ -24,13 +24,17 @@ Running your own Tellery with Kubernetes
 First of all, add the repo
 
 ```shell
-helm repo add tellery https://xxxxxx
+# Clone the Tellery repo
+git clone https://github.com/tellery/tellery.git
+
+# Change directories into the demo directory
+cd tellery/deploy/helm
 ```
 
 To install the helm chart with release name `release-name`:
 
 ```shell
-helm install release-name tellery \
+helm install release-name . \
 --set postgresql.enabled=true
 ```
 
@@ -39,7 +43,7 @@ If you want to provide advanced parameters with your installation you can check 
 ### Installing with external Postgresql
 
 ```shell
-helm install release-name tellery \
+helm install release-name . \
 --set externalPostgresql.host=postgresqlAddress \
 --set externalPostgresql.port=5432 \
 --set externalPostgresql.username=postgres \
@@ -164,7 +168,7 @@ The following configuration is configured for each service, the following uses `
 Using the `--set key\value[,key=value]` argument to specify each parameter
 
 ```shell
-helm install release-name tellery --set system.secretKey=xxx --set web.replicas=2
+helm install release-name . --set system.secretKey=xxx --set web.replicas=2
 ```
 
 Or using the yaml to specify each parameter
@@ -172,5 +176,5 @@ Or using the yaml to specify each parameter
 Copy these [default configuration](https://github.com/tellery/tellery/blob/master/deploy/helm/values.yaml) into a new file named tellery-config.yaml, then modify as your need.
 
 ```shell
-helm install release-name tellery -f tellery-config.yaml
+helm install release-name . -f tellery-config.yaml
 ```
