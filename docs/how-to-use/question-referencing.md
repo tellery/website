@@ -26,7 +26,7 @@ Question references show the title of the question by default. You can recognize
 
 
 
-For example, consider a question which defines "active customers":
+For example, consider a question which defines _active customers_:
 
 
 <Question name="active customers">
@@ -47,7 +47,7 @@ where event in ('add_to_cart', 'checkout')
 This question captures the nuances of datasets and allows future analytics code to make meaningful choices on appropriate granularity of it.
 
 
-The following question references it, applies specific filtering and grouping, and asks "what's the number of daily active customers in 2021, by region":
+The following question references it, applies specific filtering and grouping, and asks _what's the number of daily active customers in 2021, by region_:
 
 
 <Question name="the number of daily active customers in 2021, by region">
