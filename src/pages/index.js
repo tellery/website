@@ -7,6 +7,7 @@ import { CircularLoading } from '../components/CircularLoading'
 import { HomepageFeatures } from '../components/HomepageFeatures'
 import { VideoWrapper } from '../components/VideoWrapper'
 import { useClickAway } from 'react-use'
+import { GithubIcon } from '../components/GithubIcon'
 
 const Meta = () => {
   return (
@@ -166,6 +167,7 @@ const Subscribe = () => {
 const MenuItem = ({ title, href }) => {
   return (
     <li className={styles.menuItem}>
+      {title === 'GitHub' && <GithubIcon fill={'#ffffff'} size={20} />}
       <a href={href}>{title}</a>
     </li>
   )
@@ -192,8 +194,15 @@ const Hero = () => {
       </h2>
 
       <h3>{hero.subtitle}</h3>
-
-      <a href="/docs/">Get Started</a>
+      <div className={styles.buttons}>
+        <a className={styles.github} href={siteConfig.customFields.githubUrl}>
+          <GithubIcon fill={'#1B1F23'} />
+          Github
+        </a>
+        <a className={styles.start} href="/docs/">
+          Get Started
+        </a>
+      </div>
       <HeroSnapshot />
     </section>
   )
