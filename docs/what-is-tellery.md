@@ -7,7 +7,9 @@ slug: /
 
 # What is Tellery?
 
-Tellery helps you organize your ad-hoc analyses and then narrate them in one place.
+
+Tellery helps data teams organize ad-hoc analyses and narrate them in one place.
+
 
 Tellery brings all of your words and data into one flexible surface:
 
