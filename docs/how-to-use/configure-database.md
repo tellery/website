@@ -18,13 +18,12 @@ A profile consists of:
 
 To connect with Snowflake, you need to provide:
 
-|    Field    |                             Description                           |    Example    | Required |
-|:-----------:|:-----------------------------------------------------------------:|:-------------:|:--------:|
-| accountName |                    your Snowflake account name                    |    xy12345    |   yes    |
-|   regionId  |                     your Snowflake region Id                      | us-ease-2.aws |   yes    |
-|     role    |  the default access control role to use in the Snowflake session  |    SYSADMIN   |    no    |
-|  warehouse  |                the virtual warehouse to run queries               |   COMPUTE_WH  |    no    |
-
+|     Field    |                             Description                           |    Example    | Required |
+|:------------:|:-----------------------------------------------------------------:|:-------------:|:--------:|
+| Account Name |                    Your Snowflake account name                    |    xy12345    |   yes    |
+|  Region Id   |                     Your Snowflake region Id                      | us-ease-2.aws |   yes    |
+|     Role     |  The default access control role to use in the Snowflake session  |    SYSADMIN   |    no    |
+|  Warehouse   |                The virtual warehouse to run queries               |   COMPUTE_WH  |    no    |
 
 Snowflake connector supports importing data from csv without any other configuration.
 
@@ -34,9 +33,9 @@ To connect with Redshift, you need to provide:
 
 |    Field    |                           Description                          |                             Example                            | Required |
 |:-----------:|:--------------------------------------------------------------:|:--------------------------------------------------------------:|:--------:|
-|  endpoint  |               The hostname of your Redshift cluster             |  examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com  |   yes    |
-|    port    | The port number that you specified when launched , usually 5439 |                               5439                             |   yes    |
-|  database  |    The logical database to connect to and run queries against   |                               my_db                            |   yes*   |
+|  Endpoint  |               The hostname of your Redshift cluster             |  examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com  |   yes    |
+|    Port    | The port number that you specified when launched , usually 5439 |                               5439                             |   yes    |
+|  Database  |    The logical database to connect to and run queries against   |                               my_db                            |   yes*   |
 
 :::note
 Since the Redshift is based on PostgreSQL, the configuration of Redshift will be similar to that of PostgreSQL. If you are interested in this topic, please read the note in [PostgreSQL](#postgreSQL)
@@ -50,9 +49,9 @@ To support importing csv to Redshift, you need to provide aws credentials for up
 
 |    Field    |                           Description                          |   Example   | Required |
 |:-----------:|:--------------------------------------------------------------:|:-----------:|:--------:|
-|  endpoint  |          The hostname of your PostgreSQL database               |  localhost  |   yes    |
-|    port    | The port number that you specified when launched , usually 5432 |    5432     |   yes    |
-|  database  |    The logical database to connect to and run queries against   |    my_db    |   yes*   |
+|  Endpoint  |          The hostname of your PostgreSQL database               |  localhost  |   yes    |
+|    Port    | The port number that you specified when launched , usually 5432 |    5432     |   yes    |
+|  Database  |    The logical database to connect to and run queries against   |    my_db    |   yes*   |
 
 :::note
 The database argument is mandatory for postgreSQL, by default it would be the same as your username.
