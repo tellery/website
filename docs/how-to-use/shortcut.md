@@ -52,15 +52,11 @@ Markdown is a lightweight markup language with plain text for formatting syntax.
 
 #### List
 
-Type `[]` to create to-do checkbox.
-
-Use single asterisk `*` followed by a space to create bullet point.
-
-Type `1.` followed by a space to start the numbered list.
-
-Use two angle brackets `>>` followed by a space to start a toggle list.
-
-In your list, press `Tab` to indent and add sub-bullets.
+* Type `[]` to create to-do checklist.
+* Use single asterisk `*` followed by a space to create bullet point.
+* Type `1.` followed by a space to start the numbered list.
+* Use two angle brackets `>>` followed by a space to start a toggle list.
+* In your list, press `Tab` to indent and add sub-bullets.
 
 
 #### Headings
@@ -76,11 +72,9 @@ Headings can be created as follows:
 #### Others
 
 
-Use single bracket `>` to capture a blockquote.
-
-Capture a code snippet with three leading `````.
-
-Soon, we will provide inline markdown support, such as **bold**, *italicize*, and ~~strikethrough~~
+* Use single bracket `>` to capture a blockquote.
+* Capture a code snippet with three leading `````.
+* Soon, we will provide inline markdown support, such as **bold**, *italicize*, and ~~strikethrough~~
 
 
 ### Slash command
