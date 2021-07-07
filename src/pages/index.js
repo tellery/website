@@ -201,7 +201,7 @@ const Hero = () => {
           <GithubIcon fill={'#1B1F23'} />
           Github
         </a>
-        <a className={styles.start} href="/docs/">
+        <a className={styles.start} href="/docs/getting-started/quick-setup">
           Get Started
         </a>
       </div>
