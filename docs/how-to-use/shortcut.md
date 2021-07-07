@@ -74,7 +74,7 @@ Headings can be created as follows:
 
 * Use single bracket `>` to capture a blockquote.
 * Capture a code snippet with three leading `````.
-* Soon, we will provide inline markdown support, such as **bold**, *italicize*, and ~~strikethrough~~
+* Soon, we will provide inline markdown support, such as **bold**, *italicize*, and ~~strike-through~~
 
 
 ### Slash command
