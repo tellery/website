@@ -27,7 +27,7 @@ const FeatureList = [
     title: 'Design for collaborative analytics',
     description: (
       <>
-        Enough of calculating duplicated metrics in isolation. Tellery allows
+        Enough of calculating duplicated metrics over and over again? Tellery allows
         you abstract essential business logic, and reference it in future contexts.
       </>
     ),
