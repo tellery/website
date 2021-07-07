@@ -11,8 +11,8 @@ const FeatureList = [
     description: (
       <>
         Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific analysis?
-        An anomalies investigation? A campaign-oriented dashboard? Tell story your own way. No more copy-pasting
-        screenshot of charts.
+        An anomalies investigation? A campaign-oriented dashboard? Tell the story your own way. No more copy-pasting
+        screenshots of charts.
       </>
     ),
     image: {
@@ -39,8 +39,8 @@ const FeatureList = [
     title: 'Streamlined Analysis',
     description: (
       <>
-        Edit analytic code and configure visualization options without leaving the current context. Answer questions
-        and put explanations in seconds.
+        Edit analytic code and configure visualization options without leaving the current context. Answer questions and
+        put explanations in seconds.
       </>
     ),
     video: {
