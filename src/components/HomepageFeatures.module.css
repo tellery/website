@@ -38,6 +38,117 @@
   margin-left: 50px;
 }
 
+.irisPieChart {
+  display: flex;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.chartHeader {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8.55967px;
+  line-height: 10px;
+  color: #333333;
+}
+
+.pidChart {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartFotter {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 6.41975px;
+  line-height: 8px;
+  color: #cccccc;
+}
+
+.chart {
+  background: #fbfbfb;
+  border-radius: 10px;
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  flex: 1;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #333333;
+  /* height: 178px; */
+  display: -webkit-box;
+  -webkit-line-clamp: 14;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  width: 26px;
+  position: relative;
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #dedede;
+}
+
+.featureInteractive {
+  display: flex;
+  flex-direction: column;
+  padding: 20px
+}
+
+.featureInteractiveRow {
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.featureInteractiveRow > div {
+  position: relative;
+  display: flex;
+}
+
+.shadow {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+.featureSlashCommand {
+  position: relative;
+  flex: 1;
+  margin-left: 24px;
+}
+
+.featureTableAndNumber {
+  flex-direction: column;
+  flex: 2;
+}
+
+.featureNumberChart {
+  width: 80%;
+  margin-top: 32px;
+  margin-left: auto;;
+}
+
 @media screen and (max-width: 966px) {
   .features {
     padding: 40px 20px;
@@ -50,5 +161,13 @@
   }
   .feature > * + * {
     margin-left: 0;
+  }
+
+  .text {
+    -webkit-line-clamp: 10;
+  }
+  .pidChart img {
+    width: 62px;
+    height: 62px;
   }
 }
