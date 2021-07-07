@@ -31,13 +31,28 @@ const FeatureInteractive = () => {
     <div className={styles.featureInteractive}>
       <div className={styles.featureInteractiveRow}>
         <div className={styles.featureTableAndNumber}>
-          <ImageWrapper className={styles.shadow} src={useBaseUrl('/img/home/feature-table.png')} width={716} height={468} />
+          <ImageWrapper
+            className={styles.shadow}
+            src={useBaseUrl('/img/home/feature-table.png')}
+            width={716}
+            height={468}
+          />
           <div className={styles.featureNumberChart}>
-            <ImageWrapper className={styles.shadow}  src={useBaseUrl('/img/home/feature-number-chart.png')} width={486} height={284} />
+            <ImageWrapper
+              className={styles.shadow}
+              src={useBaseUrl('/img/home/feature-number-chart.png')}
+              width={486}
+              height={284}
+            />
           </div>
         </div>
         <div className={styles.featureSlashCommand}>
-          <ImageWrapper className={styles.shadow}   src={useBaseUrl('/img/home/slash-command.png')} width={300} height={611} />
+          <ImageWrapper
+            className={styles.shadow}
+            src={useBaseUrl('/img/home/slash-command.png')}
+            width={300}
+            height={611}
+          />
         </div>
       </div>
       <IrisPieChart />
@@ -47,34 +62,42 @@ const FeatureInteractive = () => {
 
 const FeatureList = [
   {
-    title: 'Build analytical narratives from scratch, faster',
     Left: FeatureInteractive,
     Right: () => (
-      <p>
-        Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific analysis?
-        An anomalies investigation? A campaign-oriented dashboard? Tell the story your own way. No more copy-pasting
-        screenshots of charts.
-      </p>
-    ),
+      <>
+        {' '}
+        <h3>Build analytical narratives from scratch, faster</h3>
+        <p>
+          Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific
+          analysis? An anomalies investigation? A campaign-oriented dashboard? Tell the story your own way. No more
+          copy-pasting screenshots of charts.
+        </p>
+      </>
+    )
   },
   {
-    title: 'Design for collaborative analytics',
     Left: () => (
-      <p>
-        Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential business
-        logic, and reference it in future contexts.
-      </p>
+      <>
+        {' '}
+        <h3>Design for collaborative analytics</h3>
+        <p>
+          Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential business
+          logic, and reference it in future contexts.
+        </p>
+      </>
     ),
     Right: () => <ImageWrapper src={useBaseUrl('/img/home/feature-2.png')} width={1800} height={1446} />
   },
   {
-    title: 'Streamlined Analysis',
     Left: () => <VideoWrapper src={useBaseUrl('/img/home/feature-3.mp4')} width={1920} height={972} />,
     Right: () => (
-      <p>
-       Edit analytic code and configure visualization options without leaving the current context. Answer questions and
-        put explanations in seconds.
-      </p>
+      <>
+        <h3>Streamlined Analysis</h3>
+        <p>
+          Edit analytic code and configure visualization options without leaving the current context. Answer questions
+          and put explanations in seconds.
+        </p>
+      </>
     )
   }
 ]
@@ -83,7 +106,7 @@ export const HomepageFeatures = () => {
   return (
     <section id="features" className={styles.features}>
       {FeatureList.map((item, idx) => (
-        <Feature key={item.title} Left={item.Left} Right={item.Right} contentOnLeft={idx % 2 == 1} />
+        <Feature key={idx} Left={item.Left} Right={item.Right} contentOnLeft={idx % 2 == 1} />
       ))}
     </section>
   )
