@@ -44,6 +44,7 @@
   border-radius: 16px;
   padding: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+
 }
 
 .chartHeader {
@@ -53,6 +54,21 @@
   font-size: 8.55967px;
   line-height: 10px;
   color: #333333;
+}
+
+@keyframes shirnk {
+  0% {
+    flex: 0.5
+  }
+  30% {
+    flex: 0.5
+  }
+  70% {
+    flex: 1.3
+  }
+  100% {
+    flex: 1.3
+  }
 }
 
 .pidChart {
@@ -78,6 +94,7 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  animation: 5s ease-in-out 0s infinite alternate shirnk;
 }
 
 .text {
@@ -88,7 +105,7 @@
   font-size: 11px;
   line-height: 13px;
   color: #333333;
-  /* height: 178px; */
+  height: 180px;
   display: -webkit-box;
   -webkit-line-clamp: 14;
   -webkit-box-orient: vertical;
@@ -109,6 +126,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
+  margin: auto;
   background: #dedede;
 }
 
