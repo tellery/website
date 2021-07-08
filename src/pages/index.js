@@ -34,11 +34,13 @@ const Meta = () => {
         key="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
       />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@TelleryHQ" />
       <meta name="twitter:title" content={siteConfig.title} />
       <meta name="twitter:description" content={siteConfig.customFields.copy.hero.subtitle} />
       <meta name="twitter:image" content={useBaseUrl('/img/home/feature-table.png')} />
+      <meta name="og:image" content={useBaseUrl('/img/home/feature-table.png')} />
+
     </Head>
   )
 }
