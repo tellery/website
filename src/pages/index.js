@@ -10,6 +10,8 @@ import { useClickAway } from 'react-use'
 import { GithubIcon } from '../components/GithubIcon'
 
 const Meta = () => {
+  const { siteConfig } = useDocusaurusContext()
+
   return (
     <Head>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -32,6 +34,11 @@ const Meta = () => {
         key="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
       />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@TelleryHQ" />
+      <meta name="twitter:title" content={siteConfig.title} />
+      <meta name="twitter:description" content={siteConfig.customFields.copy.hero.subtitle} />
+      <meta name="twitter:image" content={useBaseUrl('/img/home/feature-table.png')} />
     </Head>
   )
 }
@@ -87,6 +94,7 @@ const MenuItems = ({ small }) => {
 const Menu = () => {
   const [showMenuDropdown, setShowMenuDropdown] = useState(false)
   const ref = useRef(null)
+
   useClickAway(ref, () => {
     setShowMenuDropdown(false)
   })
@@ -96,16 +104,18 @@ const Menu = () => {
       <ul className={styles.menu}>
         <MenuItems />
       </ul>
-      <ul className={styles.dropdown}>
+      <ul className={styles.dropdown}  ref={ref}>
         <span
           onClick={(e) => {
-            setShowMenuDropdown(!showMenuDropdown)
+            e.preventDefault()
+            e.stopPropagation()
+            setShowMenuDropdown(!showMenuDropdown )
           }}
         >
           Menu
         </span>
         <div
-          ref={ref}
+         
           className={styles.dropdownContent}
           style={{
             opacity: showMenuDropdown ? 1 : 0,
