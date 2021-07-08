@@ -14,8 +14,8 @@ Running your own Tellery with Kubernetes
 ## Infrastructure
 
 - **(Required)** Postgresql 10.0+
-- **(Required)** Object Storage Service ( `AWS S3`, `Aliyun OSS` or others compatible with `S3` protocol)
 - (Optional) Redis 5.0+
+- (Optional) Object Storage Service ( `AWS S3`, `Aliyun OSS` or others compatible with `S3` protocol)
 - For notifications, you would need
   - Email: An email address and an email server
 
@@ -65,7 +65,7 @@ The following table lists the configurable parameters of the Tellery chart and t
 
 You can choose `PostgreSQL deployed by Helm` by `--set postgresql.enabled=true` or `External PostgreSQL` by `--set externalPostgresql.host=xxx`, if both are configured, `PostgreSQL deployed by Helm` will be used.
 
-`PostgreSQL deployed by Helm` is base on [Postgresql Helm Chart](https://artifacthub.io/packages/helm/bitnami/postgresql/10.4.8#parameters), you can see it for more configurations
+`PostgreSQL deployed by Helm` is base on [Postgresql Helm Chart](https://artifacthub.io/packages/helm/bitnami/postgresql/10.4.8#parameters), you can see it for more configurations.
 
 | Parameter                   | Description                        | Default    |
 | --------------------------- | ---------------------------------- | ---------- |
@@ -78,16 +78,18 @@ You can choose `PostgreSQL deployed by Helm` by `--set postgresql.enabled=true` 
 
 ### Object Storage Configuration
 
-`objectStorage.endpoint` is optional when you are using `AWS S3`
+If you use PG as object storage, you only need to set `objectStorage.type=postgres`.
+
+`objectStorage.endpoint` is optional when you are using `AWS S3`.
 
 | Parameter               | Description               | Default                            |
 | ----------------------- | ------------------------- | ---------------------------------- |
-| objectStorage.type      | Object storage type       | s3                                 |
-| objectStorage.endpoint  | Object storage endpoint   | https://s3.us-west-1.amazonaws.com |
-| objectStorage.bucket    | Object storage bucket     | tellery-uploads                    |
-| objectStorage.region    | Object storage region     | us-west-1                          |
-| objectStorage.accessKey | Object storage access key | ''                                 |
-| objectStorage.secretKey | Object storage secret key | ''                                 |
+| objectStorage.type      | Object storage type       | postgres                           |
+| objectStorage.endpoint  | Object storage endpoint   | null                               |
+| objectStorage.bucket    | Object storage bucket     | null                               |
+| objectStorage.region    | Object storage region     | null                               |
+| objectStorage.accessKey | Object storage access key | null                               |
+| objectStorage.secretKey | Object storage secret key | null                               |
 
 ### Redis Configuration
 
@@ -128,7 +130,17 @@ If your written language is not English, you can modify your search plugin throu
 | system.web.port        | Web server port                                            | 80                     |
 | system.web.protocol    | Web server protocol                                        | https                  |
 | system.web.host        | Web server host                                            | null                   |
-| system.server.port     | Backend server port                                        | 8000                   |
+
+### Initialization Configuration
+
+| Parameter             | Description                       | Default             |
+| --------------------- | --------------------------------- | ------------------- |
+| init.user.create      | Whether to create first user      | false               |
+| init.user.name        | Name of created user              | admin               |
+| init.user.email       | Email of created user             | admin@tellery.local |
+| init.user.password    | Password of created user          | admin               |
+| init.workspace.create | Whether to create first workspace | false               |
+| init.workspace.name   | Name of created workspace         | Default             |
 
 ### Basic Configuration
 
