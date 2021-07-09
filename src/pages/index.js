@@ -38,9 +38,8 @@ const Meta = () => {
       <meta name="twitter:site" content="@TelleryHQ" />
       <meta name="twitter:title" content={siteConfig.title} />
       <meta name="twitter:description" content={siteConfig.customFields.copy.hero.subtitle} />
-      <meta name="twitter:image" content={useBaseUrl('/img/home/feature-table.png')} />
-      <meta name="og:image" content={useBaseUrl('/img/home/feature-table.png')} />
-
+      <meta name="twitter:image" content={useBaseUrl('/img/twitter-card.png')} />
+      <meta name="og:image" content={useBaseUrl('/img/twitter-card.png')} />
     </Head>
   )
 }
