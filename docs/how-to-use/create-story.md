@@ -54,7 +54,7 @@ The default visualization type is `table`. To change the visualization, just cli
 Or, click the "Visualization options📊" on the bottom right of the question block.
 
 
-<video src='/img/tutorial/create-story.mp4' controls />
+<video src='/img/tutorial/edit-question.mp4' controls />
 
 
 ## Add some narratives
@@ -84,7 +84,7 @@ Tellery provides [markdown](/docs/how-to-use/shortcut#markdown-styling) syntax y
 ### Drag and drop
 
 
-<video src='/img/tutorial/create-story.mp4' controls/>
+<video src='/img/tutorial/arrange-layout.mp4' controls/>
 
 
 
