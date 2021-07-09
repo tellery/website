@@ -130,7 +130,8 @@
 }
 
 .subscribe input {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .subscribe input::placeholder {
@@ -162,7 +163,7 @@
   border: 1px solid #dedede;
   box-sizing: border-box;
   border-radius: 30px;
-  padding: 17px 15px;
+  padding: 17px 30px;
   flex: 1;
   outline: none;
 }
