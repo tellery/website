@@ -81,7 +81,7 @@ const FeatureList = [
         <h3>Design for collaborative analytics</h3>
         <p>
           Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential business
-          logic, and reference it in future contexts. Metrics across multiple dashboards can be maintained easily.
+          logic, and reference it in future contexts. Metrics can be maintained easily across multiple dashboards.
         </p>
       </>
     ),
