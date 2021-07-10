@@ -69,8 +69,7 @@ const FeatureList = [
         <h3>Build analytical narratives from scratch, faster</h3>
         <p>
           Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific
-          analysis? An anomalies investigation? A campaign-oriented dashboard? Tell the story your own way. No more
-          copy-pasting screenshots of charts.
+          analysis? An anomalies investigation? A campaign-oriented dashboard? Tell the story, your way.
         </p>
       </>
     )
@@ -82,7 +81,7 @@ const FeatureList = [
         <h3>Design for collaborative analytics</h3>
         <p>
           Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential business
-          logic, and reference it in future contexts.
+          logic, and reference it in future contexts. Metrics across multiple dashboards can be maintained easily.
         </p>
       </>
     ),

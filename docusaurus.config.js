@@ -9,7 +9,7 @@ const customFields = {
     hero: {
       title: 'Analyze, report and organize\nall in one place',
       subtitle:
-        'Tellery helps data teams organize analyses and narrate them in one place. As easy as using a notebook. As powerful as a data modeling tool.'
+        'Tellery helps you explore, analyze and share analytics in one place. As easy as using a notebook. As powerful as a data modeling tool.'
     },
     philosophy:
       'We believe that analytic code is an asset. But most analyses, narrated in reports, decks, dashboards, notebooks are ephemeral. If we can build a tool helping people organize analysis effectively, we can free up them to focus on bigger ideas.'
