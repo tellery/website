@@ -6,15 +6,10 @@ sidebar_position: 3
 # Create a new thought
 
 
-Ad hoc analytic code sometimes is hard to manage. Tellery allows you organize ad hoc analytic code and track them into a calendar view.
+Ad hoc analytic code sometimes is hard to manage. Tellery allows you organize ad hoc analytic code and track them into a reverse chronological view.
 
 
-You can create a new "thought" each day on the "My Thought" page. 
-
-
-Feel free to drop your unformed analyses there. All your thoughts are in reverse chronological order on this page. The newest content is always on top of the page.
-
-
+You can create a new "thought" each day on the "My Thought" page. Feel free to drop your unformed analyses there. The newest content is always on top of the page.
 
 
 ## Calendar view
