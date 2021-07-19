@@ -79,14 +79,15 @@ If you use PG as object storage, you only need to set `objectStorage.type=postgr
 
 `objectStorage.endpoint` is optional when you are using `AWS S3`.
 
-| Parameter               | Description               | Default                            |
-| ----------------------- | ------------------------- | ---------------------------------- |
-| objectStorage.type      | Object storage type       | postgres                           |
-| objectStorage.endpoint  | Object storage endpoint   | null                               |
-| objectStorage.bucket    | Object storage bucket     | null                               |
-| objectStorage.region    | Object storage region     | null                               |
-| objectStorage.accessKey | Object storage access key | null                               |
-| objectStorage.secretKey | Object storage secret key | null                               |
+| Parameter                 | Description               | Default                            |
+| ------------------------- | ------------------------- | ---------------------------------- |
+| objectStorage.type        | Object storage type       | postgres                           |
+| objectStorage.endpoint    | Object storage endpoint   | null                               |
+| objectStorage.bucket      | Object storage bucket     | null                               |
+| objectStorage.region      | Object storage region     | null                               |
+| objectStorage.accessKey   | Object storage access key | null                               |
+| objectStorage.secretKey   | Object storage secret key | null                               |
+| objectStorage.cdnEndpoint | Object storage cdn endpoint| null                              |
 
 ### Redis Configuration
 
