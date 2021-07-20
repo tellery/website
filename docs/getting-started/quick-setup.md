@@ -24,7 +24,7 @@ git clone https://github.com/tellery/tellery.git
 cd tellery/deploy/compose
 
 # View or edit config file (optional)
-vim .env
+# vim .env
 
 # Run docker compose
 docker-compose up
