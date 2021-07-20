@@ -16,3 +16,6 @@ So far we support the following:
 |     Snowflake     |   [Profile Setup](/docs/how-to-use/configure-database#Snowflake)  |
 |     Redshift      |   [Profile Setup](/docs/how-to-use/configure-database#Redshift)   |
 |     PostgreSQL    |   [Profile Setup](/docs/how-to-use/configure-database#PostgreSQL) |
+|     BigQuery      |   [Profile Setup](/docs/how-to-use/configure-database#BigQuery)   |
+
+The [community-supported connectors](https://github.com/tellery/community-supported-connectors), consisting of SparkSQL / Hive and Presto, are currently working in progress. Feel free to make contribution!

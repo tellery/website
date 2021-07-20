@@ -8,9 +8,9 @@ To bring your own data into Tellery, You can set up your database profile on Set
 
 A database profile, which is the necessary configurations we have to made to connect to your data warehouse, consists of:
 
-- Connector type *(what kind of database you are connecting)*
+- Name *(the unique identifier of your profile)*
 
-- Authentication *(username, password for database)*
+- Connector type *(what kind of database you are connecting)*
 
 - Configurations & Optionals *(host, port, etc. differs from each kind of connector. For more details, see sections below)*
 
@@ -22,6 +22,8 @@ To connect with Snowflake, you need to provide:
 |:------------:|:-----------------------------------------------------------------:|:-------------:|:--------:|
 | Account Name |                    Your Snowflake account name                    |    xy12345    |   yes    |
 |  Region Id   |                     Your Snowflake region Id                      | us-ease-2.aws |   yes    |
+|   Username   |                     Your Snowflake username                       |   login_name  |   yes    |
+|   Password   |                     Your Snowflake password                       | your_password |   yes    |
 |     Role     |  The default access control role to use in the Snowflake session  |    SYSADMIN   |    no    |
 |  Warehouse   |                The virtual warehouse to run queries               |   COMPUTE_WH  |    no    |
 
@@ -35,6 +37,8 @@ To connect with Redshift, you need to provide:
 |:----------:|:--------------------------------------------------------------:|:--------------------------------------------------------------:|:--------:|
 |  Endpoint  |              The hostname of your Redshift cluster             |  examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com  |   yes    |
 |    Port    | The port number that you specified when launched, usually 5439 |                               5439                             |   yes    |
+|  Username  |   The username you created when initializing cluster           |                           your_username                        |   yes    |
+|  Password  |   The password your created when initializing cluster          |                           your_password                        |   yes    |
 |  Database  |   The logical database to connect to and run queries against   |                               my_db                            |   yes*   |
 
 :::note
@@ -47,11 +51,13 @@ To support importing csv to Redshift, you need to provide aws credentials for up
 
 ## PostgreSQL
 
-|    Field   |                           Description                          |   Example   | Required |
-|:----------:|:--------------------------------------------------------------:|:-----------:|:--------:|
-|  Endpoint  |         The hostname of your PostgreSQL database               |  localhost  |   yes    |
-|    Port    | The port number that you specified when launched, usually 5432 |    5432     |   yes    |
-|  Database  |   The logical database to connect to and run queries against   |    my_db    |   yes*   |
+|    Field   |                           Description                          |    Example    | Required |
+|:----------:|:--------------------------------------------------------------:|:-------------:|:--------:|
+|  Endpoint  |         The hostname of your PostgreSQL database               |   localhost   |   yes    |
+|    Port    | The port number that you specified when launched, usually 5432 |     5432      |   yes    |
+|  Username  |     The user / role that granted access to your database       | your_username |   yes    |
+|  Password  |                      Your password                             | your_password |   yes    |
+|  Database  |   The logical database to connect to and run queries against   |     my_db     |   yes*   |
 
 :::note
 The database argument is mandatory for postgreSQL, by default it would be the same as your username.
@@ -62,3 +68,19 @@ Therefore, our connector will restrict your accessibility into the database you 
 
 This setting will be also applied to Redshift.
 :::
+
+## BigQuery
+
+The only thing you need to connect your BigQuery is your key file, which can be generated following the instruction [here](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries)
+
+The uploaded json file should populate the following fields:
+
+- Project id
+- Private key id
+- Private key
+- Client email
+- Client id
+- Auth uri
+- Token uri
+- Auth provider x509 cert url
+- Client x509 cert url
