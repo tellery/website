@@ -8,7 +8,7 @@ sidebar_position: 5
 
 ![](/img/tutorial/question-reference-popover.png)
 
-This week we've shipped lots of little improvements, one thing you might notice is that question references now have popover UI indicators. You can preview the SQL of an question ref easily without navigating to it.
+This week we've shipped lots of little improvements, one thing you might notice is that question references now have popover UI indicators. You can preview the SQL of a question ref easily without navigating to it.
 
 You can make a story refresh all its questions on open. This feature makes dashboard more intuitive. And Tellery now supports [BigQuery](https://tellery.io/docs/how-to-use/configure-database#bigquery)! 🎉
 
