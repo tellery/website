@@ -65,6 +65,10 @@ const config = {
               href: '/docs'
             },
             {
+              label: 'Changelog',
+              href: '/docs/changelog'
+            },
+            {
               label: 'GitHub',
               href: customFields.githubUrl
             }
