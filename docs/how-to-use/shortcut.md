@@ -14,6 +14,7 @@ sidebar_position: 4
 * Press `Cmd/Ctrl + k` to toggle search bar
 
 
+
 ## Question editor
 
 
@@ -25,9 +26,22 @@ sidebar_position: 4
 
 ## Story
 
+### The basics
 
+* Press `/` to bring up quick commands.
+* Type `/Command Name + Enter` to execute a command directly
 * Type `[[` and the name of another story to create a link to it
+* Type `Tab` to indent text 
+* Type `Shift + Tab` to unindent text
+* Type `Enter` to create a new text block below
+* Press `Ctrl + f` to move cursor forward
+* Press `Ctrl + b` to move cursor backward
+* Press `Ctrl + a` to jump to start of block
+* Press `Ctrl + e` to jump to end of block
+* Undo: `Cmd/Ctrl + z` to 
+* Redo: `Cmd/Ctrl + Shift + z` 
 * Press `Alt/Option` and click a story link to open it in the sidebar
+
 
 
 ### Inline styling
@@ -77,8 +91,6 @@ Headings can be created as follows:
 * Soon, we will provide inline markdown support, such as **bold**, *italicize*, and ~~strike-through~~
 
 
-### Slash command
 
 
-Type `/Command Name + Enter` to execute a slash command.
 
