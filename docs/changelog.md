@@ -7,6 +7,13 @@ import Lightbox from "@site/src/components/lightbox/index.js"
 
 # Changelog
 
+:::note
+New updates and improvements to Tellery.
+
+[Follow us on twitter](https://twitter.com/telleryhq) to find out when features are released.
+:::
+
+
 ## v0.5.0 (Jul 21, 2021)
 
 
