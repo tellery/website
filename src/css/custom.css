@@ -24,11 +24,11 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-video {
+.doc_page video {
   max-width: 100%;
 }
 
-img {
+.doc_page img {
   max-width: 100%;
   display: block;
   zoom: 50%;
