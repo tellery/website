@@ -42,6 +42,5 @@ Check out the [general configuration guide](https://github.com/tellery/tellery/t
 
 Learn how to start analysis with Tellery:
 
-* [Create a new story](/docs/how-to-use/create-story)
-* Use [question references](/docs/how-to-use/question-referencing)
 * [Configure a database](/docs/how-to-use/configure-database) to connect to your own dataset
+* [Create a new story](/docs/how-to-use/create-story)
