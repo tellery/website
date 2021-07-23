@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-import Question from "@site/src/components/Question.js"
+import Question from "@site/src/components/question/index.js"
 
 
 # Question referencing

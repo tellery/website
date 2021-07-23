@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import styles from './Question.module.css'
+import styles from './styles.module.css'
 
 export const Question = ({ children, name }) => {
   return (

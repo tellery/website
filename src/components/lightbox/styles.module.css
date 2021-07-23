@@ -1,0 +1,13 @@
+
+:local(.docImage) {
+  display: block;
+  zoom: 50%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 0px 1px;
+  border-radius: 8px;
+  margin: 2em auto;
+}
+
+:local(.title) {
+  text-align: center;
+  width: 100%;
+}

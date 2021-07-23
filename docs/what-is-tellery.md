@@ -8,18 +8,10 @@ slug: /
 # What is Tellery?
 
 
-Tellery helps data teams organize ad-hoc analyses and narrate them in one place.
+Tellery brings data exploration, analytical narratives and collaboration into one place. Want an anomalies investigation? A campaign-oriented dashboard? A Feature-specific analysis? They are now all in one place.
 
 
-Tellery brings all of your words and data into one flexible surface:
-
- * Anomalies investigation
- * Feature-specific analysis
- * Campaign-oriented dashboard
- * Or customize your deliverable for your own needs
-
-
-Tellery allows you abstract essential business logic, and [reference it in future analysis](/docs/how-to-use/question-referencing). You can define a model grasping the nuances of datasets to make your exploratory analysis organizable. Tellery uses SQL to model data, so you can easily consolidate it in [dbt](https://www.getdbt.com/).
+Tellery allows you abstract essential business logic, and [reference it in future analysis](/docs/how-to-use/question-referencing). Metrics are maintainable and shareable models across dashboards and reports. Tellery uses SQL to model data, so you can easily consolidate it in [dbt](https://www.getdbt.com/).
 
 
 See the reason [why we built Tellery](/docs/about).

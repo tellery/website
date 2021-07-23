@@ -7,12 +7,14 @@ id: about
 
 ## Why we built Tellery?
 
-The last few years have seen an explosion in a number of analytics tools in an emerging ecosystem, called modern data stack. Dashboarding tools brought visibility into the business. Looker made the analytics tool self-servable. But a long tail of custom questions are answered in an exploratory manner, or commonly known as ad-hoc analytics.
+The last few years have seen an explosion in a number of analytics tools in an emerging ecosystem, called modern data stack. Dashboards brought visibility into the business. Looker helped business users to do self-service analytics. Transformation tool like dbt created a solid foundation that everyone can share. 
 
-We believe that analysts have a workflow problem. We too often copy-paste screenshots of charts from one tool to another. Metrics buried dashboard can not be referenced elsewhere. We conduct duplicated analysis that a colleague had already done. The modern data stack makes it easy to answer questions, but hard to answer them consistently.
+We use dozens of tools to get our work done. We too often copy-paste screenshots of charts from one tool to another. We conduct duplicated analysis that a colleague had already done. Metrics are scattered across tools and recreated with no oversight. The modern data stack makes it easy to answer questions, but hard to answer them consistently.
 
-Most analytics tools don't compound. Most data analyses, narrated in reports, decks, dashboards, notebooks are ephemeral. Few tools treat analytics as assets and manage to evolve from them. This is the start problem. If any individual isn't getting compound interest from his analytics how can a collective. We start by building a tool that can help analysts explore data, analyze and narrate business analytics in one place.
+We start by building a tool that brings data exploration, analytical narratives and collaboration **into one place**. Want an anomalies investigation? A campaign-oriented dashboard? A Feature-specific analysis? They are now all in one place.
 
-We bring together analytic workflow and a presentation layer. Tellery comes with a handful of building blocks, like visualization and bullet list. Want an anomalies investigation? A Feature-specific analysis? A campaign-oriented dashboard? Tellery comes with a bucket of building blocks. You can customize your deliverables for your own needs. Tell story your way.
+Tellery brings words and data into one flexible surface, where you can organize visualizations with drag-and-drop ease. You can customize your deliverables with a bucket of building blocks. Tell story your way.
 
-Tellery allows you abstract essential business logic, and reuse it in future contexts. Maintain metrics across dashboards and reports. Metrics are defined consistently and always up to date. Stakeholders can see the context around numbers, making it possible to see how analysts arrived at the conclusions they did.
+Tellery allows you abstract essential business logic, and reuse it in future contexts. Metrics are **maintainable and shareable models** across dashboards and reports. They are defined consistently and always up to date.
+
+Stakeholders can see the context around numbers, making it possible to see how analysts arrived at the conclusions they did.

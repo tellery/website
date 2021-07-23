@@ -2,11 +2,16 @@
 sidebar_position: 5
 
 ---
+
+import Lightbox from "@site/src/components/lightbox/index.js"
+
 # Changelog
 
 ## v0.5.0 (Jul 21, 2021)
 
-![](/img/tutorial/question-reference-popover.png)
+
+<Lightbox src='/img/tutorial/question-reference-popover.png' title='Question reference popover' />
+
 
 This week we've shipped lots of little improvements, one thing you might notice is that question references now have popover UI indicators. You can preview the SQL of a question ref easily without navigating to it.
 
