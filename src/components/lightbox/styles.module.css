@@ -1,13 +1,22 @@
 
-:local(.docImage) {
-  display: block;
-  zoom: 50%;
-  box-shadow: rgb(0 0 0 / 20%) 0px 0px 0px 1px;
-  border-radius: 8px;
+:local(.card) {
   margin: 2em auto;
 }
 
-:local(.title) {
-  text-align: center;
+:local(.docImage) {
   width: 100%;
+}
+
+:local(.docImage img) {
+  display: block;
+  zoom: 50%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 3px 1px;
+  border-radius: 20px;
+}
+
+:local(.footer) {
+  padding: 20px 20px;
+  margin: 0 auto; 
+  text-align: center;
+  width: 250px;
 }

@@ -16,14 +16,12 @@ New updates and improvements to Tellery.
 
 ## v0.5.0 (Jul 21, 2021)
 
-
 <Lightbox src='/img/tutorial/question-reference-popover.png' title='Question reference popover' />
 
 
 This week we've shipped lots of little improvements, one thing you might notice is that question references now have popover UI indicators. You can preview the SQL of a question ref easily without navigating to it.
 
 You can make a story refresh all its questions on open. This feature makes dashboard more intuitive. And Tellery now supports [BigQuery](https://tellery.io/docs/how-to-use/configure-database#bigquery)! 🎉
-
 
 
 #### Enhancements
