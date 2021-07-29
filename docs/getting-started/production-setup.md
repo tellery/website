@@ -201,6 +201,8 @@ If your written language is not English, you can modify your search plugin throu
 | connector.service.annotations                        | Annotations for service assignment              | {}                |
 | connector.service.externalIPs                        | ExternalIPs for service assignment              | null              |
 | connector.service.loadBalancerSourceRanges           | LoadBalancerSourceRanges for service assignment | null              |
+| connector.persistence.enabled                        | Persistence volume for storing configurations   | true              |
+| connector.persistence.size                           | Size of Persistence volume                      | 1Gi               |
 
 Using the `--set key\value[,key=value]` argument to specify each parameter
 
