@@ -67,16 +67,16 @@ group by 1,2
 ## How to reference questions?
 
 
-### Copy their addresses
+### Copy their URLs
 
 
-To link things together, every block in Tellery has an address. We can reference a question by its block address.
+To link things together, every block in Tellery has a url. We can reference a question by its block url.
 
 
-The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy block ref" button in the dropdown menu to copy its address to your clipboard.
+The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy url" button in the dropdown menu to copy its url to your clipboard.
 
 
-If you paste the address in the question editor, it will be automatically recognized by Tellery.
+If you paste the url in the question editor, it will be automatically recognized by Tellery.
 
 <video src='/img/tutorial/copy-address.mp4' controls />
 
@@ -87,7 +87,7 @@ If you paste the address in the question editor, it will be automatically recogn
 When editing SQL in the question editor, type double curly braces `{{` to invoke the question referencing.
 
 
-Then start typing the name of the question you want to reference. Hit "Enter" to pull its address in your editor when you’ve found the question in the dropdown that appears.
+Then start typing the name of the question you want to reference. Hit "Enter" to pull it in your editor when you’ve found the question in the dropdown that appears.
 
 <video src='/img/tutorial/search-question-ref.mp4' controls/>
 
@@ -102,7 +102,7 @@ On the right side of each question, Tellery also lists all the questions referen
 in the **Downstream** section. You can navigate to them to see how they use that question.
 
 
-## Some Advice
+## Some Advice on transformation
 
 
 Although transforming and re-shaping data can be very easy in Tellery, we recommend you govern transformations using a batch-based tool like [dbt](https://www.getdbt.com/). Because you can assure data quality and improve performance there.
