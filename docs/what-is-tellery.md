@@ -21,7 +21,8 @@ See the reason [why we built Tellery](/docs/about).
 
 ## Getting started with Tellery
 
-[Try the demo Tellery project](/docs/getting-started/quick-setup) with minimal setup.
+1. [Try this online demo](https://demo.tellery.io/) where you can click around and see Tellery in action - no installation required!
+2. [Try the demo Tellery project](/docs/getting-started/quick-setup) with minimal setup.
 
 
 ---
