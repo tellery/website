@@ -29,15 +29,23 @@ Last but no least, we shipped a online demo at [https://demo.tellery.io/](https:
 
 #### Enhancements
 
-* Improve the appearance of scrollbar
-* Better error messages for saving transactions
-* Support anonymous login mode
+- Improve the appearance of scrollbar in multiple places
+- Support anonymous login mode
+- Better error messages for saving transactions
+- Optimize the inserting experience of toggle list
+- Discard the reminder for slash commands after start typing
+- Avatars of recent visitors now have tooltips
+- Open thoughts from left sidebar
 
 
 #### Fixed
 
-* Resolved alias conflicts when constructing SQL
-
+- Resolved alias conflicts when constructing SQL
+- Fixed an issue when there are too many tabs in SQL editor
+- Fixed an issue when undoing/redoing operations
+- Fixed an issue when opening story in right sidebar
+- Fixed several text styling issues
+- Fixed an collaboration issue when serval ppl editing the same story
 
 
 ## v0.5.0 (Jul 21, 2021)
