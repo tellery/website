@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Quick Setup
 
-Setup Tellery quickly on your local machine. We prepare some sample data for you to play with.
+Setup Tellery quickly on your local machine. We prepare some sample data for you to play with. The final result will look exactly like [https://demo.tellery.io](https://demo.tellery.io).
 
 ## Prerequisites
 
