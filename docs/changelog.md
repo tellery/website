@@ -24,7 +24,7 @@ You can convert any question into Metric and explore it in any stories with drag
 <Lightbox src='/img/changelog/all-metrics.png' title='All metrics' />
 
 
-Last but no least, we shipped a online demo at [https://demo.tellery.io/](https://demo.tellery.io/) this week!
+Last but no least, we shipped an online demo at [https://demo.tellery.io/](https://demo.tellery.io/) this week!
 
 
 #### Enhancements
