@@ -208,12 +208,11 @@ const Hero = () => {
 
       <h3>{hero.subtitle}</h3>
       <div className={styles.buttons}>
-        <a className={styles.github} href={siteConfig.customFields.githubUrl}>
-          <GithubIcon fill={'#1B1F23'} />
-          Github
+        <a className={styles.secondary}  href="/docs/getting-started/quick-setup">
+          Learn More
         </a>
-        <a className={styles.start} href="/docs/getting-started/quick-setup">
-          Get Started
+        <a className={styles.primary} href="https://demo.tellery.io">
+         Try Demo
         </a>
       </div>
       <HeroSnapshot />
