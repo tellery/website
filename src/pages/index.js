@@ -208,7 +208,7 @@ const Hero = () => {
 
       <h3>{hero.subtitle}</h3>
       <div className={styles.buttons}>
-        <a className={styles.secondary}  href="/docs/getting-started/quick-setup">
+        <a className={styles.secondary}  href="/docs">
           Learn More
         </a>
         <a className={styles.primary} href="https://demo.tellery.io">
