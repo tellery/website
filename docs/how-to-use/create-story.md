@@ -6,9 +6,9 @@ sidebar_position: 1
 # Create a new story
 
 
+### Create a story
 
 Click the "+" button on the left side bar. Then the story is created in your workspace, and a new empty story will pop up in front of you. You can give it a meaningful name.
-
 
 
 ### Ask a new question
@@ -43,13 +43,7 @@ You can click the "Execute▶️" button in the question editor to submit a SQL 
 ### Change the visualization
 
 
-The default visualization type is `table`. To change the visualization, just click the "Visualization options📊" button on the upper right of your question editor.
-
-
-Or, click the "Visualization options📊" on the bottom right of the question block.
-
-
-<video src='/img/tutorial/edit-question.mp4' controls />
+The default visualization type is `table`. To change the visualization, just click the "Visualization options📊" button on the upper right of your question.
 
 
 ### Add your words
@@ -79,9 +73,6 @@ Tellery provides [markdown](/docs/how-to-use/shortcut#markdown-styling) syntax y
 ### Drag and drop
 
 
-<video src='/img/tutorial/arrange-layout.mp4' controls/>
-
-
 
 Any text or chart in a story can be dragged wherever you want it.
 
@@ -100,3 +91,6 @@ Drag-and-dropping a block to the right side of another creates columns. Hovering
 
 
 Change the width of a story from the upper right `•••` menu on your story. Making a story "Full-width" will allow you to put more content horizontally.
+
+
+<video src='/img/tutorial/arrange-layout.mp4' controls/>
