@@ -66,10 +66,11 @@ const FeatureList = [
     Right: () => (
       <>
         {' '}
-        <h3>Build analytical narratives from scratch, faster</h3>
+        <h3>Explore, analyze and share analytics in one place</h3>
         <p>
           Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific
-          analysis? An anomalies investigation? A campaign-oriented dashboard? Tell the story, your way.
+          analysis? An anomalies investigation? A real-time campaign-oriented dashboard? 
+          You can tailor it to your need to unlock the value of data.
         </p>
       </>
     )
@@ -80,8 +81,9 @@ const FeatureList = [
         {' '}
         <h3>Design for collaborative analytics</h3>
         <p>
-          Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential business
-          logic, and reference it in future contexts. Metrics can be maintained easily across multiple dashboards.
+          Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential data 
+          transformation/business logic, and reference it in future contexts. 
+          Metrics can be maintained easily across multiple dashboards.
         </p>
       </>
     ),
