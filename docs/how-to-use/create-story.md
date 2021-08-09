@@ -7,16 +7,11 @@ sidebar_position: 1
 
 
 
-Click the "Create new story`+`" button at the bottom of your sidebar.
+Click the "+" button on the left side bar. Then the story is created in your workspace, and a new empty story will pop up in front of you. You can give it a meaningful name.
 
 
-Then the story is created in your workspace, and a new empty story will pop up in front of you. You can give it a meaningful name.
 
-
-<video src='/img/tutorial/create-story.mp4' controls />
-
-
-## Ask a new question
+### Ask a new question
 
 
 :::info
@@ -45,7 +40,7 @@ Click the "Edit SQL`<>`" on the bottom right of any existing question block to b
 You can click the "Execute▶️" button in the question editor to submit a SQL to Tellery. Tellery will query the data warehouse, fetch the result back, and visualize it.
 
 
-###  Change the visualization
+### Change the visualization
 
 
 The default visualization type is `table`. To change the visualization, just click the "Visualization options📊" button on the upper right of your question editor.
@@ -57,7 +52,7 @@ Or, click the "Visualization options📊" on the bottom right of the question bl
 <video src='/img/tutorial/edit-question.mp4' controls />
 
 
-## Add some narratives
+### Add your words
 
 
 Besides the question block, you can also insert a narrative block by simply typing the `/` command.
