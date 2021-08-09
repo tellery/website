@@ -8,10 +8,10 @@ slug: /
 # What is Tellery?
 
 
-Tellery brings data exploration, analytical narratives and collaboration into one place. Want an anomalies investigation? A campaign-oriented dashboard? A feature-specific analysis report? They are now all in one place.
+Tellery allows you abstract essential data transformation/business logic, and reuse it in future contexts through metrics. Metrics are **maintainable and shareable data models** across dashboards and reports. They are defined consistently and always up to date.
 
 
-You can even define a model grasping the nuance of datasets. Tellery allows you abstract essential business logic, and reuse it in future contexts. Metrics are **maintainable and shareable models** across dashboards and reports. They are defined consistently and always up to date.
+To deliver better value of the metrics, Tellery comes with a bucket of building blocks and rich text styling features. Want a real-time campaign-oriented dashboard? A feature-specific analysis? An anomalies investigation? You can tailor it to your need to unlock the value of data.
 
 
 See the reason [why we built Tellery](/docs/about).
