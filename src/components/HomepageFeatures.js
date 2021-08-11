@@ -88,7 +88,7 @@ const FeatureList = [
     Right: () => <ImageWrapper src={useBaseUrl('/img/home/feature-2.png')} width={1800} height={1446} />
   },
   {
-    Left: () => <ImageWrapper src={useBaseUrl('/img/home/feature-3.png')} width={2110} height={1394} />,
+    Left: () => <ImageWrapper className={styles.image} src={useBaseUrl('/img/home/feature-3.png')} width={2110} height={1394} />,
     Right: () => (
       <>
         <h3>Multiplayer and built for web</h3>
