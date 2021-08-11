@@ -68,9 +68,8 @@ const FeatureList = [
         {' '}
         <h3>Explore, analyze and share analytics in one place</h3>
         <p>
-          Tellery comes with a bucket of building blocks and rich text styling features. Want a feature-specific
-          analysis? An anomalies investigation? A real-time campaign-oriented dashboard? 
-          You can tailor it to your need to unlock the value of data.
+          Tellery comes with a bucket of building blocks and rich text styling features. 
+          From reports to dashboards, you can tailor it to your need to unlock the value of data.
         </p>
       </>
     )
@@ -82,21 +81,20 @@ const FeatureList = [
         <h3>Design for collaborative analytics</h3>
         <p>
           Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential data 
-          transformation/business logic, and reference it in future contexts. 
-          Metrics can be maintained easily across multiple dashboards.
+          transformation/business logic. Metrics can be maintained easily across reports and dashboards.
         </p>
       </>
     ),
     Right: () => <ImageWrapper src={useBaseUrl('/img/home/feature-2.png')} width={1800} height={1446} />
   },
   {
-    Left: () => <VideoWrapper src={useBaseUrl('/img/home/feature-3.mp4')} width={1920} height={972} />,
+    Left: () => <ImageWrapper src={useBaseUrl('/img/home/feature-3.png')} width={2110} height={1394} />,
     Right: () => (
       <>
-        <h3>Streamlined Analysis</h3>
+        <h3>Multiplayer and built for web</h3>
         <p>
-          Edit analytic code and configure visualization options without leaving the current context. Answer questions
-          and put explanations in seconds.
+          With Tellery, you can collaborate and review work in real-time. 
+          Bring timely and trusted data to your team.
         </p>
       </>
     )
