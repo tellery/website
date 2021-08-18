@@ -36,6 +36,7 @@ We added inline formula to reference a single number in your story. The inline f
 
 #### Enhancements
 
+- Metric is renamed to **Data asset**
 - Introduce two new block types: Code block/Math equation block
 - Improve the appearance & styles of visualization blocks
 - A visualization block can be configured to "frozen" to avoid its data being refreshed by mistake
