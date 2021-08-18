@@ -14,6 +14,47 @@ Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telle
 :::
 
 
+
+## v0.7.0 (Aug 18, 2021)
+
+
+Wow, half month has passed, here's a quick update on what's changed since last version.
+
+
+### Dbt integration
+
+We've added dbt integration this version to make the modelling process more smooth. Set up your dbt repository, Tellery now imports all your dbt sources and models as data assets. You can inspect their dbt metadata while editing SQL in Tellery. 
+
+
+<Lightbox src='/img/changelog/dbt-integration.png' title='Data assets for dbt models' />
+
+
+
+### Inline formula
+
+
+We add inline formula to reference a single number in your story. Inline formula allows you mention important numbers in charts/tables. It connects your data and words more tightly. It also supports simple arithmetic. 
+
+
+#### Enhancements
+
+- Introduce two new block types: Code block/Math equation block
+- Improve the appearance & styles of visualization blocks
+- A visualization block can be configured to "frozen" to avoid its data being refreshed by mistake
+- Optimize the position of tooltip when hovering over data points in visualizations
+- Add linear display mode to X-axis for line/bar/area chart
+
+
+#### Fixed
+
+- Fixed an issue when copying data within visualization block
+- Fixed a mouse/keyboard navigation conflict issue in slash command popup
+- Resizing visualization block width will not affect its height now 
+- Fixed an bug when typing asterisk before a bi-directional link
+- Fixed an issue when pressing backspace key (will delete two blocks)
+
+
+
 ## v0.6.0 (Aug 4, 2021)
 
 We’re excited to introduce Metric in Tellery. A metric is essentially a wrapper that lets you embed a piece of SQL from one question into other questions. It's based on the mechanism of referencing question. 
@@ -24,7 +65,7 @@ You can convert any question into Metric and explore it in any stories with drag
 <Lightbox src='/img/changelog/all-metrics.png' title='All metrics' />
 
 
-Last but no least, we shipped an online demo at [https://demo.tellery.io/](https://demo.tellery.io/) this week!
+Last but not least, we shipped an online demo at [https://demo.tellery.io/](https://demo.tellery.io/) this week!
 
 
 #### Enhancements
