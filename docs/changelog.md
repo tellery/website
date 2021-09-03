@@ -17,7 +17,7 @@ Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telle
 ## v0.8.0 (Sept 2, 2021)
 
 
-Last week brings some great improvements to data assets. A business user now can extract metrics from a data asset without the assist of analysts.
+Last week brings some great improvements to data assets. A business user now can extract metrics from a data asset without the assistance of analysts.
 
 1. First, drag and drop a data asset from the left side of your story.
 2. Second, choose at least one **Metric** as well as a couple of **Dimensions** to summarize.
