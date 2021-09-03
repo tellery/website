@@ -14,6 +14,47 @@ Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telle
 :::
 
 
+## v0.8.0 (Sept 2, 2021)
+
+
+Last week brings some great improvements to data assets. A business user now can extract metrics from a data asset without the assist of analysts.
+
+1. First, drag and drop a data asset from the left side of your story.
+2. Second, choose at least one **Metric** as well as a couple of **Dimensions** to summarize.
+3. Bang! All metrics you wanted will be there for you.
+
+
+<Lightbox src='/img/changelog/smart-query.png' title='Data asset' />
+
+
+To achieve that, you need to add metrics to the data asset first. Currently, Tellery supports two types of metric:
+
+- Aggregated metric: calculate the metric by aggregating values within a column
+- Custom SQL metric: calculate the metric by a custom SQL
+
+We've also rolled out a number of UI improvements including visualization block menu, Thoughts preview in the past couple of weeks. 
+
+
+#### Enhancements
+
+- Tooltips will open instantly if you have another tooltip open
+- Generate random avatars for anonymous users
+- Optimized the responsive layout for small screens
+- Redirect user to the original page where he landed after he logged in
+- Inline formula can be modified by clicking it
+- Optimized the navigation logic for references in editor
+- Hyperlinks/inline formulas have tooltips now 
+
+
+#### Fixed
+
+- Fixed an issue of the popover menu when editing text
+- Fixed an bug when moving the cursor in the nested block
+- Fixed an issue when displaying the title of thoughts in the downstream list
+- Fixed an bug of calculating width for the line/bar/area charts
+- Fixed an bug of cursor when hitting an enter within a paragraph
+
+
 
 ## v0.7.0 (Aug 18, 2021)
 
