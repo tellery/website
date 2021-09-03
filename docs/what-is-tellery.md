@@ -10,12 +10,12 @@ slug: /
 Tellery is a BI tool connecting your data and team. As easy as using a notebook. As powerful as a data modelling tool.
 
 
-Instead of querying on tables and columns directly, Tellery users can ask questions against Data assets, which provides a semantic layer for your data. 
+Instead of querying on tables and columns directly, Tellery users can ask questions against [data assets](https://demo.tellery.io/story/vtkequmHGz5QBD9WjVflU), which provides a semantic layer for your data.
 
 
-- Data asset let business users extract business metrics without the assist of analysts.
-- Using data asset across dashboards/reports instead of copy-pasting SQL snippets around make your business logic more consistent and easier to maintain. 
-- Tellery comes with a bucket of building blocks and rich text styling features. From reports to dashboards, you can tailor it to your need to unlock the value of data asset.
+- Data asset let business users extract metrics without the assistance of analysts.
+- Building dashboards and reports on data assets make your business logic more consistent and easier to maintain.
+- Tellery comes with a bucket of building blocks. From reports to dashboards, you can tailor it to your own need to unlock the value of data asset.
 
 
 See the reason [why we built Tellery](/docs/about).
