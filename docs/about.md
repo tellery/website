@@ -8,13 +8,13 @@ id: about
 ## Why we built Tellery?
 
 
-The last few years have seen an explosion in a number of analytics tools in an emerging ecosystem, called modern data stack. Dashboards brought visibility into the business. Looker helped business users to do self-service analytics. Transformation tool like dbt created a solid foundation which everyone can share. 
+The last few years have seen an explosion in many analytics tools in an emerging ecosystem, called modern data stack. Dashboards brought visibility into the business. Looker helped business users to do self-service analytics. Transformation tools like dbt created a solid foundation that everyone can share. 
 
 
 We use dozens of tools to get our work done. We too often copy-paste screenshots of charts from one tool to another. We conduct duplicated analysis that a colleague had already done. Metrics are scattered across tools and recreated with no oversight. The modern data stack makes it easy to answer questions, but hard to answer them consistently.
 
 
-We start by building a tool that brings data exploration, analytical narratives and self-service BI **into one place**. Want an anomalies investigation? A campaign-oriented dashboard? A feature-specific analysis report? 
+We start by building a tool that brings data exploration, analytical narratives, and self-service **into one place**. Want an anomalies investigation? A campaign-oriented dashboard? A feature-specific analysis report? 
 They are now all in one place.
 
 
