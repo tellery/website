@@ -7,15 +7,13 @@ slug: /
 
 # What is Tellery?
 
-The all-in-one BI tool built for collaboration. As easy as using a SQL notebook. As powerful as a data modeling tool.
-
 
 Tellery comes with a bucket of lego-ish building blocks. From reports to dashboards, Tellery can be tailored to your needs. Tellery users can ask questions against Data assets instead of communicating in only tables and columns. Data assets provide a central business abstraction over your data.
 
 
 - [x] 💎 Let business users get answers in just a few clicks. Tellery will automatically roll up the metrics on the fly.
 - [x] 📏 Delivering insights through data assets make your metrics consistent and easy to maintain.
-- [x] 💪 Data assets can also be incorporated into deep analyses with SQL.
+- [x] 💪 You can also incorporate data assets into deep analyses with SQL.
 
 
 ---
