@@ -11,7 +11,7 @@ sidebar_position: 1
 Click the "+" button on the left side bar. Then the story is created in your workspace, and a new empty story will pop up in front of you. You can give it a meaningful name.
 
 
-### Ask a new question
+### Ask a question
 
 
 :::info
@@ -24,7 +24,7 @@ For asking a question in Tellery, you need to [configure a database](/docs/how-t
 Type `/` to bring up your menu of content options. Go ahead and choose "Question", then a question block will appear in the story. You can edit the name of the question.
 
 
-### Edit SQL
+### Write SQL
 
 
 

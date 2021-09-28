@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 import Question from "@site/src/components/question/index.js"
@@ -73,7 +73,7 @@ group by 1,2
 To link things together, every block in Tellery has a url. We can reference a question by its block url.
 
 
-The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy url" button in the dropdown menu to copy its url to your clipboard.
+The easiest way to reference a question is by having it in front of you. Move your mouse to the block and the `⋮⋮` icon will appear to the left of it. Click this handle, and then click "Copy link" button in the dropdown menu to copy its url to your clipboard.
 
 
 If you paste the url in the question editor, it will be automatically recognized by Tellery.
@@ -92,14 +92,6 @@ Then start typing the name of the question you want to reference. Hit "Enter" to
 <video src='/img/tutorial/search-question-ref.mp4' controls/>
 
 
-## Navigate between questions
-
-
-Each question reference in question is clickable. You can click it to open the question in another editor tab.
-
-
-On the right side of each question, Tellery also lists all the questions referencing that question
-in the **Downstream** section. You can navigate to them to see how they use that question.
 
 
 ## Some Advice on transformation
