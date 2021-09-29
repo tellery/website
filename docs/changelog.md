@@ -17,12 +17,12 @@ Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telle
 ## v0.8.2 (Sept 29, 2021)
 
 
-For the last two weeks, we've been focused on polishing the UI of metrics exploration and visualization settings.
+For the last two weeks, we've been focused on polishing the interaction of metrics exploration and visualization settings.
 
 We'll soon be working on adding filters to allow segmenting data and comparing measures across different dimensions.
 
 
-### 💎Enhancements
+#### 💎Enhancements
 
 - Redesign the icon for data asset🧱🧱🧱
 - The left side menu has a new appearance when triggered
@@ -31,12 +31,12 @@ We'll soon be working on adding filters to allow segmenting data and comparing m
 - The right-hand sidebar can be optionally closed by clicking the X at the top right of the tab
 
 
-### 🐞Fixed
+#### 🐞Fixed
 
 - Fixed a bug of refreshing data in a visualization
 - Fixed a bug of scrolling to query block
 - Correct the argument of importing from CSV
-- Fixed an overflow issue when hoovering code block
+- Fixed an overflow issue when hovering code block
 
 
 
@@ -57,7 +57,7 @@ We create a brand new sidebar in this release. Not only is this more excellent t
 - **Modeling**: This tab is for data producers. We now display the metrics and the downstream in this tab.
 
 
-### ✨New
+#### ✨New
 
 - Changing the measures and dimensions of the smart query will refresh its data 
 - The SQL editor has a new appearance
