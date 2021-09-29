@@ -14,6 +14,31 @@ Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telle
 :::
 
 
+## v0.8.2 (Sept 29, 2021)
+
+
+For the last two weeks, we've been focused on polishing the UI of metrics exploration and visualization settings.
+
+We'll soon be working on adding filters to allow segmenting data and comparing measures across different dimensions.
+
+
+#### 💎Enhancements
+
+- The left side menu has a more appearance
+- File could be imported into the data warehouse if it uploaded to Postgres storage
+- Data assets can be navigated to their block in the original stories
+- The right-hand sidebar can be optionally closed by clicking the X at the top right of the tab
+
+
+#### 🐞Fixed
+
+- Fixed a bug of refreshing data in a visualization
+- Fixed a bug of scrolling to query block
+- Correct the argument of importing from CSV
+- Fixed an overflow issue when hoovering code block
+
+
+
 ## v0.8.1 (Sept 15, 2021)
 
 
