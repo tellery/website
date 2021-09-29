@@ -66,10 +66,10 @@ const FeatureList = [
     Right: () => (
       <>
         {' '}
-        <h3>Explore, analyze and share analytics in one place</h3>
+        <h3>Build beautiful documents & dashboards visually</h3>
         <p>
-          Tellery comes with a bucket of building blocks and rich text styling features. 
-          From reports to dashboards, you can tailor it to your need to unlock the value of data.
+           An editor with rich text styling features, slash commands, and markdown support.
+           Share insights across your team.
         </p>
       </>
     )
@@ -78,27 +78,27 @@ const FeatureList = [
     Left: () => (
       <>
         {' '}
-        <h3>Design for collaborative analytics</h3>
+        <h3>Give your non-tech teams superpowers</h3>
         <p>
-          Enough of calculating duplicated metrics over and over again? Tellery allows you abstract essential data 
-          transformation/business logic. Metrics can be maintained easily across reports and dashboards.
+          Let business users extract metrics in just a few clicks. 
+          No longer communicate in tables and columns.
         </p>
       </>
     ),
-    Right: () => <ImageWrapper src={useBaseUrl('/img/home/feature-2.png')} width={1800} height={1446} />
+    Right: () => <ImageWrapper  src={useBaseUrl('/img/home/feature-non-tech.png')} width={928} height={585} />
   },
   {
-    Left: () => <ImageWrapper className={styles.image} src={useBaseUrl('/img/home/feature-3.png')} width={2110} height={1394} />,
     Right: () => (
       <>
-        <h3>Multiplayer and built for web</h3>
+        {' '}
+        <h3>Design for collaborative analytics</h3>
         <p>
-          With Tellery, you can collaborate and review work in real-time. 
-          Bring timely and trusted data to your team.
+          Tellery allows you model your data with just SQL. Metrics are no longer scattered across tools and recreated with no oversight.
         </p>
       </>
-    )
-  }
+    ),
+    Left: () => <ImageWrapper src={useBaseUrl('/img/home/feature-2.png')} width={1800} height={1446} />
+  },
 ]
 
 export const HomepageFeatures = () => {
