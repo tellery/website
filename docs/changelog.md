@@ -22,15 +22,16 @@ For the last two weeks, we've been focused on polishing the UI of metrics explor
 We'll soon be working on adding filters to allow segmenting data and comparing measures across different dimensions.
 
 
-#### 💎Enhancements
+### 💎Enhancements
 
-- The left side menu has a more appearance
+- Redesign the icon for data asset🧱🧱🧱
+- The left side menu has a new appearance when triggered
 - File could be imported into the data warehouse if it uploaded to Postgres storage
 - Data assets can be navigated to their block in the original stories
 - The right-hand sidebar can be optionally closed by clicking the X at the top right of the tab
 
 
-#### 🐞Fixed
+### 🐞Fixed
 
 - Fixed a bug of refreshing data in a visualization
 - Fixed a bug of scrolling to query block
@@ -56,7 +57,7 @@ We create a brand new sidebar in this release. Not only is this more excellent t
 - **Modeling**: This tab is for data producers. We now display the metrics and the downstream in this tab.
 
 
-#### ✨New
+### ✨New
 
 - Changing the measures and dimensions of the smart query will refresh its data 
 - The SQL editor has a new appearance
@@ -67,7 +68,7 @@ We create a brand new sidebar in this release. Not only is this more excellent t
 - Code block supported a few more languages syntax highlighting
 
 
-#### 💎Enhancements
+### 💎Enhancements
 
 - Change the cursor of dragging blocks within a story
 - Improve the performance when scrolled in a story
