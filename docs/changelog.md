@@ -68,7 +68,7 @@ We create a brand new sidebar in this release. Not only is this more excellent t
 - Code block supported a few more languages syntax highlighting
 
 
-### 💎Enhancements
+#### 💎Enhancements
 
 - Change the cursor of dragging blocks within a story
 - Improve the performance when scrolled in a story
