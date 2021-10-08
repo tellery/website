@@ -23,6 +23,9 @@ git clone https://github.com/tellery/tellery.git
 # Change directories into the demo directory
 cd tellery/deploy/compose
 
+# Pull the latest image (to ensure that you are using the latest image we provided)
+docker-compose pull
+
 # View or edit config file (optional)
 # vim .env
 
