@@ -30,10 +30,11 @@ helm repo add tellery-stable https://tellery.github.io/charts
 helm repo update
 ```
 
-To install the helm chart with release name `release-name`:
+To install the helm chart with release name e.g. `tellery` (replace this by your need, the following commands will all use the name `tellery`):
 
 ```shell
-helm install release-name tellery-stable/tellery \
+helm install tellery tellery-stable/tellery \
+--set system.web.host=YOUR_HOST \
 --set postgresql.enabled=true
 ```
 
@@ -42,7 +43,8 @@ If you want to provide advanced parameters with your installation you can check 
 ### Installing with external Postgresql
 
 ```shell
-helm install release-name tellery-stable/tellery \
+helm install tellery tellery-stable/tellery \
+--set system.web.host=YOUR_HOST \
 --set externalPostgresql.host=postgresqlAddress \
 --set externalPostgresql.port=5432 \
 --set externalPostgresql.username=postgres \
@@ -53,8 +55,17 @@ helm install release-name tellery-stable/tellery \
 ## Uninstall the Chart
 
 ```shell
-helm uninstall release-name
+helm uninstall tellery
 ```
+
+## Notes
+
+So far the connector can be only deployed with single replica.
+
+For tellery main service, if you wanna go with multiple replicas, you have to configure a redis storage for the state synchronization.
+To Configure the redis storage, see [Redis Configuration](#redis-configuration).
+
+The only mandatory config that have to be given by user is `system.web.host`, see [System Configuration](#system-configuration) for more details.
 
 ## Configuration
 
@@ -134,11 +145,11 @@ If your written language is not English, you can modify your search plugin throu
 
 | Parameter             | Description                       | Default             |
 | --------------------- | --------------------------------- | ------------------- |
-| init.user.create      | Whether to create first user      | false               |
+| init.user.create      | Whether to create first user      | true                |
 | init.user.name        | Name of created user              | admin               |
 | init.user.email       | Email of created user             | admin@tellery.local |
 | init.user.password    | Password of created user          | admin               |
-| init.workspace.create | Whether to create first workspace | false               |
+| init.workspace.create | Whether to create first workspace | true                |
 | init.workspace.name   | Name of created workspace         | Default             |
 
 ### Basic Configuration
@@ -184,7 +195,6 @@ If your written language is not English, you can modify your search plugin throu
 | images.connector.tag                                 | Container image tag                             | 0.5.0             |
 | images.connector.pullPolicy                          | Container image pullPolicy                      | IfNotPresent      |
 | images.connector.imagePullSecrets                    | Container image image pull secrets              | []                |
-| connector.replicas                                   | desired number of pods                          | 1                 |
 | connector.probeInitialDelaySeconds                   | Delay before liveness probe is initiated        | 10                |
 | connector.resources                                  | Container resource requests and limits          | {}                |
 | connector.affinity                                   | Affinity settings for pod assignment            | {}                |
@@ -207,7 +217,7 @@ If your written language is not English, you can modify your search plugin throu
 Using the `--set key\value[,key=value]` argument to specify each parameter
 
 ```shell
-helm install release-name tellery-stable/tellery --set system.secretKey=xxx --set web.replicas=2
+helm install tellery tellery-stable/tellery --set system.secretKey=xxx --set web.replicas=2
 ```
 
 Or using the yaml to specify each parameter
@@ -215,5 +225,5 @@ Or using the yaml to specify each parameter
 Copy these [default configuration](https://github.com/tellery/tellery/blob/master/deploy/helm/values.yaml) into a new file named tellery-config.yaml, then modify as your need.
 
 ```shell
-helm install release-name tellery-stable/tellery -f tellery-config.yaml
+helm install tellery tellery-stable/tellery -f tellery-config.yaml
 ```
