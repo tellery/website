@@ -18,4 +18,8 @@ So far we support the following:
 |     PostgreSQL    |   [Profile Setup](/docs/how-to-use/configure-database#postgresql) |
 |     BigQuery      |   [Profile Setup](/docs/how-to-use/configure-database#bigquery)   |
 
-The [community-supported connectors](https://github.com/tellery/community-supported-connectors), consisting of SparkSQL / Hive and Presto, are currently working in progress. Feel free to make contribution!
+The [community-supported connectors](https://github.com/tellery/community-supported-connectors) are currently working in progress. Feel free to make contribution!
+
+Currently available community-supported connector:
+
+- [Hive / SparkSQL connector](https://github.com/tellery/community-supported-connectors/tree/main/hive)
