@@ -32,6 +32,7 @@ such as (`Version=2.3.0` AND `OS=Android` AND `event=Login`).
 - Added 4 type icons for dimensions when querying Data Asset
 - Optimized the dropdown menu for choosing dimensions
 - Onboarding page of docker-compose deployment
+- Data assets now can be searched through their names
 
 
 #### 🐞Fixed
