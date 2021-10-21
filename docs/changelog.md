@@ -13,6 +13,37 @@ New updates and improvements to Tellery.
 Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telleryhq) to find out when features are released.
 :::
 
+## v0.8.3 (Oct 20, 2021)
+
+Another month has passed; here's a quick update on what's changed since October. 
+We've been working on a lot of little details.
+
+We finally have **Filter** for metric explorations!
+This feature lets you explore a metric against one specific segmentation combined with a series of conditions,
+such as (`Version=2.3.0` AND `OS=Android` AND `event=Login`).
+
+<Lightbox src='/img/changelog/filter.png' title='Filter' />
+
+
+#### 💎Enhancements
+
+
+- It's now possible to see more information about data assets when selecting them from the right sidebar
+- Added 4 type icons for dimensions when querying Data Asset
+- Optimized the dropdown menu for choosing dimensions
+- Onboarding page of docker-compose deployment
+
+
+#### 🐞Fixed
+
+- Fixed an issue of adding LIMIT into a non-select clause of SQL query (e.g., SHOW TABLES)
+- Fixed an issue of importing a CSV file with null fields
+- Fixed an issue of copy-pasting question's URLs in the SQL editor
+- Error message will be cleared after one successful execution
+- Referenced questions will now be refreshed in the "Refresh on open" story
+- Fixed an issue of syncing data and visualization in Pie chart
+
+
 
 ## v0.8.2 (Sept 29, 2021)
 
@@ -62,7 +93,7 @@ We create a brand new sidebar in this release. Not only is this more excellent t
 - Changing the measures and dimensions of the smart query will refresh its data 
 - The SQL editor has a new appearance
 - All available data assets are now displayed in the sidebar
-- Display visualization arrangements, data asset settings, and downstream  n the sidebar
+- Display visualization arrangements, data asset settings, and downstream in the sidebar
 - Pasting a link to a question will automatically create a linked question 
 - Pasting an URL will automatically generate a hyperlink 
 - Code block supported a few more languages syntax highlighting
