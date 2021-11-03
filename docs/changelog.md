@@ -13,6 +13,34 @@ New updates and improvements to Tellery.
 Tellery is still in Beta stage. [Follow us on twitter](https://twitter.com/telleryhq) to find out when features are released.
 :::
 
+## v0.8.4 (Nov 3, 2021)
+
+We created a dedicated page for metric exploration. It allows you to ask any questions on existing metrics for your business! Just drag and drop to start!
+
+<Lightbox src='/img/changelog/metric-explore.png' title='Explore' />
+
+
+After exploring it, you can either move the visualization to a story or copy it into your clipboard. Yes! We've supported "Move to story" to move your block from one story to another. Click ⋮⋮ on a block and select "Move to story". You can search for the name of your target story or create a new one.
+
+
+
+#### 💎Enhancements
+
+- Data asset can be canceled without affecting the downstream Smart Query
+- `between` operator is supported for specifying a time period in Filters
+- Add a `Save` button in the Filter form
+- Add syntax highlighting and validation for SQL expression in SQL metric form
+- Performance improvements to the SQL editor
+
+#### 🐞Fixed
+
+- Fix a data conflict issue in multiplayer mode
+- Fix a bug when copy and paste text within a block
+- Match default web port and default protocol
+- Fix some minor issues for visualization
+- Fix an issue when initializing the config of a chart
+
+
 ## v0.8.3 (Oct 20, 2021)
 
 Another month has passed; here's a quick update on what's changed since October. 
