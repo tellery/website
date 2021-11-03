@@ -1,0 +1,1 @@
+(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[713],{7485:function(e){"use strict";e.exports=JSON.parse('{"tellery":{"allTagsPath":"/blog/tags","slug":"tellery","name":"tellery","count":1,"permalink":"/blog/tags/tellery"},"init":{"allTagsPath":"/blog/tags","slug":"init","name":"init","count":1,"permalink":"/blog/tags/init"}}')}}]);
