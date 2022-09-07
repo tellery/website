@@ -4,7 +4,7 @@ const customFields = {
   contactEmail: 'contact@tellery.io',
   domainUrl: 'https://tellery.io',
   copyright: `Copyright © ${new Date().getFullYear()} Tellery, Inc.`,
-  slackInviteUrl: 'https://join.slack.com/t/telleryio/shared_invite/zt-s37tgvo7-QBdpggK_uG6QqJVWhSXlFg',
+  discordInviteUrl: 'https://discord.gg/gAxqpvQUZV',
   copy: {
     hero: {
       title: 'Analyze, report and organize\nall in one place',
@@ -82,8 +82,8 @@ const config = {
               href: `mailto:${customFields.contactEmail}`
             },
             {
-              label: 'Slack',
-              href: customFields.slackInviteUrl
+              label: 'Discord',
+              href: customFields.discordInviteUrl
             },
             {
               label: 'Twitter',
